@@ -1,0 +1,9 @@
+# main links
+main:
+  - title: "Home"
+    url: https://sureshsarda.in
+  - title: Archive
+    url: ./archive
+  - title: About
+    url: ./about
+ 
