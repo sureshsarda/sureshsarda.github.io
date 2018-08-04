@@ -1,0 +1,48 @@
+---
+layout: post
+title: 'Weekly Unix #2 - du'
+date: 2016-06-26 11:18:25.000000000 +05:30
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- UNIX
+- Weekly Unix
+tags: []
+meta:
+  _publicize_pending: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '24204731291'
+  dpsp_networks_shares: a:2:{s:11:"google-plus";i:0;s:9:"pinterest";i:0;}
+  _pt_cv_view_count: '142'
+  original_post_id: '85'
+  _wp_old_slug: '85'
+author:
+  login: sureshsarda
+  email: sureshssarda@gmail.com
+  display_name: Suresh Sarda
+  first_name: ''
+  last_name: ''
+---
+<h2>du - Disk Usage</h2>
+<p>du summarizes the disk usage for files and folders.</p>
+<h3>How to use</h3>
+<pre>du</pre>
+<p>This will list size of all the files as well as folders in the current directory. The folders will be explored recursively. That means all the files in the folders will be listed as well.</p>
+<p>The above gets bit out of hand when you have lot of files. You won't be able to figure out what is happening as lot of entries will go from your eyes. We can use -s option to summarize. So therefore,</p>
+<pre>du -s</pre>
+<p>will print the size of current directory. This size is in bytes and to print it in human readable format, add -h option.</p>
+<pre>du -sh</pre>
+<p>This will print the size of current directory in readable format. But what if we want to view the sizes of all files in current directory the way it shows in file explorer?</p>
+<pre>du -sh *</pre>
+<p>This will print sizes of all folders in current directory. The output can then be piped to sort command to get a sorted output.</p>
+<pre>du -sh * | sort -h</pre>
+<p>The -h option sorts considering the suffix K or M of the file sizes. This can be droped if you have used a common unit for listing the sizes.</p>
+<p>But I prefer having the largest directory/file on the top so I know what is consuming most of the space. We could simple add -r switch to sort command that will sort in decreasing order.</p>
+<h3>Frequent Usage</h3>
+<p>And finally I create an alias and added to my .bashrc file so I don't have to type all this again and again when I want to list files.</p>
+<pre>alias size="du -sh * | sort -rh"</pre>
+<p>Every time I want size of current directory, I just need to type 'size'</p>

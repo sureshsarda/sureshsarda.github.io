@@ -1,0 +1,56 @@
+---
+layout: post
+title: 'Weekly Unix #6 - job control (2)'
+date: 2016-07-19 18:02:38.000000000 +05:30
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Power User
+- UNIX
+- Weekly Unix
+tags: []
+meta:
+  _publicize_pending: '1'
+  _edit_last: '44162397'
+  _pt_cv_view_count: '178'
+  dpsp_networks_shares: a:2:{s:11:"google-plus";i:0;s:9:"pinterest";i:0;}
+  original_post_id: '149'
+  _wp_old_slug: '149'
+author:
+  login: sureshsarda
+  email: sureshssarda@gmail.com
+  display_name: Suresh Sarda
+  first_name: ''
+  last_name: ''
+---
+<h2 id="finer-job-selection">Finer Job Selection</h2>
+<p>In the <a href="http://sureshsarda.in/2016/07/18/weekly-unix-6-job-control/">previous</a> article we saw basics of job control but we skipped alternatives to select jobs. Consider the following job listing throughout this article.</p>
+<pre><code class="bash hljs "><span class="hljs-variable">$jobs</span>
+[<span class="hljs-number">1</span>]   Running                 find . -name *.xml &gt; /dev/null &amp;
+[<span class="hljs-number">2</span>]-  Stopped                 cat /dev/zero &gt; /dev/null
+[<span class="hljs-number">3</span>]+  Stopped                 find . -name *.cc &gt; /dev/null
+</code></pre>
+<h3 id="1-using-job-number">1. Using job number</h3>
+<p>You can use the job number (the number in square bracket) to work on it. Jobs can be refered by job number using <code>%N</code> where <code>N</code> is the job number.</p>
+<pre><code class="bash hljs ">fg %<span class="hljs-number">2</span>
+</code></pre>
+<p>will resume 2nd job in foreground</p>
+<h3 id="2-using-job-execution-command">2. Using job execution command</h3>
+<p>It’s not required to know the job number if you are more comfortable with the execution command.</p>
+<p>The following command will resume 2nd job (the one starting with cat in background)</p>
+<pre><code class="bash hljs ">bg %cat 
+</code></pre>
+<p>Whereas this next one will resume the 3rd one in background</p>
+<pre><code class="bash hljs ">bg %?cc
+</code></pre>
+<p>Note the difference of <code>?</code> in first and second form. Without <code>?</code>, prefix is searched whereas with <code>?</code> substring is searched. In case there are more than one job matching, the command will report an error.</p>
+<h3 id="3-selecting-current-and-previous-jobs">3. Selecting current and previous jobs</h3>
+<p>Current job and previous job can be referred using <code>%+</code> and <code>%-</code> respectively.</p>
+<h2 id="shorthand">Shorthand</h2>
+<p>A shorthand method to resume jobs in foreground and background exists. Following commands are just short-form of respective longer commands.<br />
+<code>%N</code> =&gt; <code>fg %N</code><br />
+<code>%N &amp;</code> =&gt; <code>bg %N</code></p>
+<p>A detailed article on job control can be found <a href="http://sureshsarda.in/2016/07/18/weekly-unix-6-job-control/">here</a>.</p>

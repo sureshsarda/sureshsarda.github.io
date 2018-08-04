@@ -1,0 +1,109 @@
+---
+layout: post
+title: Memento
+date: 2016-08-11 16:48:55.000000000 +05:30
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Design Patterns
+tags: []
+meta:
+  _publicize_pending: '1'
+  _edit_last: '44162397'
+  _pt_cv_view_count: '165'
+  dpsp_networks_shares: a:2:{s:11:"google-plus";i:0;s:9:"pinterest";i:0;}
+  original_post_id: '161'
+  _wp_old_slug: '161'
+author:
+  login: sureshsarda
+  email: sureshssarda@gmail.com
+  display_name: Suresh Sarda
+  first_name: ''
+  last_name: ''
+---
+<p>Ever used an image editing software? We opened an image but it’s too sharp and the light is not good. We make some changes and still not satisfied, we make few more changes only to realize that the previous changes were better than these new! We want to restore to previous changes. If we were using a drawing sheet and paint brush, this task would be very difficult; perhaps impossible. But with softwares, that’s not a problem. We can simply select the state from history which we like the most and start working on that and continue as if we never made these new changes. Undo is one of most ingenious tool developed. Let’s see how we can create our own undo tool in this post.</p>
+<p>Memento or sometime also called as <em>Token</em> is described as follows in Gang of Four:</p>
+<blockquote><p>Without violating encapsulation, capture and externalize an object’s internal state so that the object can be restored to this state later</p></blockquote>
+<p>Let’s see the most important part of this definition first:</p>
+<blockquote><p>Without violating encapsulation, <mark>capture</mark> and externalize <mark>an object’s internal state so that the object can be restored to this state later</mark></p></blockquote>
+<p>Basically, we are storing an object’s state to restore later.</p>
+<p><em>How?</em> <mark>Externally, without violating encapsulation</mark></p>
+<p>That was simple. But how to do it?</p>
+<p>Let’s take a simpler example of a Word Processor. What we need to track is the text entered by user and restore it later when the user clicks undo. In other words, we have to <em>capture</em> the <em>text</em> such that it can be restored later.</p>
+<p>So say we have some object that will store the text in the document. It’s state will be the text on the document. Let’s call this object - <em>originator</em>. Then we need a mechanism to represent the snapshot. The way we take our photograph to preserve the moment, we need a snapshot of the text at the very instant. Let’s call the snapshot - <em>Memento</em>. Now we need someone, who will store these snapshots and give them to us when asked. Like a caretaker but of snapshots. Let’s call it <em>Caretaker</em>.</p>
+<p>So we have 3 characters in our play - The <em>originator</em>, the <em>memento</em> and the <em>caretaker</em>.</p>
+<p><em>Originator</em> will request to take snapshot or restore them. Memento <em>is</em> the snapshot and <em>caretaker</em> is going to store them for later use.</p>
+<h3 id="implementing-it">Implementing it</h3>
+<p>Implementing this may sound tricky but is in fact very easy.</p>
+<p>At the very basic level, the state of text can simple be represented like this:</p>
+<pre><code class="Java hljs coffeescript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Text</span> {</span>
+    String currentTextInBuffer;
+}
+</code></pre>
+<p>and memento can be represented like this:</p>
+<pre><code class="Java hljs coffeescript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TextMemento</span></span>
+    String state;
+
+    <span class="hljs-regexp">/* getters and setters ommitted */</span>
+}
+</code></pre>
+<p>Now let’s look at the part that says - <em>without violating encapsulation</em>. We must not create a separate object that will clone or get internal state of <code>Text</code> object. Instead this responsibility is of the <em>originator</em> in our case <code>Text</code> object to provide appropriate methods for this. So let’s fix this.</p>
+<pre><code class="Java hljs java">class Text {
+    String currentTextInBuffer;
+
+    <span class="hljs-keyword">public</span> TextMemento <span class="hljs-title">getState</span>() {
+        TextMemento m = <span class="hljs-keyword">new</span> TextMemento();
+        m.setState(currentTextInBuffer);
+        <span class="hljs-keyword">return</span> m;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setState</span>(TextMemento m) {
+        <span class="hljs-keyword">this</span>.currentTextInBuffer = m.getState(); 
+    }
+}
+</code></pre>
+<p>That’s good, but now we need to store some states. That too <em>externally</em>. Let’s create a caretaker object that is going to do this.</p>
+<pre><code class="Java hljs cs"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> CareTaker {
+    <span class="hljs-keyword">private</span> List&lt;TextMemento&gt; states = <span class="hljs-keyword">new</span> LinkedList&lt;TextMemento&gt;();
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">saveState</span>(TextMemento m) {
+        states.add(m);
+    }
+
+    <span class="hljs-keyword">public</span> TextMemento <span class="hljs-title">getState</span>(<span class="hljs-keyword">int</span> stateIndex) {
+        <span class="hljs-keyword">return</span> states.<span class="hljs-keyword">get</span>(stateIndex);
+    }
+
+}
+</code></pre>
+<p>We have used <code>LinkedList</code> to save the state. We could use <code>Stack</code> or <code>Queue</code> depending on the requirement. We could also provide some helper methods for example to return a state <code>nth </code>iteration previous from current state.</p>
+<pre><code class=" hljs cs"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> CareTaker {
+    <span class="hljs-comment">/* previous implementation here */</span>
+
+    <span class="hljs-comment">/*
+     * Returns the previous state
+     */</span>
+    <span class="hljs-keyword">public</span> TextMemento <span class="hljs-title">getPreviousState</span>() {
+        <span class="hljs-keyword">return</span> state.<span class="hljs-keyword">get</span>(state.size() - <span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-comment">/*
+     * Returns nth previous state
+     */</span>
+    <span class="hljs-keyword">public</span> TextMemento <span class="hljs-title">getNthPreviousState</span>(<span class="hljs-keyword">int</span> n) {
+        <span class="hljs-keyword">return</span> state.<span class="hljs-keyword">get</span>(state.size() - n);
+    }
+}
+</code></pre>
+<p>That’s it! We are done. With these 3 objects, we can travel time. We can save changes when required and restore them when required!</p>
+<h3 id="points-to-consider">Points to consider</h3>
+<p>Using Memento might be expensive in terms of storage size. Therefore we must use it carefully and try to keep as less internal information required as possible. We might have to keep a fixed size of the list and keep deleting older entries from the list.</p>
+<p>Not violating encapsulation is very important and the state of the object should never be in <em>wrong hands</em>. That is, the object should return a Memento when asked for.</p>
+<h3 id="examples">Examples</h3>
+<p>When ever we have <em>incremental progress</em> of some object, we can use Memento to track and restore it!</p>
+<p>For example user filling a very complex form or the email we type to saving and then loading a game we were playing!</p>
+<hr />
+<p>That was Memento pattern, Bye Bye till next time!</p>

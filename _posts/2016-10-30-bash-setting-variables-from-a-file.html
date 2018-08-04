@@ -1,0 +1,59 @@
+---
+layout: post
+title: 'Bash: Setting variables from a file'
+date: 2016-10-30 12:59:26.000000000 +05:30
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Power User
+- Tutorials
+- UNIX
+tags: []
+meta:
+  _edit_last: '44162397'
+  _pt_cv_view_count: '95'
+  dpsp_networks_shares: a:2:{s:11:"google-plus";i:0;s:9:"pinterest";i:0;}
+  original_post_id: '167'
+  _wp_old_slug: '167'
+  _publicize_job_id: '14355861224'
+author:
+  login: sureshsarda
+  email: sureshssarda@gmail.com
+  display_name: Suresh Sarda
+  first_name: ''
+  last_name: ''
+---
+<p>Shell scripts sometimes get overly complicated and we need lot of configurations stored in file instead of setting them in ten different files which not to mention is error prone. A simple technique would be to write all the configurations in a properties file and read it in all the scripts.</p>
+<h4 id="lets-do-that">Let’s do that!</h4>
+<p>For example we have all these configurations we need to set</p>
+<p>[code language="bash"]<br />
+server.build.ip=10.20.0.17</p>
+<p>server.stage.ip=10.20.0.77<br />
+server.stage.user=stageuser<br />
+server.stage.user.sudo=stageadmin<br />
+server.stage.log=/var/log/logfile.log</p>
+<p>server.demo.ip=10.20.0.83<br />
+server.demo.user=demoadmin<br />
+server.demo.log=/var/log/error.log</p>
+<p>config.project=/opt/foo/bat/config<br />
+[/code]</p>
+<p>If we wish to do this in all scripts we will have to write each of these variables in all the scripts and change in one of these variables meaning changing all the scripts.<br />
+So we could read this file in a script and execute that script in every shell script.</p>
+<p>Executing and setting the variables:</p>
+<p>[code language="bash"]<br />
+while IFS='=' read -r key value<br />
+do<br />
+    key=$(echo $key | tr '.' '_')<br />
+    eval &quot;${key}=${value}&quot;<br />
+done &lt; config<br />
+[/code]</p>
+<p>Assuming that the config information is stored in <code>config</code> file.</p>
+<p>Now we could just call this piece of code, or a script that contains this code every time we need these variables.</p>
+<p>What it does is, it reads the file line by line and splits the line at <code>=</code> (see the part: <code>IFS='='</code>?) and assigns the values to <code>key</code>,<code>value</code>.<br />
+Next bash variables can not contain a period. So we replace all the periods with underscores.<br />
+After that we simple set the values using the eval statement.</p>
+<p>Done! You have all your variables stored!<br />
+For example if we need the IP address of build server we could use: <code>$server_build_ip</code>. Neat!</p>

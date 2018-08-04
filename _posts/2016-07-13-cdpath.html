@@ -1,0 +1,58 @@
+---
+layout: post
+title: CDPATH
+date: 2016-07-13 16:42:13.000000000 +05:30
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Power User
+- UNIX
+tags: []
+meta:
+  _publicize_pending: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '24751551761'
+  dpsp_networks_shares: a:2:{s:11:"google-plus";i:0;s:9:"pinterest";i:0;}
+  _pt_cv_view_count: '121'
+  original_post_id: '98'
+  _wp_old_slug: '98'
+author:
+  login: sureshsarda
+  email: sureshssarda@gmail.com
+  display_name: Suresh Sarda
+  first_name: ''
+  last_name: ''
+excerpt: What is CDPATH and how to use it. A quick tip on navigation faster with cd
+  using CDPATH.
+---
+<hr />
+<p><code>CDPATH</code> is an environment variable under UNIX, which is refered everytime <code>cd</code> command is invoked.</p>
+<h3 id="the-working-of-cd">The working of <code>cd</code></h3>
+<p>Let’s say you invoke the following command:</p>
+<pre><code class="bash hljs "><span class="hljs-built_in">cd</span> blog
+</code></pre>
+<p>The directory <code>blog</code> is looked in current working directory. If found, the current working directory is changed to that. If it is not found there, it is looked in every path in the <code>CDPATH</code> variable. Again if found, it is changed. If not then a directory not found message is displayed and cd returns 1 (Error code).</p>
+<h3 id="structure-of-cdpath-variable">Structure of <code>CDPATH</code> variable</h3>
+<p><code>CDPATH</code> is similar to any other <code>PATH</code> variable for it contains several paths separated by colons.</p>
+<p>Example:<br />
+<code>homeusername:homeusernameDesktop:homeusernameworkspace:homeusernametoolkit</code><br />
+can be content of <code>CDPATH</code> variable.<br />
+What this means is, the above directory <code>blog</code> is searched in all these directories one by one. If found, navigated to it.</p>
+<h3 id="multiple-occurences-of-a-directory">Multiple occurrences of a directory</h3>
+<p>Say that the directory <code>blog</code> is in <code>Desktop</code> as well as <code>workspace</code> . In such case, the first occurring parent will get precedence. And even before consulting the <code>CDPATH</code> the current working directory will get preference.<br />
+In fact, <code>CDPATH</code> is only referred if the directory is not found in current working directory. And when a directory is found in <code>CDPATH</code>, the <code>cd</code> command echos the complete path of directory where it has navigated to.<br />
+For example:</p>
+<pre><code class="bash hljs ">somedir&gt;<span class="hljs-built_in">cd</span> blog
+blog&gt;
+</code></pre>
+<p>will simple <code>cd</code> into <code>blog</code> directory. But if <code>blog</code> was not found in current working directory and instead found in <code>/home/username/Desktop</code>, the output will look something like this:</p>
+<pre><code class=" hljs bash">somedir&gt;<span class="hljs-built_in">cd</span> blog
+/home/username/Desktop/blog
+blog&gt;
+</code></pre>
+<p>The line is for us to understand that we have been navigated somewhere far and not in the current working directory.</p>
+<p>This is a very helpful tip for quick navigation. We don't have to type long path names every time. Frequent paths can be added to CDPATH. The best is, cd auto completion in terminal works with CDPATH and suggests paths from all the available directories!</p>

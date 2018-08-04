@@ -1,0 +1,92 @@
+---
+layout: post
+title: 'Weekly Unix #5 - cd'
+date: 2016-07-17 10:00:23.000000000 +05:30
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Power User
+- UNIX
+- Weekly Unix
+tags: []
+meta:
+  _publicize_pending: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  dpsp_networks_shares: a:2:{s:11:"google-plus";i:0;s:9:"pinterest";i:0;}
+  _pt_cv_view_count: '134'
+  _edit_last: '44162397'
+  original_post_id: '109'
+  _wp_old_slug: '109'
+author:
+  login: sureshsarda
+  email: sureshssarda@gmail.com
+  display_name: Suresh Sarda
+  first_name: ''
+  last_name: ''
+excerpt: An article on effective navigation with cd. How to create useful aliases
+  and use CDPATH to navigate.
+---
+<h2 id="change-directory">change directory</h2>
+<hr />
+<pre><code class="bash hljs ">man <span class="hljs-built_in">cd</span>
+No manual entry <span class="hljs-keyword">for</span> <span class="hljs-built_in">cd</span>
+</code></pre>
+<p>That’s because there isn’t any! <code>cd</code> is an internal shell command.</p>
+<h3 id="so-where-do-i-find-help">So where do I find help?</h3>
+<p>Well there isn’t much in <code>cd</code> that you can do except change the directory. But since this operation is done hundreds of times a day, we need to do it efficiently.</p>
+<h2 id="cd-"><code>cd -</code></h2>
+<p><code>cd</code> with a hyphen goes to previous directory and executing that again comes back to current directory. It’s like a back button which can keep you toggling between two directories.</p>
+<p>So next time you are switching between two paths again and again, use <code>cd -</code></p>
+<h2 id="bookmarking-important-locations">Bookmarking Important Locations</h2>
+<p>In a browser or in a file explorer, we can bookmark places we frequently visit. Same goes with command line. Though there is no one click solution to bookmark a location, but it’s not that hard either.</p>
+<p>We can simply created aliases of important locations. For example, my workspace is at location <code>~/workspace</code> and I navigate there a lot! So I have added the following lines in my<code>.bashrc</code> file.</p>
+<pre><code class="bash hljs ">alias bm_workspace=<span class="hljs-string">"~workspace"</span>
+</code></pre>
+<p>So now every time, I have to go there, I simply type</p>
+<pre><code class="bash hljs "><span class="hljs-built_in">cd</span> <span class="hljs-variable">$bm_workspace</span>
+</code></pre>
+<p>In this example it looks like I have to type more than I would have typed earlier. But this trick is very helpful if you have a long directory path. Plus, when on terminal with auto-complete, I type <code>$bm</code> and press <code>tab</code> and all my bookmarks are shown for auto completion. All I have to press is <code>w</code> and <code>tab</code> again and I’ll be in <code>workspace</code>. If you have a long path like this:</p>
+<pre><code class=" hljs ruby"><span class="hljs-keyword">alias</span> bm_jboss_deployments=<span class="hljs-string">"~/tools/jboss-7.1.0/standalone/deployments/"</span>
+<span class="hljs-keyword">alias</span> bm_blog=<span class="hljs-string">"~/Documents/writings/blogposts/"</span>
+</code></pre>
+<p>aliases are quite helpful. In the above case say you want to go to Jboss Deployments, all you got to type few characters and no more!</p>
+<p>Having a prefix like <code>bm</code> helps me to list all my bookmarks at once by typing <code>bm&lt;tab&gt;</code> if I ever forget them.</p>
+<h2 id="cdpath-variable"><code>CDPATH</code> variable</h2>
+<p>But what if the entire directory is important. All the folders and files in a particular directory. For example my <code>Desktop</code> has mostly important files and folders only and I navigate quite frequently to them. Or the user’s <code>home</code> directory is important.</p>
+<p>Here comes in hand the <code>CDPATH</code> variable. <code>CDPATH</code> is the base directory for <code>cd</code>. Meaning - if the argument (directory you are trying to cd into) is not found in current working directory, it is searched in all the paths in <code>CDPATH</code> variable.</p>
+<h3 id="advantage">Advantage?</h3>
+<p>Well you don’t need to type the complete directory path. You just need to type the directory you want to cd into and you will be taken there. For example you are at <code>home</code> and there is a directory called <code>workspace</code> where there are multiple project folders and you have to navigate to one of the project folder. Traditionally you would navigate to the folder by typing the complete path. But with <code>CDPATH</code> you just need to type the folder name.</p>
+<p>Here’s the <a href="http://sureshsarda.in/2016/07/13/cdpath/">link</a> to an article on <code>CDPATH</code> itself. It has examples and more details on the same. I’ll leave up to you to refer the said article without going into much details of <code>CDPATH</code>. But it’s one important trick you shouldn’t miss!</p>
+<h2 id="umm-what">../../../.. umm what?</h2>
+<p>At times we need to go to parent directories or grand parent or great great grand parent of the current directory. ‘<code>..</code>‘ referes to parent of current directory and going to 4th parent of current directory or 5th parent is just tedious. With lots of dots and slashes and counting them, it just get’s confusing. To simplify this, I’ll share some simple aliases which if you create on your system, I’m quite sure you’ll have a hard time on navigating on some one else’s system because you will so much get used to them.<br />
+Following is the list, add to your <code>.bashrc</code> and leave in peace from here onwards. Amen!</p>
+<pre><code class="bash hljs ">alias .=<span class="hljs-string">'cd ..'</span>
+alias ..=<span class="hljs-string">'cd ../..'</span>
+alias ...=<span class="hljs-string">'cd ../../..'</span>
+alias ....=<span class="hljs-string">'cd ../../../..'</span>
+alias .<span class="hljs-number">5</span>=<span class="hljs-string">'cd ../../../../../'</span>
+alias .<span class="hljs-number">6</span>=<span class="hljs-string">'cd ../../../../../../'</span>
+</code></pre>
+<p>Want to go to parent?</p>
+<pre><code class=" hljs ">.
+</code></pre>
+<p>Parent’s parent?</p>
+<pre><code class=" hljs ">..
+</code></pre>
+<p>5th parent of current directory?</p>
+<pre><code class=" hljs ">.5
+</code></pre>
+<p>You are there!!</p>
+<p>Once you start using this, you will regret why you didn’t know about this earlier!</p>
+<p>I’ll conclude this <code>cd</code> article but will keep posting more on effective navigation.</p>
+<h2 id="tldr">TL;DR</h2>
+<ul>
+<li><code>cd -</code> goes to previous directory</li>
+<li>Use bookmarks for navigation</li>
+<li>Set <code>CDPATH</code> for most frequent directories</li>
+<li>Set parent aliases</li>
+</ul>

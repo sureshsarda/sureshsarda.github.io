@@ -1,0 +1,46 @@
+---
+layout: post
+title: 'Weekly Unix #3 - tee'
+date: 2016-07-03 11:21:48.000000000 +05:30
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- UNIX
+- Weekly Unix
+tags: []
+meta:
+  _publicize_pending: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '24435349738'
+  dpsp_networks_shares: a:2:{s:11:"google-plus";i:0;s:9:"pinterest";i:0;}
+  _pt_cv_view_count: '139'
+  original_post_id: '95'
+  _wp_old_slug: '95'
+author:
+  login: sureshsarda
+  email: sureshssarda@gmail.com
+  display_name: Suresh Sarda
+  first_name: ''
+  last_name: ''
+---
+<p>tee command as the man page puts it, reads from standard input and writes to standard output and files. Okay good enough but what does that mean? Well that mean, while using a command, the output is sent to the console. You can redirect it to file by using '&gt;' and '&gt;&gt;' to a file. That symbol is of output redirection (a summary of that in the end of this post and all the output redirection is covered in seperate post).</p>
+<p>Let's see you execute a command, for example 'ls' and you see the output on the screen. But now you want to send the file listing to a file. What you do is,</p>
+<pre>ls &gt; file</pre>
+<p>This way a new file, 'file' will be created and the file listing will be redirected to that file. The console will be clear. But what if you wanted the output to be displayed on the screen as well as in the file? You use tee.</p>
+<pre>ls | tee file</pre>
+<p>With this command, the output the displayed on screen as well as it goes into the file 'file'. You can have multiple files with tee.</p>
+<pre>ls | tee file1 file2 file3</pre>
+<p>All the 3 files will have same content - the directory listing of current directory.</p>
+<p>You can all append to file if you don't want the contents to be overwritten.</p>
+<pre>ls | tee --append file</pre>
+<pre>ls | tee -a file</pre>
+<p>Both --append and -a append the output to the file and do not overwrite its content.</p>
+<h3>Output Redirection</h3>
+<p>In bash, you can redirect output to file and overwrite its contents using '&gt;' and append the output to file using '&gt;&gt;' So for example,</p>
+<pre>ls &gt; file</pre>
+<pre>ls &gt;&gt; file</pre>
+<p>The first line will overwrite the contents of file and second line will append without overwriting the contents</p>

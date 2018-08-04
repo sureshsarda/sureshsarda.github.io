@@ -1,0 +1,65 @@
+---
+layout: post
+title: 'Weekly Unix #1 - tr'
+date: 2016-06-08 03:19:00.000000000 +05:30
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- UNIX
+- Weekly Unix
+tags: []
+meta:
+  _publicize_pending: '1'
+  blogger_blog: programmer-stuff.blogspot.com
+  blogger_author: Suresh Sarda
+  blogger_585186f54a8d3520f06300b26ee8fe7e_permalink: '144983061840934027'
+  dpsp_networks_shares: a:2:{s:11:"google-plus";i:0;s:9:"pinterest";i:0;}
+  _pt_cv_view_count: '117'
+  original_post_id: '34'
+  _wp_old_slug: '34'
+author:
+  login: sureshsarda
+  email: sureshssarda@gmail.com
+  display_name: Suresh Sarda
+  first_name: ''
+  last_name: ''
+---
+<div dir="ltr" style="text-align:left;">
+<h1 class="title">tr - translate</h1>
+<div id="text-1" class="outline-text-2">
+<p>TR basically stands for translate. The man page says - translate or delete character. So tr is used to manipulate the byte stream provided to it. This command again is very powerful when combined with other commands. For example you want to rename files to lower case (thought there are other methods for this), or you want to change a (or a set of) character in a file or from a live stream, this is the utility you will need. So let's dive in, see the basic usage first and then dig further.</p>
+<h3>Syntax:</h3>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="font-size:small;"> tr [OPTION] ... SET1 [SET2]</span></pre>
+</div>
+<p>Well nothing much there, that was a simple copy-paste from the manual page of the command but it gives us basic idea of how to use the command.  It has various options which we will see in a bit and then there is something called set. Will see that too.</p>
+<h3>Example:</h3>
+<div class="org-src-container">
+<pre>$echo "Hello, World! How are you today?" | tr A-Z a-z
+&gt;hello, world! how are you today?</pre>
+</div>
+</div>
+<p>So that was simple lower case.</p>
+<p>Simply put, tr takes first set, and replaces them with the second set. But the second set was optional. Well that's because you can also delete using translate.</p>
+<h3>Example:</h3>
+<div class="org-src-container">
+<pre class="src src-bash">$echo "Hello, World! How are you today?" | tr -d a-z
+&gt;</pre>
+</div>
+</div>
+<p>Oh no!</p>
+<div class="org-src-container">
+<pre class="src src-bash">$echo "Hello, World! How are you today?" | tr -d aeiou
+&gt;Hll, Wrld! Hw r y tdy?</pre>
+</div>
+<p>Well if you are wondering what are all the weird spaces there, then they are from our input. The characters specified are totally gone. No placeholders either. Let's remove those spaces too.</p>
+<pre class="example">$echo "Hello, World! How are you today?" | tr -d aeiou
+&gt;Hll,Wrld!Hwrytdy?</pre>
+<p>Did you see how the space was escaped? So yeah special characters are to be escaped before using.</p>
+<h3 id="sec-1-1">Using Character ranges</h3>
+<p>Character ranges like some in regular expression are supported. Few special types are also builtin. For example - <code>:alnum:</code> is for alpha numeric, <code>:digit:</code> is for all digit and many more - <code>:lower:</code>, <code>:upper:</code>, <code>:punct:</code>, <code>:space:</code>, etc, etc.. You can always refer the manual to see which one corresponds to what.</p>
+<p>Hope that helps!</p>
+<p>Originally posted <a href="http://www.sureshsarda.in/" target="_blank">here.</a></p>
