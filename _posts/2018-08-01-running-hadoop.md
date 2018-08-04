@@ -6,8 +6,6 @@ categories: hadoop java pig
 share: true
 ---
 
-# Running Pig in Local Mode in Java
-
 ## Overview of steps
 1. Create a new maven project
 2. Add Hadoop and Pig dependencies
