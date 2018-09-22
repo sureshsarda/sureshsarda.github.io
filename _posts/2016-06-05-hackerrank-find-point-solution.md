@@ -7,7 +7,7 @@ categories:
 tags:
 - hackerrank
 ---
-[Original Question][question]
+Solution to HackerRank [FindPoint][question]
 
 ## Domain Knowledge Required
 ### What is a symmetric point?
@@ -18,7 +18,7 @@ In other words, let’s say a point P’ is the symmetric point. Then,
 
 ## Code
  ```java
- import java.io.*;
+import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
