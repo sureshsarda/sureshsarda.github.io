@@ -1,4 +1,9 @@
-# Pandas: Splitting (Exploding) a column into multiple rows
+---
+layout: single
+title: Pandas: Splitting (Exploding) a column into multiple rows
+date: 2018-11-21
+share: true
+---
 
 Recently, while working with on something in my [office](https://whatfix.com), I faced a small but interesting problem. I had to clean some data, and the data was not properly normalized. So in one of the columns, a single cell had multiple comma seperated values. I could not find out the distribution of how frequently the value was appearing without splitting these cells into individual cells of their own, creating new rows.
 
