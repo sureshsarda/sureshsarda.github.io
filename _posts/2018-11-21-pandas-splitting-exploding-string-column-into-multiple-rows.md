@@ -1,13 +1,12 @@
 ---
 layout: single
-title: Pandas: Splitting (Exploding) a column into multiple rows
+title: "Pandas: Splitting (Exploding) a column into multiple rows"
 date: 2018-11-21 10:00:00 +05:30
 share: true
+tags: pandas, python
 ---
 
-Recently, while working with on something in my [office](https://whatfix.com), I faced a small but interesting problem. I had to clean some data, and the data was not properly normalized. So in one of the columns, a single cell had multiple comma seperated values. I could not find out the distribution of how frequently the value was appearing without splitting these cells into individual cells of their own, creating new rows.
-
-See the complete notebook [here](https://gist.github.com/sureshsarda/00c3b7423ea7b6cba4250a719d6b7424)
+Recently, while working with on something in my [office](https://whatfix.com), I faced a small but interesting problem. I had to clean some data and the data was not normalized. In one of the columns, a single cell had multiple comma seperated values. I could not find out the distribution of how frequently the value was appearing without splitting these cells into individual cells of their own; creating new rows.
 
 Example:
 ```python
@@ -36,7 +35,7 @@ EmployeeId, City
 005, Bangalore
 ```
 
-Apparently, there is not straightforward way to clean this in pandas, but it's not that difficult either.
+Apparently, there is no straightforward way to clean this in Pandas, but it's not that difficult either.
 
 ```python
 import pandas as pd
@@ -73,11 +72,12 @@ new_df.columns = ['EmployeeId', 'City']
 8 	004 	Pune
 9 	005 	Bangalore
 ```
+See the Jupyter Notebook [here].(https://gist.github.com/sureshsarda/00c3b7423ea7b6cba4250a719d6b7424)
 
 ## Explanation
 Step 1 is the real trick here, the other 2 steps are more of cleaning exercises to get the data into correct format. 
-In Step 1, we are asking pandas to split the series into multiple values and the combine all of them into single column using the [`stack`][stack] method.
-The output of this step without stack looks like this:
+In Step 1, we are asking Pandas to split the series into multiple values and the combine all of them into single column using the [stack] method.
+The output of Step 1 without stack looks like this:
 ```md 	
             0 	        1 	        2
 EmployeeId 			
