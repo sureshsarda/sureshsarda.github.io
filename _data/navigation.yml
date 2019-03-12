@@ -1,9 +1,12 @@
 # main links
-# main:
-#   - title: "Home"
-#     url: https://sureshsarda.in
-#   - title: Archive
-#     url: ./archive
-#   - title: About
-#     url: ./about
+main:
+  - title: "Home"
+    url: https://sureshsarda.in
+  - title: Posts
+    url: /
+  - title: Books
+    url: /books/absolute-minimum-about-programming
+  - title: About
+    url: /about/
+
  
