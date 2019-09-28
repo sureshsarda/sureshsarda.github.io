@@ -7,12 +7,13 @@ description: Learn to create a Docker container in less than 60 seconds.
 tags: docker python devops containers
 ---
 
-
-
-# First Docker Container
 > Part 1 of a multi-part essay on configuring Docker in production.
 
-*This article assumes you have Docker installed. You can find instructions to install Docker [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/).*
+## Prerequisites
+1. You have Docker installed ([See instructions to install](https://docs.docker.com/install/linux/docker-ce/ubuntu/))
+2. (Optional) You know to to deploy a Flask application using command line
+
+---
 
 Docker works on basis of configurations. It's a declarative way of telling Docker how to build images.
 
