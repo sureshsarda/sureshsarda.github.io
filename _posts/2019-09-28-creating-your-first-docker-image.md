@@ -12,7 +12,7 @@ tags: docker python devops containers
 # First Docker Container
 > Part 1 of a multi-part essay on configuring Docker in production.
 
-> This article assumes you have Docker installed. You can find instructions to install Docker [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
+*This article assumes you have Docker installed. You can find instructions to install Docker [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/).*
 
 Docker works on basis of configurations. It's a declarative way of telling Docker how to build images.
 
