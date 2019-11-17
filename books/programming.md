@@ -12,9 +12,9 @@ I hope you will find this information helpful. I have tried to keep this book fu
     1. SOLID
     3. KISS
     4. Correct-Clean-Concise-Optimize in that order
-    5. Human Readable Code?
-2. Debugging and your IDE
-    1. How to debug
+    5. Writing clean code
+2. [Debugging and your IDE][debugging]
+    1. Printing variable value on console is not how you debug
 3. Strings
     1. Encoding
     2. Big Endian and Little Endian
@@ -43,7 +43,7 @@ I hope you will find this information helpful. I have tried to keep this book fu
 9. Shell Commands
     1. Grep
     2. Find
-    3. Get into a habit of writing small scripts
+    3. Think Automation -Get into a habit of writing small scripts
 10. Databases
     1. SQL vs NoSQL
     2. CAP theorem
@@ -57,3 +57,5 @@ I hope you will find this information helpful. I have tried to keep this book fu
 
 
 [1]: https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+
+[debugging]: /books/absolute-minimum-about-programming/debugging

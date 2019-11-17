@@ -5,6 +5,9 @@ date: 2019-09-28 10:00:00 +05:30
 share: true
 description: Learn to create a Docker container in less than 60 seconds.
 tags: docker python devops containers
+categories:
+- DevOps
+- Docker
 ---
 
 > Part 1 of a multi-part essay on configuring Docker in production.

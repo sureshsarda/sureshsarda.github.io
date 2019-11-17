@@ -3,7 +3,7 @@ layout: single
 title: Weekly Unix \#1 - tr
 date: 2016-06-08
 categories:
-- Competitive programming
+- Linux
 tags:
 - hackerrank
 ---

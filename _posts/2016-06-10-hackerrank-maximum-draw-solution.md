@@ -3,6 +3,8 @@ layout: single
 title: Hackerrank - maximum-draw solution
 date: 2016-06-10
 share: true
+categories:
+- Competitive programming
 ---
 Solution to HackerRank question: [maximum draw](hackerrank)
 

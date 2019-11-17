@@ -5,6 +5,10 @@ date: 2018-11-21 10:00:00 +05:30
 share: true
 description: Learn how to split/explode a Pandas DataFrame with a column or cell with multiple values separated by a deliminator into multiple rows
 tags: pandas python
+categories:
+- Python
+- Pandas
+- Data Science
 ---
 
 Recently, while working with on something in my [office](https://whatfix.com), I faced a small but interesting problem. I had to clean some data and the data was not normalized. In one of the columns, a single cell had multiple comma seperated values. I could not find out the distribution of how frequently the value was appearing without splitting these cells into individual cells of their own; creating new rows.

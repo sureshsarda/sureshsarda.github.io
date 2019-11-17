@@ -2,8 +2,8 @@
 main:
   - title: "Home"
     url: https://sureshsarda.in
-  - title: Posts
-    url: /
+  - title: Archive
+    url: /archive/
   - title: Books
     url: /books/absolute-minimum-about-programming
   - title: About

@@ -2,7 +2,10 @@
 layout: single
 title:  "Running in Pig in Local Mode in Java"
 date:   2018-08-01 07:11:02 +0530
-categories: hadoop java pig
+categories:
+- Hadoop
+- Pig
+- Java
 share: true
 ---
 
