@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Home"
-    url: https://sureshsarda.in
+    url: /
   - title: Archive
     url: /archive/
   - title: Books
