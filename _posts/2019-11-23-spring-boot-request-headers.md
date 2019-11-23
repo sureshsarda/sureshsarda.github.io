@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Spring - Use request headers
+title: Spring - Read Http Request headers
 date: 2019-11-23
 permalink: /java/spring/request-headers-in-spring-rest
 categories:
