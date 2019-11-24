@@ -2,6 +2,7 @@
 layout: single
 title: Creating CSV from Strings in Java
 date: 2019-11-17
+permalink: /java/creating-csv-from-strings
 categories:
 - Java
 tags:

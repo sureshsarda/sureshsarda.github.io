@@ -4,6 +4,7 @@ title: Java 8 Streams 101
 date: 2019-11-18
 categories:
 - Java
+permalink: /java/introduction-to-java-streams-101
 ---
 
 Java 8 introduced a new Stream API. In this article we will take a look at how to create and use streams.
