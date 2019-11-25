@@ -70,5 +70,5 @@ Returns:
 - [How to parse RequestHeaders in Spring]({% post_url 2019-11-23-spring-boot-request-headers %})
 - [How to parse ReqeustParameters in Spring]
 - [How to parse ReqeustBody in Spring]
-- [How to pretty print a Map using Java Streams]
+- [How to pretty print a Map using Java Streams]({% post_url 2019-12-01-pretty-print-map-using-streams %})
 - [Introduction to Java Streams]({% post_url 2019-11-18-introduction-to-java-stream %})
