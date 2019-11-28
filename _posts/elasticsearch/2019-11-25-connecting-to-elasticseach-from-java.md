@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Connect to Elasticsearch using Java High Level Client
-date: 2019-11-28
+date: 2019-11-25
 categories:
 - Elasticsearch
 permalink: /elasticsearch/connect-from-java-using-high-level-client
