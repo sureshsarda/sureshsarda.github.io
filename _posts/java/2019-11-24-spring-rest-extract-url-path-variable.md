@@ -65,5 +65,5 @@ public ResponseEntity<String> greeting(@PathVariable Map<String, String> pathPar
 
 
 ## Related Articles
-- [How to extract Request Headers]({% post_url /2019-11-23-spring-boot-request-headers %})
-- [Introduction to Java Streams]({% post_url /2019-11-18-introduction-to-java-stream %})
+- [How to extract Request Headers]({% post_url java/2019-11-23-spring-boot-request-headers %})
+- [Introduction to Java Streams]({% post_url java/2019-11-18-introduction-to-java-stream %})

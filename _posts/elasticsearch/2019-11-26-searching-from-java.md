@@ -10,7 +10,7 @@ tags:
 - Java
 ---
 
-In [the last post]({% post_url /2019-11-25-connection-to-elasticsearch-from-java %}) we saw how to connect to Elasticsearch using the High Level Client.
+In [the last post]({% post_url elasticsearch/2019-11-25-connecting-to-elasticsearch-from-java %}) we saw how to connect to Elasticsearch using the High Level Client.
 
 ## `match_all` Query using Java client
 The client provides many high level methods to build an Elasticsearch query. To keep it simple, let's see how to construct a simple `match_all` query:
