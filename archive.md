@@ -1,7 +1,6 @@
 ---
 layout: categories
 title: Archive
-permalink: /archive/
+permalink: /archive
 ---
-
-{% include paginator.html %}
+<!-- {% include paginator.html %} -->

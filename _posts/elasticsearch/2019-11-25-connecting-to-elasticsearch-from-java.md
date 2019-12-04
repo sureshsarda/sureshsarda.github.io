@@ -16,8 +16,8 @@ Elasticsearch provides a client to conveniently connect with Elasticsearch. Crea
 ```xml
 <dependency>
     <groupId>org.elasticsearch.client</groupId>
-    <artifactId>transport</artifactId>
-    <version>6.4.2</version>
+    <artifactId>elasticsearch-rest-high-level-client</artifactId>
+    <version>7.3.1</version>
 </dependency>
 ```
 

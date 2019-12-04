@@ -46,6 +46,11 @@
   align-items: center;
   font-weight: bold;
   z-index: 20;
+  text-transform: uppercase;
+}
+
+.site-subtitle {
+    font-size: 0.7em;
 }
 
 .masthead__menu {
@@ -75,9 +80,11 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 0.7em;;
 
   &--lg {
-    padding-right: 2em;
+    padding-right: 1em;
     font-weight: 700;
   }
 }
