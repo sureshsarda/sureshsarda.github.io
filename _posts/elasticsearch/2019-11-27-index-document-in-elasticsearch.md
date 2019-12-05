@@ -8,6 +8,13 @@ permalink: /elasticsearch/insert-index-document-elasticsearch-java
 tags:
 - Elasticsearch
 - Java
+header:
+  teaser: /assets/images//overlay/marcel-strauss-unsplash.jpg
+  overlay_image: /assets/images//overlay/marcel-strauss-unsplash.jpg
+  caption: "Elasticsearch Index Documents"
+  show_overlay_excerpt: false
+  cta_label: Read
+  cta_url: "#main"
 ---
 
 In this article we will see how to insert a document in Elasticsearch using the High Level Client provided by Elasticsearch.
