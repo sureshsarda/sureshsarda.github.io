@@ -8,6 +8,7 @@ categories:
 tags:
 - Spring
 excerpt: Learn how to extract path variables from URL. This is useful when building RESTful services to extract the resource name or resource id from the URL
+teaser: https://www.websoptimization.com/blog/wp-content/uploads/2019/03/top-10-reasons-to-use-spring-framework-1.jpg
 ---
 REST APIs have resource names and resource id present in the URL path unlike a traditional web API. This article focuses on how to extract that information and use it.
 
@@ -65,5 +66,5 @@ public ResponseEntity<String> greeting(@PathVariable Map<String, String> pathPar
 
 
 ## Related Articles
-- [How to extract Request Headers]({% post_url /2019-11-23-spring-boot-request-headers %})
-- [Introduction to Java Streams]({% post_url /2019-11-18-introduction-to-java-stream %})
+- [How to extract Request Headers]({% post_url java/2019-11-23-spring-boot-request-headers %})
+- [Introduction to Java Streams]({% post_url java/2019-11-18-introduction-to-java-stream %})

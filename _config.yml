@@ -32,7 +32,6 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-sitemap
-  - jekyll-archive
 
 repository: sureshsarda/sureshsarda.github.io
 
@@ -47,7 +46,7 @@ repository: sureshsarda/sureshsarda.github.io
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-minimal_mistakes_skin    : contrast # "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : air # "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 social:
   type: person
   name: Suresh Sarda
@@ -67,12 +66,12 @@ analytics:
 
 author:
   name             : "Suresh Sarda"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/dp.jpg"
   bio              : "print(suresh.bio)"
   location         : "Bangalore, India"
   email            : "sureshssarda@gmail.com"
   uri              :
-  home             : "https://sureshsarda.in"
+  home             : 
   bitbucket        :
   codepen          :
   dribbble         :
@@ -98,11 +97,11 @@ author:
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
 
-jekyll-archives:
-  enabled: ['tag', 'category']
-  layouts:
-    tag: tags
-    category: categories
-  permalinks:
-    tag: '/tag/:name/'
-    category: '/category/:name/'
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      toc: true
+      toc_label: Outline
+      share: true
