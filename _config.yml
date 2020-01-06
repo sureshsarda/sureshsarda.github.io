@@ -105,3 +105,8 @@ defaults:
       toc: true
       toc_label: Outline
       share: true
+
+collections_dir: all
+collections:
+    elasticsearch:    
+        output: true
