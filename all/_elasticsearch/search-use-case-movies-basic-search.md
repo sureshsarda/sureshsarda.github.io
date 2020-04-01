@@ -8,6 +8,7 @@ permalink: /elasticsearch/case-study-movies-imdb-part-1-basic-search
 tags:
 - Elasticsearch
 - CaseStudies
+publish: true
 ---
 
 Searching is an important component of an application. The search bar that take the least amount of space on your site or app attracts more users than you think. But sadly, it gets less attention from the developer and it turns down more user than you think.
