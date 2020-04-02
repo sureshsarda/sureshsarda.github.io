@@ -7,6 +7,7 @@ description: Solution to Leetcode's Happy Number problem. Write an algorithm to 
 categories:
 - Problem Solving
 publish: true
+permalink: /problem-solving/leetcode/solution-happy-number
 ---
 
 As part of 30 days challenge during the Corono pandemic, Leetcode published this problem on the second day:
