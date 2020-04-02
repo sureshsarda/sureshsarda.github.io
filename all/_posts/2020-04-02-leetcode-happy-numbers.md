@@ -1,85 +1,131 @@
 ---
 layout: single
-title: "Why you should not use null as a method parameter"
-date: 2020-01-06
+title: "Solution to Leetcode - Happy Number"
+date: 2020-04-02
 share: true
-description: Why passing null as a method parameter breaks the abstraction paradigm and how you should avoid it.
+description: Solution to Leetcode's Happy Number problem. Write an algorithm to determine if a number is "happy".
 categories:
-- Design
+- Problem Solving
+publish: true
 ---
 
-Object Oriented concept was first introduced with [Lisp][lisp] in the late 1950s. Lisp has atoms and attributes, where the atoms represented an real world object. OOP has evolved quite a bit after that. [SOLID][solid] design principle were introduced that helped us craft a better software. I will not go in details of [how these principles help us, there is already lot of material out there][solid_benefits]. Instead I'll focus on some mistakes we do while implementing these patterns. One of them is passing `null` as a method parameter especially when the called method doesn't use that parameter or has some default behavior.
+As part of 30 days challenge during the Corono pandemic, Leetcode published this problem on the second day:
+> A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.
 
-## What are we talking about?
-Let's take a simple example to elaborate this:
+## Explanation
+Happy Number = repeated sum of squares of digits will end in 1
+Non Happy Number = repeated sum of squares will lead in an infinite loop.
+
+## Thought Process for Solution
+The main task is to figure out when to stop out of the infinite loop and conclude that a number is not happy. Once you can figure this out, the code is not very tricky.
+
+Let's look at a sequence of a unhappy number, 42:
+```
+    input   = 42
+=> 16 + 4   = 20
+=> 4 + 0    = 4
+=> 16       = 16
+=> 1 + 36   = 37
+=> 9 + 49   = 56
+=> 25 + 36  = 61
+=> 36 + 1   = 37
+```
+It's evident from 37 that it will start to loop again from the 37 we have already seen. This is important. We can now stop iterating because any number of time we try 37, it's going to give same sequence `37 -> 56 -> 61 -> 37 -> 56 -> ...`.
+
+From here, the solution is simple, keep a track of already seen numbers and when ever a new number is found, add it to this set. We are good till the numbers are unique, but if we find a number we have already seen, that means we have detected a loop.
+
+### Pseudo Code
+```
+seen = {}
+while number not in already seen and number is not 1:
+    find square of digits of number
+    add it to seen 
+```
+
+## Code
+
 ```java
-public interface IdentityProvider {
-    public User login(String username, String password, String type);
+public class HappyNumber {
 
-    // other methods
+    static boolean isHappy(int n) {
+        if (n <= 0) {
+            return false;
+        }
+        Set<Integer> alreadySeen = new TreeSet<>();
+
+        int current = n;
+        while (!alreadySeen.contains(current) && current != 1) {
+            alreadySeen.add(current);
+            current = squareOfDigits(current);
+
+        }
+
+        return current == 1;
+    }
+
+    static int squareOfDigits(int number) {
+        int[] digits = intToDigits(number);
+        return IntStream.of(digits).reduce(0, (a, b) -> a + b * b);
+    }
+
+    static int[] intToDigits(int number) {
+        return String.valueOf(number).chars().map(it -> it - '0').toArray();
+    }
+
 }
 ```
-The anti-pattern which I'm talking about uses `null` as a flag to toggle behavior. For example, take the following usages:
+
+## Some test cases to validate
 ```java
-// 1. A valid type is passsed
-idp.login('username', 'password', AccountType.ADMIN);
+public class HappyNumberTest extends TestCase {
 
-// 2. Using null to take default value
-idp.login('username', 'password', null);
+    public void testIntToDigits() {
+        assertArrayEquals(new int[]{0}, HappyNumber.intToDigits(0));
+        assertArrayEquals(new int[]{1}, HappyNumber.intToDigits(1));
+        assertArrayEquals(new int[]{2}, HappyNumber.intToDigits(2));
+
+        assertArrayEquals(new int[]{1, 0}, HappyNumber.intToDigits(10));
+        assertArrayEquals(new int[]{2, 2}, HappyNumber.intToDigits(22));
+        assertArrayEquals(new int[]{9, 9}, HappyNumber.intToDigits(99));
+
+        assertArrayEquals(new int[]{1, 0, 0}, HappyNumber.intToDigits(100));
+        assertArrayEquals(new int[]{1, 0, 1}, HappyNumber.intToDigits(101));
+        assertArrayEquals(new int[]{5, 0, 0}, HappyNumber.intToDigits(500));
+
+    }
+
+    public void testSquareOfDigits() {
+        assertEquals(0, HappyNumber.squareOfDigits(0));
+        assertEquals(1, HappyNumber.squareOfDigits(1));
+        assertEquals(9, HappyNumber.squareOfDigits(3));
+        assertEquals(25, HappyNumber.squareOfDigits(5));
+
+        assertEquals(29, HappyNumber.squareOfDigits(25));
+        assertEquals(37, HappyNumber.squareOfDigits(16));
+        assertEquals(145, HappyNumber.squareOfDigits(89));
+        assertEquals(42, HappyNumber.squareOfDigits(145));
+
+    }
+
+    public void testIsHappy() {
+        assertTrue(HappyNumber.isHappy(1));
+        assertTrue(HappyNumber.isHappy(10));
+        assertTrue(HappyNumber.isHappy(100));
+        assertTrue(HappyNumber.isHappy(13));
+        assertTrue(HappyNumber.isHappy(31));
+        assertTrue(HappyNumber.isHappy(19));
+
+        assertFalse(HappyNumber.isHappy(25));
+        assertFalse(HappyNumber.isHappy(145));
+        assertFalse(HappyNumber.isHappy(41));
+        assertFalse(HappyNumber.isHappy(42));
+        assertFalse(HappyNumber.isHappy(0));
+        assertFalse(HappyNumber.isHappy(99));
+        assertFalse(HappyNumber.isHappy(573));
+
+    }
+}
 ```
-The first call here is absolutely fine. But in the second call we are passing `null` so that the login is attempted against the standard/default account type.
 
-## What's wrong with this?
-This type of call violate a fundamental design principle - [abstraction][abstraction]. Let's take an example to understand how.
-
-### The Carpenter and the table
-```
-You: Hey! I need a table, can you make me one?
-Carpenter: Sure, I'll need some wood, screws and glue.
-You: Oh Okay! I have wood and screws but I didn't get glue.
-Carpenter: No problem, we can make one without glue. I'll just put more screws for the strength.
-You: Awesome! Here you go!
-(and you hand over the *ingredients* to the carpenter and get your table)
-```
-In programming, one might call the `makeTable` method like this:
-```java
-carpenter.makeTable(wood, screw, glue);
-```
-Note that `glue` is optional, so someone can call the method like this as well:
-```java
-carpenter.makeTable(wood, screw, null);
-```
-
-### So what's wrong?
-Well, you know the implementation details, *that's wrong*. The `makeTable` method is not abstract any more because *you know* that you can pass `null` and it will work fine. *You know* that internally it can work without *glue*.
-
-When methods are declared with parameters, it marks a contract that, *that* method needs those argument to work correctly. If you were just a user of a third party library, you would not know that glue is required or not. You would have 2 options - read to docs if it says whether it can take `null` or figure it out by trial and error; in both the cases you are trying to know whether it works without glue and in both the cases you will have some idea about the internal implementation.
-
-## How to fix it?
-One simple way to fix it using method overloading:
-```java
-Table makeTable(Wood wood, Screw screws, Glue glue);
-Table makeTable(Wood wood, Screw screws);
-```
-
-The other one is having a separate method for without glue:
-```java
-Table makeTable(Wood wood, Screw screws, Glue glue);
-Table makeTableWithoutGlue(Wood wood, Screw screws);
-```
-
-There could be many more way to fix the design. But these are probably the simplest one. It makes the code clearer. It leaves less space for errors and assumptions.
-
-## Don't get me wrong!
-Don't get me wrong. Internally the second method might call the first method with a `null` argument. But that's *internally*. That's the implementation of the carpenter class and the guy implementing is aware of it. **The null paradigm should not go outside the class/library. Not to the programmer using it.**
-
-You will wonder that I'm not an API designer, neither anyone else apart from my team is using the code we have written. Why should I do this? Well, it has the same benefits as other design principles - [SOLID][solid], [KISS], etc - helps with writing maintainable and clean code. In one part of the code we might be a API designer while in some other part we might be user for that API. We have to interchangeably wear those 2 hats multiple times a day. In fact multiple times in an hour.
-
-
-
-
-[solid]: https://en.wikipedia.org/wiki/SOLID
-[lisp]: https://en.wikipedia.org/wiki/Lisp_(programming_language)
-[solid_benefits]: https://stackoverflow.com/questions/20073023/understanding-the-practical-benefits-of-using-the-single-responsibility-principl
-[abstraction]: https://en.wikipedia.org/wiki/Abstraction_(computer_science)
-[KISS]: https://en.wikipedia.org/wiki/KISS_principle
+## Conclusion
+It's an interesting problem with a very simple solution. Once you get the bright idea behind how to stop the loop, the solution becomes evident.
