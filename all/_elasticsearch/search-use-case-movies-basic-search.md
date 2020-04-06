@@ -155,9 +155,11 @@ The same query but with boosted title gives a more accurate search result:
 ```
 Notice, how `The Lord of the Rings` is pushed down because hobbit is mentioned in plot summary.
 
-That's it! The tiny looking search bar is more important that you think. Let's keep it useful. We saw a very basic use case of Elasticsearch and later we will improve on this. Stay tuned.
+That's it! The tiny looking search bar is more important that you think. Let's keep it useful. We saw a very basic use case of Elasticsearch and later we will improve on this. In the next article, we will see [how to build an auto-complete function in the search bar][next-part].
 
 ## Further Reading
 - [`multi-query` on Elastic.co](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html)
+- [Part 2: Building an autocompletion with completion suggester][next-part]
 
 [Data]: https://gist.github.com/sureshsarda/fa4b61fb4919b628f3de088cba504890
+[next-part]: /elasticsearch/case-study-movies-imdb-autocompletion-using-completion-suggester
