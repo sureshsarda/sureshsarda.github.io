@@ -6,8 +6,6 @@ permalink: /books/absolute-minimum-about-programming
 
 This book is inspired from [an article by Joel Spolsky on Encoding][1]. This article got me wondering what are few more things every program must know or should lear when they are programming. So I started compiling a list of topics which I believe as a programmer you should be aware of. Few of these are taught in graduate courses but they were well hidden behind other topics which perhaps are not that relevant. Few of these are never taught in grad school but we are somehow supposed to know them or are only taught by a mentor at work.
 
-I hope you will find this information helpful. I have tried to keep this book fun and since it is an ebook, I'm trying to keep it interactive.
-
 ### Chapters
 1. Design Principles
     1. SOLID
@@ -55,6 +53,12 @@ I hope you will find this information helpful. I have tried to keep this book fu
     3. Aggregations
     4. Performance
 12. Design Patterns (Why?)
+13. Deploying your application
+    1. What options do you have
+    2. APIs
+    3. Web-apps
+        1. CDN
+    4. Containers
 
 
 [1]: https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/

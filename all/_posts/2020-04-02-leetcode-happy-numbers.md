@@ -8,6 +8,13 @@ categories:
 - Problem Solving
 publish: true
 permalink: /problem-solving/leetcode/solution-happy-number
+header:
+  teaser: /assets/images/overlay/caleb-jones-unsplash.jpg
+  overlay_image: /assets/images//overlay/marcel-strauss-unsplash.jpg
+  caption: "Hackerrank - find-point solution"
+  show_overlay_excerpt: false
+  cta_label: Read
+  cta_url: "#"
 ---
 
 As part of 30 days challenge during the Corono pandemic, Leetcode published this problem on the second day:

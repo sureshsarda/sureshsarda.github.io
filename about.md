@@ -10,3 +10,7 @@ My love for learning has made me write this blog. I plan to share new and old th
 You can reach out to me at sureshssarda.at.gmail.dot.com.
 
 
+- [Books I am reading/have read](/reading)
+- Tools I use
+
+

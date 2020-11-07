@@ -6,6 +6,13 @@ categories:
 - Competitive programming
 tags:
 - hackerrank
+header:
+  teaser: /assets/images/overlay/caleb-jones-unsplash.jpg
+  overlay_image: /assets/images//overlay/marcel-strauss-unsplash.jpg
+  caption: "Hackerrank - find-point solution"
+  show_overlay_excerpt: false
+  cta_label: Read
+  cta_url: "#"
 ---
 Solution to HackerRank [FindPoint][question]
 
