@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sureshsarda.in" # the base hostname & protocol for your site, e.g. http://example.com
 
-github_username:  sureshsarda
+github_username: sureshsarda
 
 # Build settings
 markdown: kramdown
@@ -46,7 +46,7 @@ repository: sureshsarda/sureshsarda.github.io
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-minimal_mistakes_skin    : air # "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: air # "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 social:
   type: person
   name: Suresh Sarda
@@ -65,36 +65,36 @@ analytics:
     tracking_id: UA-104753298-1
 
 author:
-  name             : "Suresh Sarda"
-  avatar           : "/assets/images/dp.jpg"
-  bio              : "print(suresh.bio)"
-  location         : "Bangalore, India"
-  email            : "sureshssarda@gmail.com"
-  uri              :
-  home             : 
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         : suresh.sarda
-  foursquare       :
-  github           : sureshsarda
-  gitlab           :
-  google_plus      :
-  keybase          :
-  instagram        :
-  lastfm           :
-  linkedin         : sureshsarda
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : 2149367/sureshs
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
-  tumblr           :
-  twitter          : sureshssarda
-  vine             :
-  weibo            :
-  xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  name: "Suresh Sarda"
+  avatar: "/assets/images/dp.jpg"
+  bio: "print(suresh.bio)"
+  location: "Bangalore, India"
+  email: "sureshssarda@gmail.com"
+  uri:
+  home:
+  bitbucket:
+  codepen:
+  dribbble:
+  flickr:
+  facebook: suresh.sarda
+  foursquare:
+  github: sureshsarda
+  gitlab:
+  google_plus:
+  keybase:
+  instagram:
+  lastfm:
+  linkedin: sureshsarda
+  pinterest:
+  soundcloud:
+  stackoverflow: 2149367/sureshs
+  steam: # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
+  tumblr:
+  twitter: sureshssarda
+  vine:
+  weibo:
+  xing:
+  youtube: # "https://youtube.com/c/MichaelRoseDesign"
 
 
 defaults:
@@ -108,5 +108,9 @@ defaults:
 
 collections_dir: all
 collections:
-    elasticsearch:    
-        output: true
+  elasticsearch:
+    output: true
+  patterns:
+    output: true
+  databases:
+    output: true

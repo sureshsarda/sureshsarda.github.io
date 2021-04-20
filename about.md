@@ -14,3 +14,6 @@ You can reach out to me at sureshssarda.at.gmail.dot.com.
 - Tools I use
 
 
+Please drop an email if you wish to subscribe. My email address is on the left side.
+
+
