@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Programming Notes</title>
+    <link>https://sureshsarda.in/categories/Design/</link>
+    <description>Recent content in Design on Programming Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/categories/Design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why you should not use null as a method parameter</title>
+      <link>https://sureshsarda.in/posts/2020-01-06-design-oop-avoid-using-nulls-method-argument/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/posts/2020-01-06-design-oop-avoid-using-nulls-method-argument/</guid>
+      <description>Object Oriented concept was first introduced with Lisp in the late 1950s. Lisp has atoms and attributes, where the atoms represented an real world object. OOP has evolved quite a bit after that. SOLID design principle were introduced that helped us craft a better software. I will not go in details of how these principles help us, there is already lot of material out there. Instead I&amp;rsquo;ll focus on some mistakes we do while implementing these patterns.</description>
+    </item>
+    
+  </channel>
+</rss>

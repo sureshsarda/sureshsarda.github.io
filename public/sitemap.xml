@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/</loc>
+    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/</loc>
+    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Problem-Solving/</loc>
+    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/</loc>
+    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/problem-solving/leetcode/solution-happy-number/</loc>
+    <lastmod>2020-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/java/list-to-map-java-8-streams/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/Java/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Java/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/java/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/Clean-Code/</loc>
+    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Design/</loc>
+    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/SoftwareDevelopment/</loc>
+    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2020-01-06-design-oop-avoid-using-nulls-method-argument/</loc>
+    <lastmod>2020-01-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/java/convert-string-title-case-java-streams/</loc>
+    <lastmod>2019-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/Streams/</loc>
+    <lastmod>2019-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/String/</loc>
+    <lastmod>2019-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/Elasticsearch/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Elasticsearch/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/elasticsearch/insert-index-document-elasticsearch-java/</loc>
+    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/elasticsearch/search-match-all-from-java-using-high-level-client/</loc>
+    <lastmod>2019-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/elasticsearch/connect-from-java-using-high-level-client/</loc>
+    <lastmod>2019-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/Spring/</loc>
+    <lastmod>2019-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/java/spring/spring-mvc-boot-rest-request-body-parse-http-request-body/</loc>
+    <lastmod>2019-11-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/java/spring/extract-use-parse-url-path-data-variable/</loc>
+    <lastmod>2019-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/java/spring/request-headers-in-spring-rest/</loc>
+    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/java/introduction-to-java-streams-101/</loc>
+    <lastmod>2019-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/java/creating-csv-from-strings/</loc>
+    <lastmod>2019-11-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/containers/</loc>
+    <lastmod>2019-09-28T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2019-09-28-creating-your-first-docker-image/</loc>
+    <lastmod>2019-09-28T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/DevOps/</loc>
+    <lastmod>2019-09-28T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/devops/</loc>
+    <lastmod>2019-09-28T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Docker/</loc>
+    <lastmod>2019-09-28T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/docker/</loc>
+    <lastmod>2019-09-28T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/python/</loc>
+    <lastmod>2019-09-28T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Data-Science/</loc>
+    <lastmod>2018-11-21T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Pandas/</loc>
+    <lastmod>2018-11-21T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/pandas/</loc>
+    <lastmod>2018-11-21T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2018-11-21-pandas-splitting-exploding-string-column-into-multiple-rows/</loc>
+    <lastmod>2018-11-21T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Python/</loc>
+    <lastmod>2018-11-21T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2018-08-04-the-turing-test/</loc>
+    <lastmod>2018-08-04T04:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Hadoop/</loc>
+    <lastmod>2018-08-01T07:11:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Pig/</loc>
+    <lastmod>2018-08-01T07:11:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2018-08-01-running-hadoop/</loc>
+    <lastmod>2018-08-01T07:11:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Apache-Spark/</loc>
+    <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2018-01-30-running-spark-locally/</loc>
+    <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2017-08-03-boilerplate-for-logging-in-python/</loc>
+    <lastmod>2017-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/logging/</loc>
+    <lastmod>2017-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/kafka/</loc>
+    <lastmod>2017-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/storm/</loc>
+    <lastmod>2017-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Vagrant/</loc>
+    <lastmod>2017-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2017-07-02-vagrant-setting-up-and-tearing-down-development-environments-on-the-fly/</loc>
+    <lastmod>2017-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/bulk-api/</loc>
+    <lastmod>2017-04-14T10:14:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/elasticsearch/2017-04-14-elasticsearch-bulk-api-example-and-performance-comparison/</loc>
+    <lastmod>2017-04-14T10:14:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/performance/</loc>
+    <lastmod>2017-04-14T10:14:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2016-10-30-bash-setting-variables-from-a-file/</loc>
+    <lastmod>2016-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Linux/</loc>
+    <lastmod>2016-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/series/Design-Patterns/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Design-Patterns/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/design-patterns/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/encapsulation/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2016-08-11-memento/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/oops/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/series/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-07-24-weekly-unix-7-wc/</loc>
+    <lastmod>2016-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/series/Power-Unix-User/</loc>
+    <lastmod>2016-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-07-19-weekly-unix-6-job-control-2/</loc>
+    <lastmod>2016-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-07-18-weekly-unix-6-job-control/</loc>
+    <lastmod>2016-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-07-17-cd/</loc>
+    <lastmod>2016-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-07-15-ls-list-directory-contents/</loc>
+    <lastmod>2016-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-07-13-cdpath/</loc>
+    <lastmod>2016-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-07-03-unix-command-tee/</loc>
+    <lastmod>2016-07-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/du/</loc>
+    <lastmod>2016-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-06-26-weekly-unix-2-du/</loc>
+    <lastmod>2016-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Competitive-programming/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/categories/Emacs/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/hackerrank/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2016-06-10-hackerrank-maximum-draw-solution/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/linux/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/power-user/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-06-10-practical-emacs-tip-1-meet-the-c-x-z-command/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/probability/</loc>
+    <lastmod>2016-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/tr/</loc>
+    <lastmod>2016-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/linux/2016-06-08-weekly-unix-tr/</loc>
+    <lastmod>2016-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/geometry/</loc>
+    <lastmod>2016-06-05T04:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/2016-06-05-hackerrank-find-point-solution/</loc>
+    <lastmod>2016-06-05T04:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/posts/database/architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/database/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/series/Databases/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/draft/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/how-it-works/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/nosql/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sureshsarda.in/tags/sql/</loc>
+  </url>
+  
+</urlset>

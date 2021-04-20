@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Power Unix User on Programming Notes</title>
+    <link>https://sureshsarda.in/series/Power-Unix-User/</link>
+    <description>Recent content in Power Unix User on Programming Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/series/Power-Unix-User/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Weekly Unix #6 - job control (2)</title>
+      <link>https://sureshsarda.in/posts/linux/2016-07-19-weekly-unix-6-job-control-2/</link>
+      <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/posts/linux/2016-07-19-weekly-unix-6-job-control-2/</guid>
+      <description>Finer Job Selection In the previousarticle we saw basics of job control but we skipped alternatives to select jobs. Consider the following job listing throughout this article.
+$jobs [1] Running find . -name *.xml &amp;gt; /dev/null &amp;amp; [2]- Stopped cat /dev/zero &amp;gt; /dev/null [3]+ Stopped find . -name *.cc &amp;gt; /dev/null 1. Using job number You can use the job number (the number in square bracket) to work on it. Jobs can be referred by job number using %N where N is the job number.</description>
+    </item>
+    
+    <item>
+      <title>Weekly Unix #6 - job control</title>
+      <link>https://sureshsarda.in/posts/linux/2016-07-18-weekly-unix-6-job-control/</link>
+      <pubDate>Mon, 18 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/posts/linux/2016-07-18-weekly-unix-6-job-control/</guid>
+      <description>Some commands take long time to finish execution. For example if you are searching for a file in a directory or extracting/compressing a directory or maybe building a project which take quite some time to complete. The command when executed takes a while to complete and thereby occupy the terminal preventing you from doing other stuff.
+Linux (since a multitasking operating system) offers neat job control tools to deal with this.</description>
+    </item>
+    
+    <item>
+      <title>CDPATH</title>
+      <link>https://sureshsarda.in/posts/linux/2016-07-13-cdpath/</link>
+      <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/posts/linux/2016-07-13-cdpath/</guid>
+      <description>CDPATH is an environment variable under UNIX, which is referred every time cd command is invoked.
+The working of cd Let’s say you invoke the following command:
+cd blog The directory blog is looked in current working directory. If found, the current working directory is changed to that. If it is not found there, it is looked in every path in the CDPATH variable. Again if found, it is changed. If not then a directory not found message is displayed and cd returns 1 (Error code).</description>
+    </item>
+    
+  </channel>
+</rss>

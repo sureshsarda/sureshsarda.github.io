@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on Programming Notes</title>
+    <link>https://sureshsarda.in/tags/Spring/</link>
+    <description>Recent content in Spring on Programming Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/tags/Spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring MVC - @RequestBody annotation to parse Http Request Body</title>
+      <link>https://sureshsarda.in/java/spring/spring-mvc-boot-rest-request-body-parse-http-request-body/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/java/spring/spring-mvc-boot-rest-request-body-parse-http-request-body/</guid>
+      <description>In this article we will take a look at how to use the @RequestBody annotation.
+The @RequestBody is used to automatically parse and serialize the Http Request Body of the request and create Java objects out of it. The Java objects can be a POJO (Plain Old Java Objects) or a Map depending on the requirement.
+Let&amp;rsquo;s take an example on how to use @RequestBody annotation to parse body passed as application/json:</description>
+    </item>
+    
+    <item>
+      <title>Spring REST - Extract URL Path Variables</title>
+      <link>https://sureshsarda.in/java/spring/extract-use-parse-url-path-data-variable/</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/java/spring/extract-use-parse-url-path-data-variable/</guid>
+      <description>REST APIs have resource names and resource id present in the URL path unlike a traditional web API. This article focuses on how to extract that information and use it.
+Take a typical REST URL:
+GET https://api.bookstore.com/authors/twain-mark/books/roughing-it Here, the name of the author and the name of the book are inside the book and not part of the request body or query parameters. This is a standard practice while developing REST APIs.</description>
+    </item>
+    
+    <item>
+      <title>Spring - Read Http Request headers</title>
+      <link>https://sureshsarda.in/java/spring/request-headers-in-spring-rest/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/java/spring/request-headers-in-spring-rest/</guid>
+      <description>In the previous article we saw how to use request parameters and request body of a request. In this article we will see how to use the request headers.
+The request headers can be accessed using the @RequestHeader attribute.
+@RequestMapping(&amp;#34;/greeting&amp;#34;) public ResponseEntity&amp;lt;String&amp;gt; greeting(@RequestHeader(&amp;#34;Accept-Language&amp;#34;) String language, @RequestHeader(&amp;#34;Content-Type&amp;#34;) String contentType) { // do something with the headers  return new ResponseEntity&amp;lt;String&amp;gt;(String.format(&amp;#34;Language: %s, Content Type: %s&amp;#34;, language, contentType), HttpStatus.OK); } Note that the name of the header field is case insensitive.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design patterns on Programming Notes</title>
+    <link>https://sureshsarda.in/tags/design-patterns/</link>
+    <description>Recent content in design patterns on Programming Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Aug 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memento</title>
+      <link>https://sureshsarda.in/posts/2016-08-11-memento/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/posts/2016-08-11-memento/</guid>
+      <description>Ever used an image editing software? We opened an image but it’s too sharp and the light is not good. We make some changes and still not satisfied, we make few more changes only to realize that the previous changes were better than these new! We want to restore to previous changes. If we were using a drawing sheet and paint brush, this task would be very difficult; perhaps impossible. But with softwares, that’s not a problem.</description>
+    </item>
+    
+  </channel>
+</rss>

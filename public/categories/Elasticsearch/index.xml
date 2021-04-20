@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elasticsearch on Programming Notes</title>
+    <link>https://sureshsarda.in/categories/Elasticsearch/</link>
+    <description>Recent content in Elasticsearch on Programming Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/categories/Elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Insert, Index document in Elasticsearch using Java</title>
+      <link>https://sureshsarda.in/elasticsearch/insert-index-document-elasticsearch-java/</link>
+      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/elasticsearch/insert-index-document-elasticsearch-java/</guid>
+      <description>In this article we will see how to insert a document in Elasticsearch using the High Level Client provided by Elasticsearch.
+Prepare the Index Request Elasticsearch client accepts IndexRequest to insert documents. Two required details for this request are:
+ Name of the index Document source  Everything else can take default value. We will stick to the easy path to create our very first document and explore other optional arguments later.</description>
+    </item>
+    
+    <item>
+      <title>Search Elasticsearch from Java using High Level Client</title>
+      <link>https://sureshsarda.in/elasticsearch/search-match-all-from-java-using-high-level-client/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/elasticsearch/search-match-all-from-java-using-high-level-client/</guid>
+      <description>In [the last post]({% post_url elasticsearch/2019-11-25-connecting-to-elasticsearch-from-java %}) we saw how to connect to Elasticsearch using the High Level Client.
+match_all Query using Java client The client provides many high level methods to build an Elasticsearch query. To keep it simple, let&amp;rsquo;s see how to construct a simple match_all query:
+SearchRequest request = new SearchRequest(&amp;#34;online&amp;#34;); // -- 1 SearchSourceBuilder builder = new SearchSourceBuilder(); // -- 2 builder.query(QueryBuilders.matchAllQuery()); request.source(builder); // -- 3  Parameter to the constructor is the index you want to query, this can be left empty and all the indices will be queried SearchSourceBuilder is used to create a search request.</description>
+    </item>
+    
+    <item>
+      <title>Connect to Elasticsearch using Java High Level Client</title>
+      <link>https://sureshsarda.in/elasticsearch/connect-from-java-using-high-level-client/</link>
+      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/elasticsearch/connect-from-java-using-high-level-client/</guid>
+      <description>Elasticsearch provides a client to conveniently connect with Elasticsearch. Create a Maven project and add the following maven dependency:
+Add Maven Dependency &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.elasticsearch.client&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;elasticsearch-rest-high-level-client&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;7.3.1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Set Up connection with Elasticsearch Elasticsearch maintains 2 clients - Low Level Client and High Level Client. It is recommended to use the High Level Client to query and index documents in Elasticsearch. You can create connection to Elasticsearch like this:
+RestHighLevelClient client = new RestHighLevelClient( RestClient.</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch Bulk API Example and Performance Comparison</title>
+      <link>https://sureshsarda.in/posts/elasticsearch/2017-04-14-elasticsearch-bulk-api-example-and-performance-comparison/</link>
+      <pubDate>Fri, 14 Apr 2017 10:14:10 +0000</pubDate>
+      
+      <guid>https://sureshsarda.in/posts/elasticsearch/2017-04-14-elasticsearch-bulk-api-example-and-performance-comparison/</guid>
+      <description>Elasticsearch provides bulk operations to perform multiple operations in a single call. Bulk APIs can be accessed by hitting the _bulk endpoint. This post demonstrates the use of bulk API with Python. It assumes that you are familiar (not expert) with REST Bulk API of Elasticsearch. To keep it simple we will just consider the insertion case.
+Problem Statement Before we jump into code, let’s take a minute and think about the problem in hand.</description>
+    </item>
+    
+  </channel>
+</rss>
