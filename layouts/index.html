@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<h2>Latest Posts</h2>
+{{ range $index, $page := (.Paginate (where (where .Site.RegularPages "Type" "posts") ".Params.hidden" "!=" "true")).Pages }}
+    {{if ne $index 0 }}
+    {{ end }}
+    {{ .Render "li" }}
+{{ end }}
+
+<h2>Selected Articles</h2>
+
+{{ partial "pagination.html" .Paginator }} {{ partial "siteinfo.html" . }}
+{{ partial "footer.html" . }}

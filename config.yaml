@@ -1,0 +1,86 @@
+baseURL: https://sureshsarda.in
+disablePathToLower: true
+languageCode: en-us
+title: Programming Notes
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /
+    - identifier: about
+      name: About
+      url: /about
+  footer:
+    - identifier: curated
+      name: Curated
+      url: /curated
+      children:
+    - identifier: blogs
+      name: Blogs
+      url: /blogs
+      parent: curated
+    - identifier: books
+      name: Books
+      url: /books
+      parent: curated
+    - identifier: papers
+      name: Papers
+      url: papers
+      parent: curated
+
+    - identifier: links
+      name: Links
+      url: /links
+    - identifier: posts
+      name: Posts
+      url: /posts
+      parent: links
+    - identifier: tags
+      name: Tags
+      url: /tags
+      parent: links
+    - identifier: categories
+      name: Categories
+      url: /categories
+      parent: links
+    - identifier: series
+      name: Article Series
+      url: /series
+      parent: links
+
+    - identifier: social
+      name: Social
+      url: /social
+    - identifier: github
+      name: Github
+      parent: social
+    - identifier: linkedin
+      name: LinkedIn
+      parent: social
+    - identifier: stackoverflow
+      name: Stack Overflow
+      parent: social
+    - identifier: medium
+      name: Medium
+      parent: social
+    - identifier: twitter
+      name: Twitter
+      parent: social
+
+params:
+  - author: Suresh Sarda
+  - paginate: 5
+
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+
+markup:
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+
+
