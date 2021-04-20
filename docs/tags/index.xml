@@ -2,296 +2,296 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Programming Notes</title>
-    <link>https://sureshsarda.in/tags/</link>
+    <link>https://sureshsarda.github.io/tags/</link>
     <description>Recent content in Tags on Programming Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java</title>
-      <link>https://sureshsarda.in/tags/Java/</link>
+      <link>https://sureshsarda.github.io/tags/Java/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/Java/</guid>
+      <guid>https://sureshsarda.github.io/tags/Java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Clean Code</title>
-      <link>https://sureshsarda.in/tags/Clean-Code/</link>
+      <link>https://sureshsarda.github.io/tags/Clean-Code/</link>
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/Clean-Code/</guid>
+      <guid>https://sureshsarda.github.io/tags/Clean-Code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SoftwareDevelopment</title>
-      <link>https://sureshsarda.in/tags/SoftwareDevelopment/</link>
+      <link>https://sureshsarda.github.io/tags/SoftwareDevelopment/</link>
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/SoftwareDevelopment/</guid>
+      <guid>https://sureshsarda.github.io/tags/SoftwareDevelopment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Streams</title>
-      <link>https://sureshsarda.in/tags/Streams/</link>
+      <link>https://sureshsarda.github.io/tags/Streams/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/Streams/</guid>
+      <guid>https://sureshsarda.github.io/tags/Streams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>String</title>
-      <link>https://sureshsarda.in/tags/String/</link>
+      <link>https://sureshsarda.github.io/tags/String/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/String/</guid>
+      <guid>https://sureshsarda.github.io/tags/String/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elasticsearch</title>
-      <link>https://sureshsarda.in/tags/Elasticsearch/</link>
+      <link>https://sureshsarda.github.io/tags/Elasticsearch/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/Elasticsearch/</guid>
+      <guid>https://sureshsarda.github.io/tags/Elasticsearch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spring</title>
-      <link>https://sureshsarda.in/tags/Spring/</link>
+      <link>https://sureshsarda.github.io/tags/Spring/</link>
       <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/Spring/</guid>
+      <guid>https://sureshsarda.github.io/tags/Spring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>containers</title>
-      <link>https://sureshsarda.in/tags/containers/</link>
+      <link>https://sureshsarda.github.io/tags/containers/</link>
       <pubDate>Sat, 28 Sep 2019 10:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/containers/</guid>
+      <guid>https://sureshsarda.github.io/tags/containers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>devops</title>
-      <link>https://sureshsarda.in/tags/devops/</link>
+      <link>https://sureshsarda.github.io/tags/devops/</link>
       <pubDate>Sat, 28 Sep 2019 10:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/devops/</guid>
+      <guid>https://sureshsarda.github.io/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://sureshsarda.in/tags/docker/</link>
+      <link>https://sureshsarda.github.io/tags/docker/</link>
       <pubDate>Sat, 28 Sep 2019 10:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/docker/</guid>
+      <guid>https://sureshsarda.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://sureshsarda.in/tags/python/</link>
+      <link>https://sureshsarda.github.io/tags/python/</link>
       <pubDate>Sat, 28 Sep 2019 10:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/python/</guid>
+      <guid>https://sureshsarda.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pandas</title>
-      <link>https://sureshsarda.in/tags/pandas/</link>
+      <link>https://sureshsarda.github.io/tags/pandas/</link>
       <pubDate>Wed, 21 Nov 2018 10:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/pandas/</guid>
+      <guid>https://sureshsarda.github.io/tags/pandas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>logging</title>
-      <link>https://sureshsarda.in/tags/logging/</link>
+      <link>https://sureshsarda.github.io/tags/logging/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/logging/</guid>
+      <guid>https://sureshsarda.github.io/tags/logging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kafka</title>
-      <link>https://sureshsarda.in/tags/kafka/</link>
+      <link>https://sureshsarda.github.io/tags/kafka/</link>
       <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/kafka/</guid>
+      <guid>https://sureshsarda.github.io/tags/kafka/</guid>
       <description></description>
     </item>
     
     <item>
       <title>storm</title>
-      <link>https://sureshsarda.in/tags/storm/</link>
+      <link>https://sureshsarda.github.io/tags/storm/</link>
       <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/storm/</guid>
+      <guid>https://sureshsarda.github.io/tags/storm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bulk-api</title>
-      <link>https://sureshsarda.in/tags/bulk-api/</link>
+      <link>https://sureshsarda.github.io/tags/bulk-api/</link>
       <pubDate>Fri, 14 Apr 2017 10:14:10 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/bulk-api/</guid>
+      <guid>https://sureshsarda.github.io/tags/bulk-api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>performance</title>
-      <link>https://sureshsarda.in/tags/performance/</link>
+      <link>https://sureshsarda.github.io/tags/performance/</link>
       <pubDate>Fri, 14 Apr 2017 10:14:10 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/performance/</guid>
+      <guid>https://sureshsarda.github.io/tags/performance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>design patterns</title>
-      <link>https://sureshsarda.in/tags/design-patterns/</link>
+      <link>https://sureshsarda.github.io/tags/design-patterns/</link>
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/design-patterns/</guid>
+      <guid>https://sureshsarda.github.io/tags/design-patterns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>encapsulation</title>
-      <link>https://sureshsarda.in/tags/encapsulation/</link>
+      <link>https://sureshsarda.github.io/tags/encapsulation/</link>
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/encapsulation/</guid>
+      <guid>https://sureshsarda.github.io/tags/encapsulation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>oops</title>
-      <link>https://sureshsarda.in/tags/oops/</link>
+      <link>https://sureshsarda.github.io/tags/oops/</link>
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/oops/</guid>
+      <guid>https://sureshsarda.github.io/tags/oops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>du</title>
-      <link>https://sureshsarda.in/tags/du/</link>
+      <link>https://sureshsarda.github.io/tags/du/</link>
       <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/du/</guid>
+      <guid>https://sureshsarda.github.io/tags/du/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hackerrank</title>
-      <link>https://sureshsarda.in/tags/hackerrank/</link>
+      <link>https://sureshsarda.github.io/tags/hackerrank/</link>
       <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/hackerrank/</guid>
+      <guid>https://sureshsarda.github.io/tags/hackerrank/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://sureshsarda.in/tags/linux/</link>
+      <link>https://sureshsarda.github.io/tags/linux/</link>
       <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/linux/</guid>
+      <guid>https://sureshsarda.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>power user</title>
-      <link>https://sureshsarda.in/tags/power-user/</link>
+      <link>https://sureshsarda.github.io/tags/power-user/</link>
       <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/power-user/</guid>
+      <guid>https://sureshsarda.github.io/tags/power-user/</guid>
       <description></description>
     </item>
     
     <item>
       <title>probability</title>
-      <link>https://sureshsarda.in/tags/probability/</link>
+      <link>https://sureshsarda.github.io/tags/probability/</link>
       <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/probability/</guid>
+      <guid>https://sureshsarda.github.io/tags/probability/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tr</title>
-      <link>https://sureshsarda.in/tags/tr/</link>
+      <link>https://sureshsarda.github.io/tags/tr/</link>
       <pubDate>Wed, 08 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/tr/</guid>
+      <guid>https://sureshsarda.github.io/tags/tr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>geometry</title>
-      <link>https://sureshsarda.in/tags/geometry/</link>
+      <link>https://sureshsarda.github.io/tags/geometry/</link>
       <pubDate>Sun, 05 Jun 2016 04:47:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/geometry/</guid>
+      <guid>https://sureshsarda.github.io/tags/geometry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>architecture</title>
-      <link>https://sureshsarda.in/tags/architecture/</link>
+      <link>https://sureshsarda.github.io/tags/architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/architecture/</guid>
+      <guid>https://sureshsarda.github.io/tags/architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>database</title>
-      <link>https://sureshsarda.in/tags/database/</link>
+      <link>https://sureshsarda.github.io/tags/database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/database/</guid>
+      <guid>https://sureshsarda.github.io/tags/database/</guid>
       <description></description>
     </item>
     
     <item>
       <title>how it works</title>
-      <link>https://sureshsarda.in/tags/how-it-works/</link>
+      <link>https://sureshsarda.github.io/tags/how-it-works/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/how-it-works/</guid>
+      <guid>https://sureshsarda.github.io/tags/how-it-works/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nosql</title>
-      <link>https://sureshsarda.in/tags/nosql/</link>
+      <link>https://sureshsarda.github.io/tags/nosql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/nosql/</guid>
+      <guid>https://sureshsarda.github.io/tags/nosql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sql</title>
-      <link>https://sureshsarda.in/tags/sql/</link>
+      <link>https://sureshsarda.github.io/tags/sql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/tags/sql/</guid>
+      <guid>https://sureshsarda.github.io/tags/sql/</guid>
       <description></description>
     </item>
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emacs on Programming Notes</title>
-    <link>https://sureshsarda.in/categories/Emacs/</link>
+    <link>https://sureshsarda.github.io/categories/Emacs/</link>
     <description>Recent content in Emacs on Programming Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/categories/Emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.github.io/categories/Emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Emacs Tip #1: Meet the C-x z command</title>
-      <link>https://sureshsarda.in/posts/linux/2016-06-10-practical-emacs-tip-1-meet-the-c-x-z-command/</link>
+      <link>https://sureshsarda.github.io/posts/linux/2016-06-10-practical-emacs-tip-1-meet-the-c-x-z-command/</link>
       <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/posts/linux/2016-06-10-practical-emacs-tip-1-meet-the-c-x-z-command/</guid>
+      <guid>https://sureshsarda.github.io/posts/linux/2016-06-10-practical-emacs-tip-1-meet-the-c-x-z-command/</guid>
       <description>The Emacs manual simply states that &amp;ldquo;Repear the most recently executed command&amp;rdquo;.
 This command just repeats the last command with the last given set of arguments to that command (if any). No rocket science. Just simple Emacs!
 By the way, before we start there is one more thing - Once you press C-x z, you can repeatedly press only z for the command to repeat itself! No need to press C-x again and again.</description>

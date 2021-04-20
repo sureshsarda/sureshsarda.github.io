@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pig on Programming Notes</title>
-    <link>https://sureshsarda.in/categories/Pig/</link>
+    <link>https://sureshsarda.github.io/categories/Pig/</link>
     <description>Recent content in Pig on Programming Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Aug 2018 07:11:02 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/categories/Pig/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Aug 2018 07:11:02 +0000</lastBuildDate><atom:link href="https://sureshsarda.github.io/categories/Pig/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Running in Pig in Local Mode in Java</title>
-      <link>https://sureshsarda.in/posts/2018-08-01-running-hadoop/</link>
+      <link>https://sureshsarda.github.io/posts/2018-08-01-running-hadoop/</link>
       <pubDate>Wed, 01 Aug 2018 07:11:02 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/posts/2018-08-01-running-hadoop/</guid>
+      <guid>https://sureshsarda.github.io/posts/2018-08-01-running-hadoop/</guid>
       <description>Overview of steps  Create a new maven project Add Hadoop and Pig dependencies Write a small pig script to count words in a file Write a driver program that will run this pig script  1. Create a new maven project mvn archetype:generate -DgroupId=com.example -DartifactId=piglocal -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false You can now import the project in your IDE.
 2. Add Hadoop and Pig dependencies Pig needs the following dependencies:
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.apache.pig&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;pig&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.</description>

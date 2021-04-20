@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Programming Notes</title>
-    <link>https://sureshsarda.in/series/</link>
+    <link>https://sureshsarda.github.io/series/</link>
     <description>Recent content in Series on Programming Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Aug 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Aug 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Design Patterns</title>
-      <link>https://sureshsarda.in/series/Design-Patterns/</link>
+      <link>https://sureshsarda.github.io/series/Design-Patterns/</link>
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/series/Design-Patterns/</guid>
+      <guid>https://sureshsarda.github.io/series/Design-Patterns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Power Unix User</title>
-      <link>https://sureshsarda.in/series/Power-Unix-User/</link>
+      <link>https://sureshsarda.github.io/series/Power-Unix-User/</link>
       <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/series/Power-Unix-User/</guid>
+      <guid>https://sureshsarda.github.io/series/Power-Unix-User/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Databases</title>
-      <link>https://sureshsarda.in/series/Databases/</link>
+      <link>https://sureshsarda.github.io/series/Databases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/series/Databases/</guid>
+      <guid>https://sureshsarda.github.io/series/Databases/</guid>
       <description></description>
     </item>
     

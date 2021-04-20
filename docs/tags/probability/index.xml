@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>probability on Programming Notes</title>
-    <link>https://sureshsarda.in/tags/probability/</link>
+    <link>https://sureshsarda.github.io/tags/probability/</link>
     <description>Recent content in probability on Programming Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.github.io/tags/probability/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hackerrank - maximum-draw solution</title>
-      <link>https://sureshsarda.in/posts/2016-06-10-hackerrank-maximum-draw-solution/</link>
+      <link>https://sureshsarda.github.io/posts/2016-06-10-hackerrank-maximum-draw-solution/</link>
       <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/posts/2016-06-10-hackerrank-maximum-draw-solution/</guid>
+      <guid>https://sureshsarda.github.io/posts/2016-06-10-hackerrank-maximum-draw-solution/</guid>
       <description>Solution to HackerRank question: maximum draw
 Explanation This one is really simple. The question is:
  Jim is off to a party and is searching for a matching pair of socks. His drawer is filled with socks, each pair of a different color. In its worst case scenario, how many socks (x) should Jim remove from his drawer until he finds a matching pair?

@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Programming Notes</title>
-    <link>https://sureshsarda.in/tags/Java/</link>
+    <link>https://sureshsarda.github.io/tags/Java/</link>
     <description>Recent content in Java on Programming Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/tags/Java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.github.io/tags/Java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a map from List in Java 8</title>
-      <link>https://sureshsarda.in/java/list-to-map-java-8-streams/</link>
+      <link>https://sureshsarda.github.io/java/list-to-map-java-8-streams/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/java/list-to-map-java-8-streams/</guid>
+      <guid>https://sureshsarda.github.io/java/list-to-map-java-8-streams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Why you should not use null as a method parameter</title>
-      <link>https://sureshsarda.in/posts/2020-01-06-design-oop-avoid-using-nulls-method-argument/</link>
+      <link>https://sureshsarda.github.io/posts/2020-01-06-design-oop-avoid-using-nulls-method-argument/</link>
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/posts/2020-01-06-design-oop-avoid-using-nulls-method-argument/</guid>
+      <guid>https://sureshsarda.github.io/posts/2020-01-06-design-oop-avoid-using-nulls-method-argument/</guid>
       <description>Object Oriented concept was first introduced with Lisp in the late 1950s. Lisp has atoms and attributes, where the atoms represented an real world object. OOP has evolved quite a bit after that. SOLID design principle were introduced that helped us craft a better software. I will not go in details of how these principles help us, there is already lot of material out there. Instead I&amp;rsquo;ll focus on some mistakes we do while implementing these patterns.</description>
     </item>
     
     <item>
       <title>Insert, Index document in Elasticsearch using Java</title>
-      <link>https://sureshsarda.in/elasticsearch/insert-index-document-elasticsearch-java/</link>
+      <link>https://sureshsarda.github.io/elasticsearch/insert-index-document-elasticsearch-java/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/elasticsearch/insert-index-document-elasticsearch-java/</guid>
+      <guid>https://sureshsarda.github.io/elasticsearch/insert-index-document-elasticsearch-java/</guid>
       <description>In this article we will see how to insert a document in Elasticsearch using the High Level Client provided by Elasticsearch.
 Prepare the Index Request Elasticsearch client accepts IndexRequest to insert documents. Two required details for this request are:
  Name of the index Document source  Everything else can take default value. We will stick to the easy path to create our very first document and explore other optional arguments later.</description>
@@ -38,10 +38,10 @@ Prepare the Index Request Elasticsearch client accepts IndexRequest to insert do
     
     <item>
       <title>Search Elasticsearch from Java using High Level Client</title>
-      <link>https://sureshsarda.in/elasticsearch/search-match-all-from-java-using-high-level-client/</link>
+      <link>https://sureshsarda.github.io/elasticsearch/search-match-all-from-java-using-high-level-client/</link>
       <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/elasticsearch/search-match-all-from-java-using-high-level-client/</guid>
+      <guid>https://sureshsarda.github.io/elasticsearch/search-match-all-from-java-using-high-level-client/</guid>
       <description>In [the last post]({% post_url elasticsearch/2019-11-25-connecting-to-elasticsearch-from-java %}) we saw how to connect to Elasticsearch using the High Level Client.
 match_all Query using Java client The client provides many high level methods to build an Elasticsearch query. To keep it simple, let&amp;rsquo;s see how to construct a simple match_all query:
 SearchRequest request = new SearchRequest(&amp;#34;online&amp;#34;); // -- 1 SearchSourceBuilder builder = new SearchSourceBuilder(); // -- 2 builder.query(QueryBuilders.matchAllQuery()); request.source(builder); // -- 3  Parameter to the constructor is the index you want to query, this can be left empty and all the indices will be queried SearchSourceBuilder is used to create a search request.</description>
@@ -49,10 +49,10 @@ SearchRequest request = new SearchRequest(&amp;#34;online&amp;#34;); // -- 1 Sea
     
     <item>
       <title>Connect to Elasticsearch using Java High Level Client</title>
-      <link>https://sureshsarda.in/elasticsearch/connect-from-java-using-high-level-client/</link>
+      <link>https://sureshsarda.github.io/elasticsearch/connect-from-java-using-high-level-client/</link>
       <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/elasticsearch/connect-from-java-using-high-level-client/</guid>
+      <guid>https://sureshsarda.github.io/elasticsearch/connect-from-java-using-high-level-client/</guid>
       <description>Elasticsearch provides a client to conveniently connect with Elasticsearch. Create a Maven project and add the following maven dependency:
 Add Maven Dependency &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.elasticsearch.client&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;elasticsearch-rest-high-level-client&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;7.3.1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Set Up connection with Elasticsearch Elasticsearch maintains 2 clients - Low Level Client and High Level Client. It is recommended to use the High Level Client to query and index documents in Elasticsearch. You can create connection to Elasticsearch like this:
 RestHighLevelClient client = new RestHighLevelClient( RestClient.</description>
@@ -60,10 +60,10 @@ RestHighLevelClient client = new RestHighLevelClient( RestClient.</description>
     
     <item>
       <title>Creating CSV from Strings in Java</title>
-      <link>https://sureshsarda.in/java/creating-csv-from-strings/</link>
+      <link>https://sureshsarda.github.io/java/creating-csv-from-strings/</link>
       <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/java/creating-csv-from-strings/</guid>
+      <guid>https://sureshsarda.github.io/java/creating-csv-from-strings/</guid>
       <description>Earlier in Java 7, you needed a StringBuilder to create a CSV from list. From Java 8 onwards, there are multiple ways to achieve this depending on the task in hand.
 1. Using the String.join method The String class has a join method that take a delimiter.
 List&amp;lt;String&amp;gt; tokens = Arrays.asList(&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;, &amp;#34;three&amp;#34;); String joined = String.join(&amp;#34;,&amp;#34;, tokens); System.out.println(joined); // --output -- // one,two,three 2. Using the StringJoiner Another similar way to achieve this is using the StringJoiner class.</description>

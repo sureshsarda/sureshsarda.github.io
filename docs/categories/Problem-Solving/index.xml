@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Problem Solving on Programming Notes</title>
-    <link>https://sureshsarda.in/categories/Problem-Solving/</link>
+    <link>https://sureshsarda.github.io/categories/Problem-Solving/</link>
     <description>Recent content in Problem Solving on Programming Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/categories/Problem-Solving/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.github.io/categories/Problem-Solving/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Solution to Leetcode - Happy Number</title>
-      <link>https://sureshsarda.in/problem-solving/leetcode/solution-happy-number/</link>
+      <link>https://sureshsarda.github.io/problem-solving/leetcode/solution-happy-number/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/problem-solving/leetcode/solution-happy-number/</guid>
+      <guid>https://sureshsarda.github.io/problem-solving/leetcode/solution-happy-number/</guid>
       <description>As part of 30 days challenge during the Corono pandemic, Leetcode published this problem on the second day:
  A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.</description>
     </item>

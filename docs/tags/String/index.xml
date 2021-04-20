@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>String on Programming Notes</title>
-    <link>https://sureshsarda.in/tags/String/</link>
+    <link>https://sureshsarda.github.io/tags/String/</link>
     <description>Recent content in String on Programming Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/tags/String/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.github.io/tags/String/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Convert String to title case in Java using Streams</title>
-      <link>https://sureshsarda.in/java/convert-string-title-case-java-streams/</link>
+      <link>https://sureshsarda.github.io/java/convert-string-title-case-java-streams/</link>
       <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/java/convert-string-title-case-java-streams/</guid>
+      <guid>https://sureshsarda.github.io/java/convert-string-title-case-java-streams/</guid>
       <description>Title case is capitalized first character of each word. That means, we have to do this:
  Break at word boundaries Capitalize the first character and lowercase the others Join again at word boundaries.  public String toTitleCase(String str) { final String wordBoundary = &amp;#34; &amp;#34;; return Arrays.stream(str.split(wordBoundary)) .map(it -&amp;gt; it.substring(0, 1).toUpperCase() + it.substring(1, it.length()).toLowerCase()) .collect(Collectors.joining(wordBoundary)); } Let&amp;rsquo;s see it in actions:
 Roughing It =&amp;gt; Roughing It PRIde AnD PrejudICE =&amp;gt; Pride And Prejudice a tale of two Cities =&amp;gt; A Tale Of Two Cities </description>

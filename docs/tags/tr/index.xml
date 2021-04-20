@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tr on Programming Notes</title>
-    <link>https://sureshsarda.in/tags/tr/</link>
+    <link>https://sureshsarda.github.io/tags/tr/</link>
     <description>Recent content in tr on Programming Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.in/tags/tr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://sureshsarda.github.io/tags/tr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Weekly Unix \#1 - tr</title>
-      <link>https://sureshsarda.in/posts/linux/2016-06-08-weekly-unix-tr/</link>
+      <link>https://sureshsarda.github.io/posts/linux/2016-06-08-weekly-unix-tr/</link>
       <pubDate>Wed, 08 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.in/posts/linux/2016-06-08-weekly-unix-tr/</guid>
+      <guid>https://sureshsarda.github.io/posts/linux/2016-06-08-weekly-unix-tr/</guid>
       <description>tr - translate TR basically stands for translate. The man page says - translate or delete character. So tr is used to manipulate the byte stream provided to it. This command again is very powerful when combined with other commands. For example you want to rename files to lower case (thought there are other methods for this), or you want to change a (or a set of) character in a file or from a live stream, this is the utility you will need.</description>
     </item>
     
