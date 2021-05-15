@@ -2,7 +2,9 @@
 categories:
 - Linux
 date: "2016-07-19T00:00:00Z"
-tags: []
+tags:
+  - linux
+  - power-unix-tools
 title: 'Weekly Unix #6 - job control (2)'
 series:
     - Power Unix User

@@ -3,6 +3,8 @@ categories:
   - Linux
 date: "2016-07-03T00:00:00Z"
 tags:
+  - linux
+  - power-unix-tools
 title: 'Weekly Unix #3 - tee'
 ---
 `tee` command as the man page puts it, reads from standard input and writes to standard output and files. Okay good enough but what does that mean? Well that mean, while using a command, the output is sent to the console. You can redirect it to file by using `>` and `>>` to a file. That symbol is of output redirection (a summary of that in the end of this post and all the output redirection is covered in separate post). 

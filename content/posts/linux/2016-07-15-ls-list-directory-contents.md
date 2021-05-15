@@ -2,7 +2,8 @@
 categories:
 - Linux
 date: "2016-07-15T00:00:00Z"
-tags: []
+tags:
+  - linux
 title: 'Weekly Unix #4 - ls'
 ---
 This command is one of the most widely used (no references, just guessing) command. It simple lists the directory contents. It lists files, directories and links in current directory (default behavior). The command and it’s variants are so widely used, that some of the distributions contains some aliases for this command in the `.bashrc` file. For example I am using Mint and it already contains these `ls` aliases in my `.bashrc`:

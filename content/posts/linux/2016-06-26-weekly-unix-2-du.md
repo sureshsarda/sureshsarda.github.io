@@ -3,6 +3,8 @@ categories:
 - Linux
 date: "2016-06-26T00:00:00Z"
 tags:
+  - linux
+  - power-unix-tools
   - du
 title: 'Weekly Unix #2 - du'
 ---
