@@ -1,29 +1,31 @@
 <html>
 {{ partial "head.html" . }}
+
 <body>
-<div class="article">
+    <div class="article">
 
-    <h1>#{{ .Title }}</h1>
+        <h1>#{{ .Title }}</h1>
 
-    <section class="article">
-        {{ if isset .Site.Taxonomies "tags" }}
+        <section class="article">
+            {{ if isset .Site.Taxonomies "tags" }}
             {{ $mytag := .Title }}
             {{ range $index, $page := (.Paginate (where .Data.Pages "Type" "posts")).Pages }}
-                {{ if ne $index 0 }}
-                    {{ end }}
-                {{ .Render "li" }}
-            {{ end }}
-        {{ else }}
-        {{ range $index, $page := (.Paginate (where .Site.RegularPages "Type" "posts")).Pages }}
             {{ if ne $index 0 }}
-                {{ end }}
+            {{ end }}
             {{ .Render "li" }}
-        {{ end }}
-        {{ end }}
-    </section>
+            {{ end }}
+            {{ else }}
+            {{ range $index, $page := (.Paginate (where .Site.RegularPages "Type" "posts")).Pages }}
+            {{ if ne $index 0 }}
+            {{ end }}
+            {{ .Render "li" }}
+            {{ end }}
+            {{ end }}
+        </section>
 
-</div>
+    </div>
 
-{{ partial "pagination.html" .Paginator }} {{ partial "siteinfo.html" . }}
-{{ partial "footer.html" . }}
-
+    {{ partial "pagination.html" .Paginator }} {{ partial "siteinfo.html" . }}
+    {{ partial "footer.html" . }}
+</body>
+</html>

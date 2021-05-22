@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Index of Data Structures and Algorithm on Programming Notes</title>
+    <link>https://sureshsarda.github.io/notes/data-structures-and-algorithms/</link>
+    <description>Recent content in Index of Data Structures and Algorithm on Programming Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://sureshsarda.github.io/notes/data-structures-and-algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/data-structures-and-algorithms/hashing/hashing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/data-structures-and-algorithms/hashing/hashing/</guid>
+      <description>Hashing Algorithms Comparing Algorithms  Cryptographic vs Non-cryptographic What are Chi Squared Tests for testing hashing algorithms What is avalanche behavior  StackOverflow
+Hashing Functions  CRC-64, the old one, 1975 Murmur Hash, first version in 2008 Google CityHash and FarmHash family, first version in 2011 Facebook XXHash, from 2014, latest in 2019 and so far the best  Hashing Scheme Static Linear Probing Resolve collision by linearly searching and insert in next place Find: Iterate till empty slots Delete: Tombstones, you could also compact but that get&amp;rsquo;s tricky</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/data-structures-and-algorithms/tips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/data-structures-and-algorithms/tips/</guid>
+      <description>Reversing, Transposing  Rotate and reverse and array Rotate the matrix  Working in pairs  Example: Pairs of problems  Putting things in the correct place  Imagine that you need to find the missing number from an array. You can start putting number at the correct position and in the end the one which is not in correct place would be your answer  Try a data structure  LinkedList Queue Stack Tree Heap Treap Graph Union Find Segment Tree Binary Indexed Trees  Try strategies  Divide and Conquer Greedy Dynamic Programming  </description>
+    </item>
+    
+  </channel>
+</rss>

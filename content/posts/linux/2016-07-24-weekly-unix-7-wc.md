@@ -1,6 +1,4 @@
 ---
-categories:
-- Linux
 date: "2016-07-24T00:00:00Z"
 tags:
   - linux
@@ -8,6 +6,8 @@ tags:
     
 title: 'Weekly Unix #7 - wc'
 type: post
+series:
+    - Power Unix User
 ---
 wc counts. It can count newlines, bytes, characters and words.
 

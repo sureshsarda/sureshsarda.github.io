@@ -4,7 +4,7 @@
 <body>
 <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
 {{ partial "svgpack-sprite.html" . }}
-<header class="article">
+<header class="container">
     {{ if .IsPage }}
         {{ $baseurl := .Site.BaseURL | sanitizeurl }}
 
@@ -30,4 +30,3 @@
         </p>
     {{ end }}
 </header>
-<main id="main" class="article">

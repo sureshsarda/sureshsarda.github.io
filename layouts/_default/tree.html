@@ -1,16 +1,17 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL | sanitizeurl }}
 <body>
+{{/*  
+    {{ .File.Path }}
+    {{ .File.Dir }}  */}}
 
-<div>
-    {{ range $index, $page := where .Site.RegularPages "Type" "notes" }}
-        {{if ne $index 0 }}
-        {{ end }}
-    {{ .Render "li" }}
-    {{ end }}
+    {{ range $page := .RegularPages }}
+        {{ $page.Title }}
+    {{end}}
+
+    {{/*  {{ .Site.Sections }}  */}}
 
 
-</div>
 
 {{ partial "footer.html" . }}
 </body>

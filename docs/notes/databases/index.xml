@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Everything About Databases on Programming Notes</title>
+    <link>https://sureshsarda.github.io/notes/databases/</link>
+    <description>Recent content in Everything About Databases on Programming Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://sureshsarda.github.io/notes/databases/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -31,6 +31,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 
   <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/style.css" />
   <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/custom.css" />
@@ -42,71 +45,245 @@
 
 
 <body>
-<div class="article">
+    <div class="article">
 
-    <h1>#linux</h1>
+        <h1>#linux</h1>
 
-    <section class="article">
-        
+        <section class="article">
             
             
-                
-                <article>
-  <header>
-    <h3 class="content-title"><a href="https://sureshsarda.github.io/posts/linux/2016-06-10-practical-emacs-tip-1-meet-the-c-x-z-command/">Practical Emacs Tip #1: Meet the C-x z command</a></h3>
-    <p class="c-article__meta">
-      <subtitle>
-    Posted on
-    <time datetime="2016-06-10T00:00:00Z">
-    Jun 10, 2016
-    </time>
-    by Suresh Sarda
-</subtitle>
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
 
-    </p>
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/posts/linux/2016-07-19-weekly-unix-6-job-control-2/">Weekly Unix #6 - job control (2)</a></h3>
+      <p>
+        Finer Job Selection In the previousarticle we saw basics of job control but we skipped alternatives to select jobs. Consider the following job listing throughout this article.
+$jobs [1] Running find . -name *.xml &gt; /dev/null &amp; [2]- Stopped cat /dev/zero &gt; /dev/null [3]+ Stopped find . -name *.cc &gt; /dev/null 1. Using job number You can use the job number (the number in square bracket) to work on it. Jobs can be referred by job number using %N where N is the job number.
+      </p>
+      
+      <a href="https://sureshsarda.github.io/posts/linux/2016-07-19-weekly-unix-6-job-control-2/">Read more</a>
+      
+    </div>
+
   </header>
-  <div class="c-article__summary">
-    The Emacs manual simply states that &ldquo;Repear the most recently executed command&rdquo;.
+
+</article>
+            
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
+
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/posts/linux/2016-07-18-weekly-unix-6-job-control/">Weekly Unix #6 - job control</a></h3>
+      <p>
+        Some commands take long time to finish execution. For example if you are searching for a file in a directory or extracting/compressing a directory or maybe building a project which take quite some time to complete. The command when executed takes a while to complete and thereby occupy the terminal preventing you from doing other stuff.
+Linux (since a multitasking operating system) offers neat job control tools to deal with this.
+      </p>
+      
+      <a href="https://sureshsarda.github.io/posts/linux/2016-07-18-weekly-unix-6-job-control/">Read more</a>
+      
+    </div>
+
+  </header>
+
+</article>
+            
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
+
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/posts/linux/2016-07-17-cd/">Weekly Unix #5 - cd</a></h3>
+      <p>
+        man cd No manual entry for cd That’s because there isn’t any! cd is an internal shell command.
+So where do I find help? Well there isn’t much in cd that you can do except change the directory. But since this operation is done hundreds of times a day, we need to do it efficiently.
+cd - cd with a hyphen goes to previous directory and executing that again comes back to current directory.
+      </p>
+      
+      <a href="https://sureshsarda.github.io/posts/linux/2016-07-17-cd/">Read more</a>
+      
+    </div>
+
+  </header>
+
+</article>
+            
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
+
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/posts/linux/2016-07-15-ls-list-directory-contents/">Weekly Unix #4 - ls</a></h3>
+      <p>
+        This command is one of the most widely used (no references, just guessing) command. It simple lists the directory contents. It lists files, directories and links in current directory (default behavior). The command and it’s variants are so widely used, that some of the distributions contains some aliases for this command in the .bashrc file. For example I am using Mint and it already contains these ls aliases in my .
+      </p>
+      
+      <a href="https://sureshsarda.github.io/posts/linux/2016-07-15-ls-list-directory-contents/">Read more</a>
+      
+    </div>
+
+  </header>
+
+</article>
+            
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
+
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/posts/linux/2016-07-13-cdpath/">CDPATH: The lesser known path variable</a></h3>
+      <p>
+        CDPATH is an environment variable under UNIX, which is referred every time cd command is invoked.
+The working of cd Let’s say you invoke the following command:
+cd blog The directory blog is looked in current working directory. If found, the current working directory is changed to that. If it is not found there, it is looked in every path in the CDPATH variable. Again if found, it is changed. If not then a directory not found message is displayed and cd returns 1 (Error code).
+      </p>
+      
+      <a href="https://sureshsarda.github.io/posts/linux/2016-07-13-cdpath/">Read more</a>
+      
+    </div>
+
+  </header>
+
+</article>
+            
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
+
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/posts/linux/2016-07-03-unix-command-tee/">Weekly Unix #3 - tee</a></h3>
+      <p>
+        tee command as the man page puts it, reads from standard input and writes to standard output and files. Okay good enough but what does that mean? Well that mean, while using a command, the output is sent to the console. You can redirect it to file by using &gt; and &gt;&gt; to a file. That symbol is of output redirection (a summary of that in the end of this post and all the output redirection is covered in separate post).
+      </p>
+      
+      <a href="https://sureshsarda.github.io/posts/linux/2016-07-03-unix-command-tee/">Read more</a>
+      
+    </div>
+
+  </header>
+
+</article>
+            
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
+
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/posts/linux/2016-06-26-weekly-unix-2-du/">Weekly Unix #2 - du</a></h3>
+      <p>
+        du = Disk Usage du summarizes the disk usage for files and folders.
+How to use du This will list size of all the files as well as folders in the current directory. The folders will be explored recursively. That means all the files in the folders will be listed as well.
+The above gets bit out of hand when you have lot of files. You won&rsquo;t be able to figure out what is happening as lot of entries will go from your eyes.
+      </p>
+      
+      <a href="https://sureshsarda.github.io/posts/linux/2016-06-26-weekly-unix-2-du/">Read more</a>
+      
+    </div>
+
+  </header>
+
+</article>
+            
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
+
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/posts/linux/2016-06-10-practical-emacs-tip-1-meet-the-c-x-z-command/">Practical Emacs Tip #1: Meet the C-x z command</a></h3>
+      <p>
+        The Emacs manual simply states that &ldquo;Repear the most recently executed command&rdquo;.
 This command just repeats the last command with the last given set of arguments to that command (if any). No rocket science. Just simple Emacs!
 By the way, before we start there is one more thing - Once you press C-x z, you can repeatedly press only z for the command to repeat itself! No need to press C-x again and again.
-  </div>
-  
-  <a href="https://sureshsarda.github.io/posts/linux/2016-06-10-practical-emacs-tip-1-meet-the-c-x-z-command/" class="read-more">Read more</a>
-  
-</article>
+      </p>
+      
+      <a href="https://sureshsarda.github.io/posts/linux/2016-06-10-practical-emacs-tip-1-meet-the-c-x-z-command/">Read more</a>
+      
+    </div>
 
-            
-                
-                    
-                <article>
-  <header>
-    <h3 class="content-title"><a href="https://sureshsarda.github.io/posts/linux/2016-06-08-weekly-unix-tr/">Weekly Unix \#1 - tr</a></h3>
-    <p class="c-article__meta">
-      <subtitle>
-    Posted on
-    <time datetime="2016-06-08T00:00:00Z">
-    Jun 8, 2016
-    </time>
-    by Suresh Sarda
-</subtitle>
-
-    </p>
   </header>
-  <div class="c-article__summary">
-    tr - translate TR basically stands for translate. The man page says - translate or delete character. So tr is used to manipulate the byte stream provided to it. This command again is very powerful when combined with other commands. For example you want to rename files to lower case (thought there are other methods for this), or you want to change a (or a set of) character in a file or from a live stream, this is the utility you will need.
-  </div>
-  
-  <a href="https://sureshsarda.github.io/posts/linux/2016-06-08-weekly-unix-tr/" class="read-more">Read more</a>
-  
+
 </article>
-
             
-        
-    </section>
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
 
-</div>
 
-<nav class="c-pagination p-pagination">
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/posts/linux/2016-06-08-weekly-unix-tr/">Weekly Unix \#1 - tr</a></h3>
+      <p>
+        tr - translate TR basically stands for translate. The man page says - translate or delete character. So tr is used to manipulate the byte stream provided to it. This command again is very powerful when combined with other commands. For example you want to rename files to lower case (thought there are other methods for this), or you want to change a (or a set of) character in a file or from a live stream, this is the utility you will need.
+      </p>
+      
+      <a href="https://sureshsarda.github.io/posts/linux/2016-06-08-weekly-unix-tr/">Read more</a>
+      
+    </div>
+
+  </header>
+
+</article>
+            
+            
+        </section>
+
+    </div>
+
+    <nav class="c-pagination p-pagination">
   <div class="c-pagination__ctrl">
     <div class="c-pagination__newer">
       
@@ -119,79 +296,88 @@ By the way, before we start there is one more thing - Once you press C-x z, you 
 </nav>
  
 
-</main>
-<footer>
-    
-        <nav>
+    <footer class="mt-5 py-5">
+    <div class="container py-5">
+        
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <h3>
+                    <a href="/">Programming Notes</a>
+                </h3>
+                <ul class="list-unstyled">
+                    <li>Share the knowledge that you can and learn more in the process.</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-1"></div>
             
-                
-                    <li>
-                        <h3>Curated</h3>
-                        <ul>
-                            
-                                <li><a href="/blogs">Blogs</a></li>
-                            
-                                <li><a href="/books">Books</a></li>
-                            
-                                <li><a href="/papers">Papers</a></li>
-                            
-                        </ul>
-                    </li>
-                
             
-                
-                    <li>
-                        <h3>Links</h3>
-                        <ul>
-                            
-                                <li><a href="/series">Article Series</a></li>
-                            
-                                <li><a href="/categories">Categories</a></li>
-                            
-                                <li><a href="/posts">Posts</a></li>
-                            
-                                <li><a href="/tags">Tags</a></li>
-                            
-                        </ul>
-                    </li>
-                
+            <div class="col-lg-2">
+                <h5>Curated</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/blog">Blog</a></li>
+                    
+                    <li class="mb-2"><a href="/books">Books</a></li>
+                    
+                    <li class="mb-2"><a href="/papers">Papers</a></li>
+                    
+                </ul>
+            </div>
             
-                
-                    <li>
-                        <h3>Social</h3>
-                        <ul>
-                            
-                                <li><a href="/">Github</a></li>
-                            
-                                <li><a href="/">LinkedIn</a></li>
-                            
-                                <li><a href="/">Medium</a></li>
-                            
-                                <li><a href="/">Stack Overflow</a></li>
-                            
-                                <li><a href="/">Twitter</a></li>
-                            
-                        </ul>
-                    </li>
-                
             
-        </nav>
-    
+            
+            <div class="col-lg-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/series">Article Series</a></li>
+                    
+                    <li class="mb-2"><a href="/categories">Categories</a></li>
+                    
+                    <li class="mb-2"><a href="/posts">Posts</a></li>
+                    
+                    <li class="mb-2"><a href="/tags">Tags</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+            <div class="col-lg-2">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/">Github</a></li>
+                    
+                    <li class="mb-2"><a href="/">LinkedIn</a></li>
+                    
+                    <li class="mb-2"><a href="/">Medium</a></li>
+                    
+                    <li class="mb-2"><a href="/">Stack Overflow</a></li>
+                    
+                    <li class="mb-2"><a href="/">Twitter</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+        </div>
+        
+    </div>
 
     <div class="p-copyright">
         
-            Suresh Sarda
-            &nbsp;&bull;&nbsp;
-            2020
+        Suresh Sarda
+        &nbsp;&bull;&nbsp;
+        2020
 
-            
-                &nbsp;&bull;&nbsp;
-                <a href="https://sureshsarda.github.io/">Programming Notes</a>
-            
+        
+        &nbsp;&bull;&nbsp;
+        <a href="https://sureshsarda.github.io/">Programming Notes</a>
+        
         
     </div>
 </footer>
-
-
-
-
+</body>
+</html>

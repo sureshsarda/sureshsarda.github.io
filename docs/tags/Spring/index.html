@@ -31,6 +31,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 
   <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/style.css" />
   <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/custom.css" />
@@ -42,98 +45,71 @@
 
 
 <body>
-<div class="article">
+    <div class="article">
 
-    <h1>#Spring</h1>
+        <h1>#Spring</h1>
 
-    <section class="article">
-        
+        <section class="article">
             
             
-                
-                <article>
-  <header>
-    <h3 class="content-title"><a href="https://sureshsarda.github.io/java/spring/spring-mvc-boot-rest-request-body-parse-http-request-body/">Spring MVC - @RequestBody annotation to parse Http Request Body</a></h3>
-    <p class="c-article__meta">
-      <subtitle>
-    Posted on
-    <time datetime="2019-11-25T00:00:00Z">
-    Nov 25, 2019
-    </time>
-    by Suresh Sarda
-</subtitle>
-
-    </p>
-  </header>
-  <div class="c-article__summary">
-    In this article we will take a look at how to use the @RequestBody annotation.
-The @RequestBody is used to automatically parse and serialize the Http Request Body of the request and create Java objects out of it. The Java objects can be a POJO (Plain Old Java Objects) or a Map depending on the requirement.
-Let&rsquo;s take an example on how to use @RequestBody annotation to parse body passed as application/json:
-  </div>
-  
-</article>
-
             
-                
-                    
-                <article>
-  <header>
-    <h3 class="content-title"><a href="https://sureshsarda.github.io/java/spring/extract-use-parse-url-path-data-variable/">Spring REST - Extract URL Path Variables</a></h3>
-    <p class="c-article__meta">
-      <subtitle>
-    Posted on
-    <time datetime="2019-11-24T00:00:00Z">
-    Nov 24, 2019
-    </time>
-    by Suresh Sarda
-</subtitle>
+            
+            <article class="my-5">
+  <header class="d-flex">
 
-    </p>
-  </header>
-  <div class="c-article__summary">
-    REST APIs have resource names and resource id present in the URL path unlike a traditional web API. This article focuses on how to extract that information and use it.
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/java/spring/extract-use-parse-url-path-data-variable/">Spring REST - Extract URL Path Variables</a></h3>
+      <p>
+        REST APIs have resource names and resource id present in the URL path unlike a traditional web API. This article focuses on how to extract that information and use it.
 Take a typical REST URL:
 GET https://api.bookstore.com/authors/twain-mark/books/roughing-it Here, the name of the author and the name of the book are inside the book and not part of the request body or query parameters. This is a standard practice while developing REST APIs.
-  </div>
-  
-  <a href="https://sureshsarda.github.io/java/spring/extract-use-parse-url-path-data-variable/" class="read-more">Read more</a>
-  
-</article>
+      </p>
+      
+      <a href="https://sureshsarda.github.io/java/spring/extract-use-parse-url-path-data-variable/">Read more</a>
+      
+    </div>
 
-            
-                
-                    
-                <article>
-  <header>
-    <h3 class="content-title"><a href="https://sureshsarda.github.io/java/spring/request-headers-in-spring-rest/">Spring - Read Http Request headers</a></h3>
-    <p class="c-article__meta">
-      <subtitle>
-    Posted on
-    <time datetime="2019-11-23T00:00:00Z">
-    Nov 23, 2019
-    </time>
-    by Suresh Sarda
-</subtitle>
-
-    </p>
   </header>
-  <div class="c-article__summary">
-    In the previous article we saw how to use request parameters and request body of a request. In this article we will see how to use the request headers.
+
+</article>
+            
+            
+            
+            <article class="my-5">
+  <header class="d-flex">
+
+
+    
+    <img style="width: 18rem;" src="https://source.unsplash.com/200x150/?nature,water">
+    
+    
+    <div class="mx-5">
+      <h3><a href="https://sureshsarda.github.io/java/spring/request-headers-in-spring-rest/">Spring - Read Http Request headers</a></h3>
+      <p>
+        In the previous article we saw how to use request parameters and request body of a request. In this article we will see how to use the request headers.
 The request headers can be accessed using the @RequestHeader attribute.
 @RequestMapping(&#34;/greeting&#34;) public ResponseEntity&lt;String&gt; greeting(@RequestHeader(&#34;Accept-Language&#34;) String language, @RequestHeader(&#34;Content-Type&#34;) String contentType) { // do something with the headers  return new ResponseEntity&lt;String&gt;(String.format(&#34;Language: %s, Content Type: %s&#34;, language, contentType), HttpStatus.OK); } Note that the name of the header field is case insensitive.
-  </div>
-  
-  <a href="https://sureshsarda.github.io/java/spring/request-headers-in-spring-rest/" class="read-more">Read more</a>
-  
+      </p>
+      
+      <a href="https://sureshsarda.github.io/java/spring/request-headers-in-spring-rest/">Read more</a>
+      
+    </div>
+
+  </header>
+
 </article>
-
             
-        
-    </section>
+            
+        </section>
 
-</div>
+    </div>
 
-<nav class="c-pagination p-pagination">
+    <nav class="c-pagination p-pagination">
   <div class="c-pagination__ctrl">
     <div class="c-pagination__newer">
       
@@ -146,79 +122,88 @@ The request headers can be accessed using the @RequestHeader attribute.
 </nav>
  
 
-</main>
-<footer>
-    
-        <nav>
+    <footer class="mt-5 py-5">
+    <div class="container py-5">
+        
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <h3>
+                    <a href="/">Programming Notes</a>
+                </h3>
+                <ul class="list-unstyled">
+                    <li>Share the knowledge that you can and learn more in the process.</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-1"></div>
             
-                
-                    <li>
-                        <h3>Curated</h3>
-                        <ul>
-                            
-                                <li><a href="/blogs">Blogs</a></li>
-                            
-                                <li><a href="/books">Books</a></li>
-                            
-                                <li><a href="/papers">Papers</a></li>
-                            
-                        </ul>
-                    </li>
-                
             
-                
-                    <li>
-                        <h3>Links</h3>
-                        <ul>
-                            
-                                <li><a href="/series">Article Series</a></li>
-                            
-                                <li><a href="/categories">Categories</a></li>
-                            
-                                <li><a href="/posts">Posts</a></li>
-                            
-                                <li><a href="/tags">Tags</a></li>
-                            
-                        </ul>
-                    </li>
-                
+            <div class="col-lg-2">
+                <h5>Curated</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/blog">Blog</a></li>
+                    
+                    <li class="mb-2"><a href="/books">Books</a></li>
+                    
+                    <li class="mb-2"><a href="/papers">Papers</a></li>
+                    
+                </ul>
+            </div>
             
-                
-                    <li>
-                        <h3>Social</h3>
-                        <ul>
-                            
-                                <li><a href="/">Github</a></li>
-                            
-                                <li><a href="/">LinkedIn</a></li>
-                            
-                                <li><a href="/">Medium</a></li>
-                            
-                                <li><a href="/">Stack Overflow</a></li>
-                            
-                                <li><a href="/">Twitter</a></li>
-                            
-                        </ul>
-                    </li>
-                
             
-        </nav>
-    
+            
+            <div class="col-lg-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/series">Article Series</a></li>
+                    
+                    <li class="mb-2"><a href="/categories">Categories</a></li>
+                    
+                    <li class="mb-2"><a href="/posts">Posts</a></li>
+                    
+                    <li class="mb-2"><a href="/tags">Tags</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+            <div class="col-lg-2">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/">Github</a></li>
+                    
+                    <li class="mb-2"><a href="/">LinkedIn</a></li>
+                    
+                    <li class="mb-2"><a href="/">Medium</a></li>
+                    
+                    <li class="mb-2"><a href="/">Stack Overflow</a></li>
+                    
+                    <li class="mb-2"><a href="/">Twitter</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+        </div>
+        
+    </div>
 
     <div class="p-copyright">
         
-            Suresh Sarda
-            &nbsp;&bull;&nbsp;
-            2020
+        Suresh Sarda
+        &nbsp;&bull;&nbsp;
+        2020
 
-            
-                &nbsp;&bull;&nbsp;
-                <a href="https://sureshsarda.github.io/">Programming Notes</a>
-            
+        
+        &nbsp;&bull;&nbsp;
+        <a href="https://sureshsarda.github.io/">Programming Notes</a>
+        
         
     </div>
 </footer>
-
-
-
-
+</body>
+</html>

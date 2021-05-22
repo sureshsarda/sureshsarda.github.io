@@ -4,12 +4,13 @@ categories:
 date: "2016-10-30T00:00:00Z"
 tags: []
 title: 'Bash: Setting variables from a file'
-type: post
+curated: true
+unsplashId: '3MAmj1ZKSZA'
 ---
 
 Shell scripts sometimes get overly complicated and we need lot of configurations stored in file instead of setting them in ten different files which not to mention is error prone. A simple technique would be to write all the configurations in a properties file and read it in all the scripts.
 
-## Let’s do that!
+## Create the variables file
 For example we have all these configurations we need to set
 ```bash
 server.build.ip=10.20.0.17

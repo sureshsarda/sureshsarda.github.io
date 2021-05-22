@@ -1,12 +1,27 @@
-{{ partial "header.html" . }}
-<h2>Latest Posts</h2>
-{{ range $index, $page := (.Paginate (where (where .Site.RegularPages "Type" "posts") ".Params.hidden" "!=" "true")).Pages }}
-    {{if ne $index 0 }}
-    {{ end }}
-    {{ .Render "li" }}
-{{ end }}
+{{ partial "head.html" . }}
 
-<h2>Selected Articles</h2>
+<main id="main" class="container">
+    <header>
+        <h1>Programming Notes</h1>
+        <p>by Suresh Sarda</p>
+    </header>
+    <div class="row">
+        <div class="col">
 
-{{ partial "pagination.html" .Paginator }} {{ partial "siteinfo.html" . }}
+            
+            {{ range $index, $page := (.Paginate (where (where .Site.RegularPages "Type" "posts") ".Params.curated" "==" true)).Pages }}
+            {{if ne $index 0 }}
+            {{ end }}
+            {{ .Render "li" }}
+            {{ end }}
+            
+            <section>
+                <!-- Article Series -->
+                <div>
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
 {{ partial "footer.html" . }}

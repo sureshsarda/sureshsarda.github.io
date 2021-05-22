@@ -16,9 +16,9 @@ menu:
       name: Curated
       url: /curated
       children:
-    - identifier: blogs
-      name: Blogs
-      url: /blogs
+    - identifier: blog
+      name: Blog
+      url: /blog
       parent: curated
     - identifier: books
       name: Books
@@ -73,7 +73,6 @@ params:
   - paginate: 5
 
 taxonomies:
-  category: categories
   series: series
   tag: tags
 

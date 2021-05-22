@@ -80,17 +80,6 @@ RestHighLevelClient client = new RestHighLevelClient( RestClient.</description>
     </item>
     
     <item>
-      <title>Spring MVC - @RequestBody annotation to parse Http Request Body</title>
-      <link>https://sureshsarda.github.io/java/spring/spring-mvc-boot-rest-request-body-parse-http-request-body/</link>
-      <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sureshsarda.github.io/java/spring/spring-mvc-boot-rest-request-body-parse-http-request-body/</guid>
-      <description>In this article we will take a look at how to use the @RequestBody annotation.
-The @RequestBody is used to automatically parse and serialize the Http Request Body of the request and create Java objects out of it. The Java objects can be a POJO (Plain Old Java Objects) or a Map depending on the requirement.
-Let&amp;rsquo;s take an example on how to use @RequestBody annotation to parse body passed as application/json:</description>
-    </item>
-    
-    <item>
       <title>Spring REST - Extract URL Path Variables</title>
       <link>https://sureshsarda.github.io/java/spring/extract-use-parse-url-path-data-variable/</link>
       <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
@@ -226,8 +215,8 @@ Problem Statement Before we jump into code, let’s take a minute and think abou
       
       <guid>https://sureshsarda.github.io/posts/2016-10-30-bash-setting-variables-from-a-file/</guid>
       <description>Shell scripts sometimes get overly complicated and we need lot of configurations stored in file instead of setting them in ten different files which not to mention is error prone. A simple technique would be to write all the configurations in a properties file and read it in all the scripts.
-Let’s do that! For example we have all these configurations we need to set
-server.build.ip=10.20.0.17 server.stage.ip=10.20.0.77 server.stage.user=stageuser server.stage.user.sudo=stageadmin server.stage.log=/var/log/logfile.log server.</description>
+Create the variables file For example we have all these configurations we need to set
+server.build.ip=10.20.0.17 server.stage.ip=10.20.0.77 server.stage.user=stageuser server.stage.user.sudo=stageadmin server.</description>
     </item>
     
     <item>
@@ -292,7 +281,7 @@ cd - cd with a hyphen goes to previous directory and executing that again comes 
     </item>
     
     <item>
-      <title>CDPATH</title>
+      <title>CDPATH: The lesser known path variable</title>
       <link>https://sureshsarda.github.io/posts/linux/2016-07-13-cdpath/</link>
       <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
       
@@ -366,21 +355,166 @@ Domain Knowledge Required What is a symmetric point? Given 2 points P and Q, a s
     </item>
     
     <item>
-      <title>Architecture of a database</title>
-      <link>https://sureshsarda.github.io/posts/database/architecture/</link>
+      <title></title>
+      <link>https://sureshsarda.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.github.io/posts/database/architecture/</guid>
-      <description>Databases are like black boxes. We send queries and assuming that they will be handled correctly without worrying too much about how a database will handle it. Read about the overall architecture of database in this multipart essay on databases.</description>
+      <guid>https://sureshsarda.github.io/about/</guid>
+      <description>Hello</description>
     </item>
     
     <item>
-      <title>Draft</title>
-      <link>https://sureshsarda.github.io/draft/</link>
+      <title></title>
+      <link>https://sureshsarda.github.io/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sureshsarda.github.io/draft/</guid>
-      <description>Upcoming Article Series  Elasticsearch Case Studies Distributed Algorithms Building a database from scratch Distributed and parallel programming with Java Popular components with Angular Patterns on the web Garbage Collection  Upcoming Articles  Kafka and other message brokers Annotation processing in Java  </description>
+      <guid>https://sureshsarda.github.io/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/books/</guid>
+      <description>Code Complete Pragmatic Programmer </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/architecture/incident-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/architecture/incident-management/</guid>
+      <description>References  https://dropbox.tech/infrastructure/lessons-learned-in-incident-management  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/architecture/summary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/architecture/summary/</guid>
+      <description> Everything is a tradeoff
+  Scalability vs Performance Latency vs throughput Availability vs Consistency  What to think of when you start  Who is going to use it   Aspects to consider  Security Incident Management Fault tolerance and recovery and reliability  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/architecture/terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/architecture/terms/</guid>
+      <description>Federation The database is partitioned by functional use cases. For example, you will end up with databases like CustomerDb, ProductsDb, etc
+Sharding The database is partitions the data bases on the value of each object or a key in an object. For example, the UserDb itself will be stored on multiple nodes based on (perhaps) the name.
+Consistent Hashing A hashing technique that doesn&amp;rsquo;t care about the number of buckets that you have.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/books/programming-pearls/tips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/books/programming-pearls/tips/</guid>
+      <description>Chapter 1 The Right Problem  Defining the problem was about ninety percent of the battle
+ Multipass Algorithms These algorithms make several passes over the input data and make little progress each time
+A time space tradeoff and one that isn&amp;rsquo;t Programming folklore and theory abound with time-space tradeoffs: by using more time a programming can run in less space.
+ It has been my experience more frequently, though, that reducing a program&amp;rsquo;s space requirements also reduce it&amp;rsquo;s run time</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/data-structures-and-algorithms/hashing/hashing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/data-structures-and-algorithms/hashing/hashing/</guid>
+      <description>Hashing Algorithms Comparing Algorithms  Cryptographic vs Non-cryptographic What are Chi Squared Tests for testing hashing algorithms What is avalanche behavior  StackOverflow
+Hashing Functions  CRC-64, the old one, 1975 Murmur Hash, first version in 2008 Google CityHash and FarmHash family, first version in 2011 Facebook XXHash, from 2014, latest in 2019 and so far the best  Hashing Scheme Static Linear Probing Resolve collision by linearly searching and insert in next place Find: Iterate till empty slots Delete: Tombstones, you could also compact but that get&amp;rsquo;s tricky</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/data-structures-and-algorithms/tips/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/data-structures-and-algorithms/tips/</guid>
+      <description>Reversing, Transposing  Rotate and reverse and array Rotate the matrix  Working in pairs  Example: Pairs of problems  Putting things in the correct place  Imagine that you need to find the missing number from an array. You can start putting number at the correct position and in the end the one which is not in correct place would be your answer  Try a data structure  LinkedList Queue Stack Tree Heap Treap Graph Union Find Segment Tree Binary Indexed Trees  Try strategies  Divide and Conquer Greedy Dynamic Programming  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/distributed-computing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/distributed-computing/</guid>
+      <description>Leader Election Bully Algorithm Message Types  Election Victory Coordinator  Algorithm  If highest processID - Send Victory Message, Else, broadcast Election to higher processes If no answer after sending election, send Victory to all processes If answer received, then further messages If receives Election message - ack and go to top If coordinator message - treat sender as coordinator  graph TD A{Highest ID} -- Yes --&amp;gt; B[Send Victory message] A -- No --&amp;gt; C[Send Election Message] B --&amp;gt; D C -- Ack Received --&amp;gt; D((Leader Elected)) C -- No Answer --&amp;gt; E[Send Victory] E --&amp;gt; D T((Election Triggered)) --&amp;gt; X X[Election Message] --&amp;gt; Y[Send Ack] Y --&amp;gt; A </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/fundamentals/concurrency-java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/fundamentals/concurrency-java/</guid>
+      <description>Concurrency Concurrency Vs Parallelism
+ Concurrecny - running more than one thing together on a single resource, interleaved Parallelism - you have more than one resource to run  Static methods in the Thread class  Thread.sleep() Thread.interrupted() Thread.join() Thread.wait()  Synchronization  synchronized keyword - uses the internsic lock of the object. All synchronized methods are together in an object synchronized keyword with static method - uses the internsic lock of the class  Re-entrant Synchronization  Allows to acquire a lock which you already have  Atomic Access  Assignment is atomic, but a++ is not Operations on volatile variales are atomic?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/interview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/interview/</guid>
+      <description>Introduction  Challenging things that you have done  Problem Solving  Dutch national flag (with/without linked lists) n-way file merge coin exchange  Design Theoretical  MVC vs MVVM vs MVP Design Patterns Dependency Injection, IoC Tools that they have used?  Databases  SQL vs NoSQL CAP Theorem  APIs  Authentication - OAuth, Basic, more?  System Design  Design a system? Which  Feedbacks Ajay Kumar (SDE-2)  Was able to explain what he was working - didn&amp;rsquo;t find anything challenging though Design principles - he was able to talk - SRP and Open-Close Dependency Injection, IoC - could just say simplicity Design pattens - strategy, factory, adapter, singleton, builder Follow up on adapter - couldn&amp;rsquo;t explain correctly, but I think he was saying correct, just couldn&amp;rsquo;t explain Follow up on factory - he knows because he used it, doesn&amp;rsquo;t know it well Dutch National Flag (sort array 0, 1, 2) -  Didn&amp;rsquo;t mention sorting and counting approaches - which are kinda typical Didn&amp;rsquo;t mention approach by using extra space Couldn&amp;rsquo;t explain the approach He followed similar approach with linked list as well   Merge Multiple Sorted Array (smaller question of n-way file merge)  He was able to come up with approache, not sure about implementation Time complexity - incorrect, gave him hints - he got the problem, but couldn&amp;rsquo;t tell the time complexity Heap - asked him about real world usage - where he has used/seen it, couldn&amp;rsquo;t tell    Overall, found him a bit slow, and he requires a more grooming, exposure and hard work.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/kafka/</guid>
+      <description>Message Brokers Apache Kafka  Requires ZooKeeper Node = Broker Topics are divided in one or more partition (partition = parallel) Consumers consume from topic at their own speed Consumers can be grouped in Consumer Group to increase consumption, consumer group share the offset Each consumer group has their own offset  Architecture Pros &amp;amp; Cons    Pros Cons     Scales really well, millions of messages per second No ideal for job queues, this is a simple pub-sub tool    RabbitMQ  Offers a variety of consuming mechanisms, Kafka is like a subset  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/string-searching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/string-searching/</guid>
+      <description>String Searching Todo  KMP Hashing functions for RabinKarp Write notes regarding RabinKarp  Hashing  Polynomial Rolling Hashing  hash(s) = s[0] + s[1]**p + s[2]**p^2 ... s[n-2].p^(n-2) + s[n-1].p^(n-1) mod m = sum s[i].p^i mod m where p and m are some chosen numbers p &amp;lt;- 31 m &amp;lt;- 1e9 + 9 hash_value &amp;lt;- 0 p_pow &amp;lt;- 1 for char_as_number in string: hash_value &amp;lt;- (hash_value + char_as_number ^ p_pow) % m p_pow &amp;lt;- (p_pow * p) % m At the end of the loop you will have the hash value.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sureshsarda.github.io/notes/web-worker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/web-worker/</guid>
+      <description>Service Workers  Runs in background seperate from the web page Push Notification, background sync Intercept, handle network requests Can&amp;rsquo;t access dom WebSockets not supported  Registering a service worker if (&amp;#39;serviceWorker&amp;#39; in navigator) { window.addEventListener(&amp;#39;load&amp;#39;, function () { navigator.serviceWorker.register(&amp;#39;/sw.js&amp;#39;).then(function (registration) { // Registration was successful  console.log(&amp;#39;ServiceWorker registration successful with scope: &amp;#39;, registration.scope); }, function (err) { // registration failed :(  console.log(&amp;#39;ServiceWorker registration failed: &amp;#39;, err); }); }); } You can register as many times you want, browser will keep it once.</description>
+    </item>
+    
+    <item>
+      <title>Algebra Basics</title>
+      <link>https://sureshsarda.github.io/notes/algebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/algebra/</guid>
+      <description>Modular Arithmetic  Defn: If a and b are integers, a m is a positive integer, then a is congruent to modulo b, if, m divides a - b (i.e. the delta is divisible by m) The above holds only if a % m == b % m Also, congruence holds true if and only iff, there exists a number k, such that a = b + km, (writing the first point in another way.</description>
+    </item>
+    
+    <item>
+      <title>Engineering Blogs</title>
+      <link>https://sureshsarda.github.io/notes/architecture/curated/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sureshsarda.github.io/notes/architecture/curated/</guid>
+      <description>Blogs Articles  https://gist.github.com/vasanthk/485d1c25737e8e72759f https://github.com/shashank88/system_design https://github.com/checkcheckzz/system-design-interview https://github.com/donnemartin/system-design-primer#how-to-approach-a-system-design-interview-question  Curated Curated Lists  http://dancres.github.io/Pages/  Papers  Presto: SQL on Everything, (Facebook Research)  Quotes   Success means shaving every possible minute from that response, https://dropbox.tech/infrastructure/lessons-learned-in-incident-management
+  Logging is the key to detecting problems. Source
+  Not using metrics in your development process is like trying to land a plane in a storm with your altimeter not working</description>
     </item>
     
   </channel>

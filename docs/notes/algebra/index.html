@@ -1,0 +1,224 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  
+  <title>Algebra Basics</title>
+  <meta property="og:title" content="Algebra Basics" />
+  <meta name="twitter:title" content="Algebra Basics" />
+  
+
+  
+
+  <meta name="author" content=""/>
+  <meta property="og:site_name" content="Programming Notes" />
+  <meta property="og:url" content="https://sureshsarda.github.io/notes/algebra/" />
+
+  
+  <meta name="twitter:card" content="summary" />
+
+  
+
+  
+  <meta property="og:type" content="article" />
+  
+  
+  
+  <meta name="generator" content="Hugo 0.80.0" />
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/style.css" />
+  <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/custom.css" />
+  
+  
+  
+  <script type="text/javascript" src="https://sureshsarda.github.io/assets/js/bundle.js"></script>
+</head>
+
+
+
+
+<body>
+    <article class="container">
+        <header>
+            
+
+            
+                <p>
+                    <a href="/">Programming Notes</a>
+                </p>
+                <h1>Algebra Basics</h1>
+                
+            
+            
+        </header>
+
+
+
+
+
+        <main id="js-article" class="container">
+            <div class="row">
+
+                <div class="col-9 py-5">
+                    <h2 id="modular-arithmetic">Modular Arithmetic</h2>
+<ul>
+<li>Defn: If <code>a</code> and <code>b</code> are integers, a <code>m</code> is a positive integer, then <em>a is congruent
+to modulo b</em>, if,  <code>m</code> divides <code>a - b</code> (i.e. the delta is divisible by <code>m</code>)</li>
+<li>The above holds only if <code>a % m == b % m</code></li>
+<li>Also, congruence holds true if and only iff, there exists a number <code>k</code>, such that
+<code>a = b + km</code>, (writing the first point in another way. If m id divisible, then
+there must be a number <code>k</code>)</li>
+<li><strong>Congruence Class:</strong> A set of all numbers congruent to a particular number</li>
+</ul>
+<h4 id="properties">Properties</h4>
+<ul>
+<li>If <code>a == b mod m</code> and <code>c == d mod m</code>, then
+<ul>
+<li><code>a + c == b + d mod m</code></li>
+<li><code>ac = bd mod m</code></li>
+<li><strong>Corollary</strong> <code>(a + b) mod m == ((a mod m) + (b mod m)) mod m</code></li>
+<li><strong>Corollary</strong> <code>ab mod m == ((a mod m) * (b mod m)) mod m</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="applications">Applications</h4>
+<ul>
+<li>Cryptography</li>
+<li>Hashing</li>
+<li>Generating pseudo random numbers</li>
+</ul>
+<h2 id="modular-exponentiation">Modular Exponentiation</h2>
+<ul>
+<li>Solves the problem of <code>b^n mod m</code></li>
+<li>Intuition: Use binary expansion of <code>n</code> to compute power of any number.</li>
+<li>e.g. <code>3^11 = 3^8 * 3^2 * 3^1</code></li>
+<li>When the number/power get larger, take the mod</li>
+</ul>
+<h2 id="modular-multiplicative-inverse">Modular Multiplicative Inverse</h2>
+<ul>
+<li>Modular Mulplicative Inverse <code>a</code> of an integer <code>x</code> is congruent to 1 modular
+some modulus <code>m</code>
+<code>a.x == 1 mod m</code></li>
+<li></li>
+</ul>
+<p>Ref: Rosen, Kenneth H. Discrete Mathematics and it&rsquo;s Applications. Section 3.4</p>
+
+
+                </div>
+                <aside class="bd-toc toc col-2 py-5">
+                    <div class="sticky-top pt-5">
+                        <h3>On this page</h3>
+                        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#modular-arithmetic">Modular Arithmetic</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#modular-exponentiation">Modular Exponentiation</a></li>
+    <li><a href="#modular-multiplicative-inverse">Modular Multiplicative Inverse</a></li>
+  </ul>
+</nav>
+                    </div>
+                </aside>
+            </div>
+
+            
+
+
+        </main>
+
+        
+    </article>
+    <footer class="mt-5 py-5">
+    <div class="container py-5">
+        
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <h3>
+                    <a href="/">Programming Notes</a>
+                </h3>
+                <ul class="list-unstyled">
+                    <li>Share the knowledge that you can and learn more in the process.</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-1"></div>
+            
+            
+            <div class="col-lg-2">
+                <h5>Curated</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/blog">Blog</a></li>
+                    
+                    <li class="mb-2"><a href="/books">Books</a></li>
+                    
+                    <li class="mb-2"><a href="/papers">Papers</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+            <div class="col-lg-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/series">Article Series</a></li>
+                    
+                    <li class="mb-2"><a href="/categories">Categories</a></li>
+                    
+                    <li class="mb-2"><a href="/posts">Posts</a></li>
+                    
+                    <li class="mb-2"><a href="/tags">Tags</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+            <div class="col-lg-2">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/">Github</a></li>
+                    
+                    <li class="mb-2"><a href="/">LinkedIn</a></li>
+                    
+                    <li class="mb-2"><a href="/">Medium</a></li>
+                    
+                    <li class="mb-2"><a href="/">Stack Overflow</a></li>
+                    
+                    <li class="mb-2"><a href="/">Twitter</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+
+    <div class="p-copyright">
+        
+        Suresh Sarda
+        &nbsp;&bull;&nbsp;
+        2020
+
+        
+        &nbsp;&bull;&nbsp;
+        <a href="https://sureshsarda.github.io/">Programming Notes</a>
+        
+        
+    </div>
+</footer>

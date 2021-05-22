@@ -6,6 +6,8 @@ tags:
     - linux
     - power user
 title: 'Practical Emacs Tip #1: Meet the C-x z command'
+series:
+    - Power Unix User
 ---
 The Emacs manual simply states that "Repear the most recently executed command".
 

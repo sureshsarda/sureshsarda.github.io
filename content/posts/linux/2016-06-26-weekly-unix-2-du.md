@@ -7,6 +7,8 @@ tags:
   - power-unix-tools
   - du
 title: 'Weekly Unix #2 - du'
+series:
+    - Power Unix User
 ---
 ### du = Disk Usage
 du summarizes the disk usage for files and folders.

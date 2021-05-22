@@ -1,0 +1,241 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  
+  <title>Programming Notes</title>
+  <meta property="og:title" content="Programming Notes" />
+  <meta name="twitter:title" content="Programming Notes" />
+  
+
+  
+
+  <meta name="author" content=""/>
+  <meta property="og:site_name" content="Programming Notes" />
+  <meta property="og:url" content="https://sureshsarda.github.io/notes/architecture/terms/" />
+
+  
+  <meta name="twitter:card" content="summary" />
+
+  
+
+  
+  <meta property="og:type" content="article" />
+  
+  
+  
+  <meta name="generator" content="Hugo 0.80.0" />
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/style.css" />
+  <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/custom.css" />
+  
+  
+  
+  <script type="text/javascript" src="https://sureshsarda.github.io/assets/js/bundle.js"></script>
+</head>
+
+
+
+
+<body>
+    <article class="container">
+        <header>
+            
+
+            
+                <p>
+                    <a href="/">Programming Notes</a>
+                </p>
+                <h1></h1>
+                
+            
+            
+        </header>
+
+
+
+
+
+        <main id="js-article" class="container">
+            <div class="row">
+
+                <div class="col-9 py-5">
+                    <h3 id="federation">Federation</h3>
+<p>The database is partitioned by functional use cases. For example, you will end up with databases like CustomerDb,
+ProductsDb, etc</p>
+<h3 id="sharding">Sharding</h3>
+<p>The database is partitions the data bases on the value of each object or a key in an object. For example, the UserDb
+itself will be stored on multiple nodes based on (perhaps) the name.</p>
+<h3 id="consistent-hashing">Consistent Hashing</h3>
+<p>A hashing technique that doesn&rsquo;t care about the number of buckets that you have. It hashes to an abstract value which
+then is kept in certain bucket.</p>
+<h3 id="benchmark">Benchmark</h3>
+<p>Simulate high load on the system to understand the capacity of the system</p>
+<h3 id="profile">Profile</h3>
+<p>Track performance of applications, track performance issues</p>
+<h3 id="base">BASE</h3>
+<p>BASE are typically described as properties of a NoSQL system.</p>
+<ul>
+<li>Basically Available - the system has availability gurantee</li>
+<li>Soft State - the state of system may change even without input</li>
+<li>Eventual Consistency - the system will attain consistency over a period of time</li>
+</ul>
+<h3 id="acid">ACID</h3>
+<p>ACID properties are typically of a SQL like system</p>
+<ul>
+<li>Atomicity</li>
+<li>Consistency</li>
+<li>Isolation</li>
+<li>Durability</li>
+</ul>
+<h3 id="key-value-store">Key-Value Store</h3>
+<p>A hash-table like database. A database that stores value or values against a given key. Implementations: Apache
+Cassandra, Redis</p>
+<h3 id="columnar-or-column-wise-database">Columnar or Column-wise Database</h3>
+<p>Database or storage engines that store data related to columns together unlike typical row based database where an
+entire row is stored together. Column based databases are typically used for data analytics when you need to run query
+on large amount of data. These databases reduce the number of disk operations in certain uses cases. Example: AWS
+Redshift</p>
+<h3 id="row-wise-database">Row wise database</h3>
+<p>Databases that store data of a row together. Typical SQL databases follow this approach. Retrival of an entire row is
+faster but aggregating the data may need multiple disk reads. Example: MySQL</p>
+<h4 id="document-store">Document Store</h4>
+<p>Like Key-value, but instead of a value of values, an entire document is stored. Example: MongoDb, which stores Json
+documents, CouchDb, DynomoDb are other examples</p>
+<h4 id="wide-column-store">Wide column store</h4>
+<p>TODO</p>
+<h3 id="graph-db">Graph Db</h3>
+<p>Data is store in nodes and edges. Nodes have data and edges have relationship between data Example: Neo4J, FlockDb</p>
+<h4 id="littles-law">Little&rsquo;s Law</h4>
+<p>Average number of records in a queue is equal to waiting time multiplied by arrival rate.
+TODO.</p>
+<h4 id="nedb">NeDB</h4>
+<p>A SQLite like MongoDb</p>
+
+
+                </div>
+                <aside class="bd-toc toc col-2 py-5">
+                    <div class="sticky-top pt-5">
+                        <h3>On this page</h3>
+                        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#federation">Federation</a></li>
+        <li><a href="#sharding">Sharding</a></li>
+        <li><a href="#consistent-hashing">Consistent Hashing</a></li>
+        <li><a href="#benchmark">Benchmark</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#base">BASE</a></li>
+        <li><a href="#acid">ACID</a></li>
+        <li><a href="#key-value-store">Key-Value Store</a></li>
+        <li><a href="#columnar-or-column-wise-database">Columnar or Column-wise Database</a></li>
+        <li><a href="#row-wise-database">Row wise database</a></li>
+        <li><a href="#graph-db">Graph Db</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                    </div>
+                </aside>
+            </div>
+
+            
+
+
+        </main>
+
+        
+    </article>
+    <footer class="mt-5 py-5">
+    <div class="container py-5">
+        
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <h3>
+                    <a href="/">Programming Notes</a>
+                </h3>
+                <ul class="list-unstyled">
+                    <li>Share the knowledge that you can and learn more in the process.</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-1"></div>
+            
+            
+            <div class="col-lg-2">
+                <h5>Curated</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/blog">Blog</a></li>
+                    
+                    <li class="mb-2"><a href="/books">Books</a></li>
+                    
+                    <li class="mb-2"><a href="/papers">Papers</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+            <div class="col-lg-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/series">Article Series</a></li>
+                    
+                    <li class="mb-2"><a href="/categories">Categories</a></li>
+                    
+                    <li class="mb-2"><a href="/posts">Posts</a></li>
+                    
+                    <li class="mb-2"><a href="/tags">Tags</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+            <div class="col-lg-2">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/">Github</a></li>
+                    
+                    <li class="mb-2"><a href="/">LinkedIn</a></li>
+                    
+                    <li class="mb-2"><a href="/">Medium</a></li>
+                    
+                    <li class="mb-2"><a href="/">Stack Overflow</a></li>
+                    
+                    <li class="mb-2"><a href="/">Twitter</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+
+    <div class="p-copyright">
+        
+        Suresh Sarda
+        &nbsp;&bull;&nbsp;
+        2020
+
+        
+        &nbsp;&bull;&nbsp;
+        <a href="https://sureshsarda.github.io/">Programming Notes</a>
+        
+        
+    </div>
+</footer>

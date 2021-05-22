@@ -10,6 +10,8 @@ tags:
   - SoftwareDevelopment
   - Clean Code
 title: Why you should not use null as a method parameter
+curated: true
+unsplashId: woMD-vhzOHI
 ---
 
 Object Oriented concept was first introduced with [Lisp][lisp] in the late 1950s. Lisp has atoms and attributes, where the atoms represented an real world object. OOP has evolved quite a bit after that. [SOLID][solid] design principle were introduced that helped us craft a better software. I will not go in details of [how these principles help us, there is already lot of material out there][solid_benefits]. Instead I'll focus on some mistakes we do while implementing these patterns. One of them is passing `null` as a method parameter especially when the called method doesn't use that parameter or has some default behavior.

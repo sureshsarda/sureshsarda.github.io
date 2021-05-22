@@ -1,0 +1,223 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  
+  <title>Programming Notes</title>
+  <meta property="og:title" content="Programming Notes" />
+  <meta name="twitter:title" content="Programming Notes" />
+  
+
+  
+
+  <meta name="author" content=""/>
+  <meta property="og:site_name" content="Programming Notes" />
+  <meta property="og:url" content="https://sureshsarda.github.io/notes/fundamentals/concurrency-java/" />
+
+  
+  <meta name="twitter:card" content="summary" />
+
+  
+
+  
+  <meta property="og:type" content="article" />
+  
+  
+  
+  <meta name="generator" content="Hugo 0.80.0" />
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/style.css" />
+  <link rel="stylesheet" href="https://sureshsarda.github.io/assets/css/custom.css" />
+  
+  
+  
+  <script type="text/javascript" src="https://sureshsarda.github.io/assets/js/bundle.js"></script>
+</head>
+
+
+
+
+<body>
+    <article class="container">
+        <header>
+            
+
+            
+                <p>
+                    <a href="/">Programming Notes</a>
+                </p>
+                <h1></h1>
+                
+            
+            
+        </header>
+
+
+
+
+
+        <main id="js-article" class="container">
+            <div class="row">
+
+                <div class="col-9 py-5">
+                    <h1 id="concurrency">Concurrency</h1>
+<p>Concurrency Vs Parallelism</p>
+<ul>
+<li>Concurrecny - running more than one thing together on a single resource, interleaved</li>
+<li>Parallelism - you have more than one resource to run</li>
+</ul>
+<h2 id="static-methods-in-the-thread-class">Static methods in the <code>Thread</code> class</h2>
+<ul>
+<li>Thread.sleep()</li>
+<li>Thread.interrupted()</li>
+<li>Thread.join()</li>
+<li>Thread.wait()</li>
+</ul>
+<h2 id="synchronization">Synchronization</h2>
+<ul>
+<li>synchronized keyword - uses the internsic lock of the object.</li>
+<li>All synchronized methods are together in an object</li>
+<li>synchronized keyword with static method - uses the internsic lock of the class</li>
+</ul>
+<h3 id="re-entrant-synchronization">Re-entrant Synchronization</h3>
+<ul>
+<li>Allows to acquire a lock which you already have</li>
+</ul>
+<h2 id="atomic-access">Atomic Access</h2>
+<ul>
+<li>Assignment is atomic, but a++ is not</li>
+<li>Operations on volatile variales are atomic? #ReadMore</li>
+<li>Volatile keyword makes variable stored in main memory that CPU cache, since every CPU will have a cache, updating the value may just update the value in the cache and not in main memory. Volatile forces it to store in main memory.</li>
+</ul>
+<h2 id="guarded-blocks">Guarded Blocks</h2>
+<h2 id="executor-service">Executor Service</h2>
+<h2 id="heading"></h2>
+<h2 id="java-constructs">Java Constructs</h2>
+<ul>
+<li>ThreadLocal variables - every thead will have their own variable copy</li>
+<li></li>
+</ul>
+
+
+                </div>
+                <aside class="bd-toc toc col-2 py-5">
+                    <div class="sticky-top pt-5">
+                        <h3>On this page</h3>
+                        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#static-methods-in-the-thread-class">Static methods in the <code>Thread</code> class</a></li>
+    <li><a href="#synchronization">Synchronization</a>
+      <ul>
+        <li><a href="#re-entrant-synchronization">Re-entrant Synchronization</a></li>
+      </ul>
+    </li>
+    <li><a href="#atomic-access">Atomic Access</a></li>
+    <li><a href="#guarded-blocks">Guarded Blocks</a></li>
+    <li><a href="#executor-service">Executor Service</a></li>
+    <li><a href="#heading"></a></li>
+    <li><a href="#java-constructs">Java Constructs</a></li>
+  </ul>
+</nav>
+                    </div>
+                </aside>
+            </div>
+
+            
+
+
+        </main>
+
+        
+    </article>
+    <footer class="mt-5 py-5">
+    <div class="container py-5">
+        
+        <div class="row">
+            <div class="col-lg-4 mb-3">
+                <h3>
+                    <a href="/">Programming Notes</a>
+                </h3>
+                <ul class="list-unstyled">
+                    <li>Share the knowledge that you can and learn more in the process.</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-1"></div>
+            
+            
+            <div class="col-lg-2">
+                <h5>Curated</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/blog">Blog</a></li>
+                    
+                    <li class="mb-2"><a href="/books">Books</a></li>
+                    
+                    <li class="mb-2"><a href="/papers">Papers</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+            <div class="col-lg-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/series">Article Series</a></li>
+                    
+                    <li class="mb-2"><a href="/categories">Categories</a></li>
+                    
+                    <li class="mb-2"><a href="/posts">Posts</a></li>
+                    
+                    <li class="mb-2"><a href="/tags">Tags</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+            <div class="col-lg-2">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    
+                    <li class="mb-2"><a href="/">Github</a></li>
+                    
+                    <li class="mb-2"><a href="/">LinkedIn</a></li>
+                    
+                    <li class="mb-2"><a href="/">Medium</a></li>
+                    
+                    <li class="mb-2"><a href="/">Stack Overflow</a></li>
+                    
+                    <li class="mb-2"><a href="/">Twitter</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+
+    <div class="p-copyright">
+        
+        Suresh Sarda
+        &nbsp;&bull;&nbsp;
+        2020
+
+        
+        &nbsp;&bull;&nbsp;
+        <a href="https://sureshsarda.github.io/">Programming Notes</a>
+        
+        
+    </div>
+</footer>

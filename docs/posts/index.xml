@@ -150,8 +150,8 @@ Problem Statement Before we jump into code, let’s take a minute and think abou
       
       <guid>https://sureshsarda.github.io/posts/2016-10-30-bash-setting-variables-from-a-file/</guid>
       <description>Shell scripts sometimes get overly complicated and we need lot of configurations stored in file instead of setting them in ten different files which not to mention is error prone. A simple technique would be to write all the configurations in a properties file and read it in all the scripts.
-Let’s do that! For example we have all these configurations we need to set
-server.build.ip=10.20.0.17 server.stage.ip=10.20.0.77 server.stage.user=stageuser server.stage.user.sudo=stageadmin server.stage.log=/var/log/logfile.log server.</description>
+Create the variables file For example we have all these configurations we need to set
+server.build.ip=10.20.0.17 server.stage.ip=10.20.0.77 server.stage.user=stageuser server.stage.user.sudo=stageadmin server.</description>
     </item>
     
     <item>
@@ -216,7 +216,7 @@ cd - cd with a hyphen goes to previous directory and executing that again comes 
     </item>
     
     <item>
-      <title>CDPATH</title>
+      <title>CDPATH: The lesser known path variable</title>
       <link>https://sureshsarda.github.io/posts/linux/2016-07-13-cdpath/</link>
       <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
       
@@ -287,15 +287,6 @@ By the way, before we start there is one more thing - Once you press C-x z, you 
       <description>Solution to HackerRank FindPoint
 Domain Knowledge Required What is a symmetric point? Given 2 points P and Q, a symmetric point of P against Q is such that Q is the midpoint of the line joining P and the symmetric point P’. In other words, let’s say a point P’ is the symmetric point. Then,
  P-Q-P’are on one line Dist(PQ) = Dist(QP’)  Code import java.io.*; import java.util.*; import java.</description>
-    </item>
-    
-    <item>
-      <title>Architecture of a database</title>
-      <link>https://sureshsarda.github.io/posts/database/architecture/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://sureshsarda.github.io/posts/database/architecture/</guid>
-      <description>Databases are like black boxes. We send queries and assuming that they will be handled correctly without worrying too much about how a database will handle it. Read about the overall architecture of database in this multipart essay on databases.</description>
     </item>
     
   </channel>

@@ -1,53 +1,72 @@
-{{ partial "header.html" . }}
+{{ partial "head.html" . }}
 
 {{ $baseurl := .Site.BaseURL | sanitizeurl }}
+
 <body>
-<article class="article">
-    {{ with .Params.thumbnail }}
-        <img src="{{ . }}" alt="thumbnail" class="p-article__thumbnail">
-    {{ end }}
+    <article class="container">
+        <header>
+            {{/*  {{ if .IsPage }}
+            {{ if .Params.unsplashId }}
+            <img style="height: 600px; object-fit: cover" class="col-12"
+                src="https://source.unsplash.com/{{ .Params.unsplashId }}">
+            {{ else }}
+            <img style="height: 600px; object-fit: cover" class="col-12"
+                src="https://source.unsplash.com/featured/?q=pattern">
+            {{ end }}
+            <p class="text-muted">Image from Unsplash</p>
+            {{ end }}  */}}
 
-    <section id="js-article" class="p-article__body">
-        {{ .Content }}
-    </section>
+            {{/*  <div style="position: absolute; background: rgba(0, 0, 0, 0.9); color: white; top: 200px; padding: 50px;">  */}}
+                <p>
+                    <a href="/">Programming Notes</a>
+                </p>
+                <h1>{{ .Title }}</h1>
+                {{ range .Params.tags }}
+                <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
+                {{ end }}
+            {{/*  </div>  */}}
+            {{/* <nav>
+                Programming Notes
+            </nav> */}}
+        </header>
 
-    <footer>
-        {{ partial "comment_custom.html" . }}
-        {{ with ($.Param "disqus") }}
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_shortname = '{{ . }}';
-                (function () {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
-                    by
-                    Disqus.</a></noscript>
-        {{ end }}
-        <nav class="p-pagination c-pagination">
-            <div class="c-pagination__ctrl">
-                <div class="c-pagination__newer">
+
+
+
+
+        <main id="js-article" class="container">
+            <div class="row">
+
+                <div class="col-9 py-5">
+                    {{ .Content }}
+
+                </div>
+                <aside class="bd-toc toc col-2 py-5">
+                    <div class="sticky-top pt-5">
+                        <h3>On this page</h3>
+                        {{.TableOfContents}}
+                    </div>
+                </aside>
+            </div>
+
+            {{ partial "related.html" . }}
+        </main>
+
+        {{/*  <nav>
+            <div>
+                <div>
                     {{ if .NextInSection }}
-                        <a href="{{ .NextInSection.Permalink }}">Newer</a>
+                    <a href="{{ .NextInSection.Permalink }}">Newer</a>
                     {{ else }}
                     {{ end }}
                 </div>
-                <div class="c-pagination__older">
+                <div>
                     {{ if .PrevInSection }}
-                        <a href="{{ .PrevInSection.Permalink }}">Older</a>
+                    <a href="{{ .PrevInSection.Permalink }}">Older</a>
                     {{ else }}
                     {{ end }}
                 </div>
             </div>
-        </nav>
-        {{ partial "related.html" . }}
-        {{ partial "siteinfo.html" . }}
-    </footer>
-</article>
-{{ partial "footer.html" . }}
-</body>
-</html>
+        </nav>  */}}
+    </article>
+    {{ partial "footer.html" . }}
