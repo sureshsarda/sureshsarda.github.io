@@ -1,4 +1,0 @@
----
-layout: blog
-hideDate: true
----

@@ -1,85 +1,48 @@
-baseURL: https://sureshsarda.github.io/ 
-disablePathToLower: true
-languageCode: en-us
-title: Programming Notes
+baseURL: '/'
+languageCode: 'en-us'
+title: 'suresh sarda'
+theme: 'ananke'
 
-menu:
+menus:
   main:
-    - identifier: posts
-      name: Posts
-      url: /
-    - identifier: about
-      name: About
-      url: /about
-  footer:
-    - identifier: curated
-      name: Curated
-      url: /curated
-      children:
-    - identifier: blog
-      name: Blog
-      url: /blog
-      parent: curated
-    - identifier: books
-      name: Books
-      url: /books
-      parent: curated
-    - identifier: papers
-      name: Papers
-      url: papers
-      parent: curated
-
-    - identifier: links
-      name: Links
-      url: /links
-    - identifier: posts
-      name: Posts
-      url: /posts
-      parent: links
-    - identifier: tags
-      name: Tags
-      url: /tags
-      parent: links
-    - identifier: categories
-      name: Categories
-      url: /categories
-      parent: links
-    - identifier: series
-      name: Article Series
-      url: /series
-      parent: links
-
-    - identifier: social
-      name: Social
-      url: /social
-    - identifier: github
-      name: Github
-      parent: social
-    - identifier: linkedin
-      name: LinkedIn
-      parent: social
-    - identifier: stackoverflow
-      name: Stack Overflow
-      parent: social
-    - identifier: medium
-      name: Medium
-      parent: social
-    - identifier: twitter
-      name: Twitter
-      parent: social
+    - name: essays
+      url: '/'
+    - name: notes
+      url: '/notes'
+    - name: about
+      url: '/about'
+    - name: reading
+      url: '/reading' 
+    
 
 params:
-  - author: Suresh Sarda
-  - paginate: 5
+  # featured_image: /images/white-texture.jpg
+  background_color_class: bg-black
+  production: true
+  mainSections:
+  - essays
+  - reading
+  ananke_socials:
+    - name: twitter
+      url: https://twitter.com/sureshssarda
+    - name: github
+      url: https://github.com/sureshsarda
+    - name: linkedin
+      url: https://www.linkedin.com/in/sureshsarda/
+    - name: medium
+      url: https://sureshssarda.medium.com/
 
-taxonomies:
-  series: series
-  tag: tags
 
 markup:
-  tableOfContents:
-    endLevel: 3
-    ordered: false
-    startLevel: 2
-
-
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4

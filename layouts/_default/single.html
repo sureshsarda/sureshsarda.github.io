@@ -1,72 +1,69 @@
-{{ partial "head.html" . }}
+{{ define "header" }}
+   {{/* We can override any block in the baseof file be defining it in the template */}}
+  {{ partial "page-header.html" . }}
+{{ end }}
 
-{{ $baseurl := .Site.BaseURL | sanitizeurl }}
+{{ define "main" }}
+  {{ $section := .Site.GetPage "section" .Section }}
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          {{/*
+          CurrentSection allows us to use the section title instead of inferring from the folder.
+          https://gohugo.io/variables/page/#section-variables-and-methods
+          */}}
+        {{with .CurrentSection.Title }}{{. | upper }}{{end}}
+      </aside>
 
-<body>
-    <article class="container">
-        <header>
-            {{/*  {{ if .IsPage }}
-            {{ if .Params.unsplashId }}
-            <img style="height: 600px; object-fit: cover" class="col-12"
-                src="https://source.unsplash.com/{{ .Params.unsplashId }}">
-            {{ else }}
-            <img style="height: 600px; object-fit: cover" class="col-12"
-                src="https://source.unsplash.com/featured/?q=pattern">
-            {{ end }}
-            <p class="text-muted">Image from Unsplash</p>
-            {{ end }}  */}}
+      <h1 class="f1 athelas mt3 mb1">
+        {{- .Title -}}
+      </h1>
+      {{ with .Params.author | default .Site.Params.author }}
+      <p class="tracked">
+          By <strong>
+          {{ if reflect.IsSlice . }}
+              {{ delimit . ", " | markdownify }}
+          {{else}}
+              {{ . | markdownify }}
+          {{ end }}
+          </strong>
+      </p>
+      {{ end }}
+      {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
+      {{ if not .Date.IsZero }}
+      <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+        {{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+      </time>
+      {{end}}
 
-            {{/*  <div style="position: absolute; background: rgba(0, 0, 0, 0.9); color: white; top: 200px; padding: 50px;">  */}}
-                <p>
-                    <a href="/">Programming Notes</a>
-                </p>
-                <h1>{{ .Title }}</h1>
-                {{ range .Params.tags }}
-                <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
-                {{ end }}
-            {{/*  </div>  */}}
-            {{/* <nav>
-                Programming Notes
-            </nav> */}}
-        </header>
+      {{/*
+          Show "reading time" and "word count" but only if one of the following are true:
+          1) A global config `params` value is set `show_reading_time = true`
+          2) A section front matter value is set `show_reading_time = true`
+          3) A page front matter value is set `show_reading_time = true`
+        */}}
+      {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
+        <span class="f6 mv4 dib tracked"> - {{ i18n "readingTime" .ReadingTime }} </span>
+        <span class="f6 mv4 dib tracked"> - {{ i18n "wordCount" .WordCount }} </span>
+      {{ end }}
+    </header>
+    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+      {{- .Content -}}
+      {{- partial "tags.html" . -}}
+      {{ partial "social-share.html" . }}
+      <div class="mt6 instapaper_ignoref">
+      {{ if .Site.DisqusShortname }}
+        {{ template "_internal/disqus.html" . }}
+      {{ end }}
+      {{ if .Site.Params.commentoEnable }}
+        {{- partial "commento.html" . -}}
+      {{ end }}
+      </div>
+    </div>
 
+    <aside class="w-30-l mt6-l">
+      {{- partial "menu-contextual.html" . -}}
+    </aside>
 
-
-
-
-        <main id="js-article" class="container">
-            <div class="row">
-
-                <div class="col-9 py-5">
-                    {{ .Content }}
-
-                </div>
-                <aside class="bd-toc toc col-2 py-5">
-                    <div class="sticky-top pt-5">
-                        <h3>On this page</h3>
-                        {{.TableOfContents}}
-                    </div>
-                </aside>
-            </div>
-
-            {{ partial "related.html" . }}
-        </main>
-
-        {{/*  <nav>
-            <div>
-                <div>
-                    {{ if .NextInSection }}
-                    <a href="{{ .NextInSection.Permalink }}">Newer</a>
-                    {{ else }}
-                    {{ end }}
-                </div>
-                <div>
-                    {{ if .PrevInSection }}
-                    <a href="{{ .PrevInSection.Permalink }}">Older</a>
-                    {{ else }}
-                    {{ end }}
-                </div>
-            </div>
-        </nav>  */}}
-    </article>
-    {{ partial "footer.html" . }}
+  </article>
+{{ end }}
