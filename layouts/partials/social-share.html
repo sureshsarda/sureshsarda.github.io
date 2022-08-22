@@ -11,7 +11,8 @@
 
 {{ $services := where (partialCached "func/socials/Get" "socials/Get") "share" true }}
 {{ if not .Params.disable_share }}
-  <div id="sharing" class="mt3 ananke-socials">
+
+<div id="sharing" class="mt3 ananke-socials">
     {{ range $service :=  $services }}
       {{ $href := index $hrefs .name }}
       <a href="{{ $href }}" class="ananke-social-link {{ .name }} no-underline" aria-label="share on {{ .label }}">

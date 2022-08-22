@@ -1,27 +1,26 @@
 baseURL: '/'
 languageCode: 'en-us'
-title: 'suresh sarda'
+title: 'sardas'
 theme: 'ananke'
 
 menus:
   main:
-    - name: essays
+    - name: posts
       url: '/'
-    - name: notes
-      url: '/notes'
+    # - name: notes
+    #   url: '/notes'
     - name: about
       url: '/about'
-    - name: reading
-      url: '/reading' 
+    # - name: reading
+    #   url: '/reading' 
     
-
 params:
   # featured_image: /images/white-texture.jpg
   background_color_class: bg-black
   production: true
-  mainSections:
-  - essays
-  - reading
+  # mainSections:
+  # - posts
+  # - reading
   ananke_socials:
     - name: twitter
       url: https://twitter.com/sureshssarda
@@ -46,3 +45,6 @@ markup:
     noClasses: true
     style: monokai
     tabWidth: 4
+
+
+disqusShortname: sardas

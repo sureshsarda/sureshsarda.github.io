@@ -1,0 +1,24 @@
+{{ define "header" }}
+{{ partial "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <section>
+        {{ .Content }}
+    </section>
+    <section>
+        <h1 class="f1">Books</h1>
+        <ul>
+            {{ range .Site.Data.Books }}
+                <li class="pv1">
+                    <div>{{ .title }}</div>
+                    <div>Status: {{ .status }}, {{ .rating }} Stars</div>
+
+                </li>
+            {{ end }}
+        </ul>
+    </section>
+
+</article>
+{{ end }}

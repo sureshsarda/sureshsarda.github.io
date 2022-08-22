@@ -1,0 +1,12 @@
+<article class="w-100">
+  <div class="flex flex-column flex-row-ns">
+    <div class="w-20 mw8 f4 fw1 mt0">{{ .Date.Format (default "Jan 02, 2006" .Site.Params.date_format) }}</div>
+    <div class="w-80">
+      <h1 class="f4 fw1 mt0 lh-title">
+        <a href="{{.RelPermalink}}" class="color-inherit dim link">
+          {{ .Title }}
+        </a>
+      </h1>
+    </div>
+  </div>
+</article>

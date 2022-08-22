@@ -2,6 +2,9 @@
 date: "2018-08-04T04:47:00Z"
 share: true
 title: On The Turing Test
+tags:
+    - artificial-intelligence
+    - research-paper
 ---
 
 The Imitation Game or Turing Test has become the hallmark of the question - ‘*Can machines think?*’. Turing predicts that by the end of 20th century, machine would be able to think. Humans have been on moon after that and machines are still at the dawn of thinking. *Thinking*. The paper is philosophical one and ‘*think*’ is a vague term which cannot be determined in simple yes or no. Turing has therefore, given a method, a test through which we can assess if machines can think. Simply put, the Turing Test states - if a machine is able to fool a human into believing that it’s a human, then we could say that the machines can think.

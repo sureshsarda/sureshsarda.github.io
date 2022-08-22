@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+body {
+    max-width: 576px;
+    /* background-color: #f4f4f4; */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25rem;
+    line-height: 24px;
+}
+
+blockquote {
+    margin: 0 2rem 0 2rem;
+    line-height: 2;
+    background: none;
+    border: none;
+    color: #5985a6;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: lighter;
+
+}
+
+aside {
+    position: absolute;
+    right: -200px;
+    width: 200px;
+    border-left: 1px solid #f4f4f4;
+    padding: 10px;
+
+}
+
+h1::before {
+    content: "§";
+    position: absolute;
+    left: -48px;
+    width: 48px;
+    text-align: center;
+    color: #f0f0f0;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 4rem 0 2rem 0;
+    font-weight: bold;
+    border: none;
+    line-height: 1.5;
+
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 3rem 0 2rem 0;
+    line-height: 1.5;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 3rem 0 1rem 0;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin: 2rem 0 1rem 0;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: bolder;
+    margin: 2rem 0 1rem 0;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+    line-height: 1.5;
+}
+
+p {
+    line-height: 1.5;
+    /* font-size: 1.25rem; */
+
+}
+
+section.notes {
+    background-color: #f6f8f2;
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+}
+
+section > p:first-child {
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    text-decoration: inherit;
+    text-transform: uppercase;
+    font-style: inherit;
+    color: black;
+
+}
+
+section.questions {
+    background-color: #f8f2f2;
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+}
+
+pre {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1rem;
+}

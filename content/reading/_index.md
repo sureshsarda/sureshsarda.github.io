@@ -1,6 +1,1 @@
----
-title: Books Reviews
-type: list
----
-
-An index of papers, books and articles I have read or I'm currently reading.
+# How does the rating work?
