@@ -5,9 +5,8 @@ description: Why passing null as a method parameter breaks the abstraction parad
   and how you should avoid it.
 share: true
 tags:
-  - Java
-  - SoftwareDevelopment
-  - Clean Code
+  - java
+  - clean code
 title: Why you should not use null as a method parameter
 curated: true
 unsplashId: woMD-vhzOHI

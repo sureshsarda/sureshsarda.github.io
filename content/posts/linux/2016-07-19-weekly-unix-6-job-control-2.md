@@ -4,7 +4,6 @@ categories:
 date: "2016-07-19T00:00:00Z"
 tags:
   - linux
-  - power-unix-tools
 title: 'Weekly Unix #6 - job control (2)'
 ---
 ## Finer Job Selection

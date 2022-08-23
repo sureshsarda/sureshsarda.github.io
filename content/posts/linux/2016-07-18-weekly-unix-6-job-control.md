@@ -4,7 +4,6 @@ categories:
 date: "2016-07-18T00:00:00Z"
 tags:
   - linux
-  - power-unix-tools
 title: 'Weekly Unix #6 - job control'
 ---
 Some commands take long time to finish execution. For example if you are searching for a file in a directory or extracting/compressing a directory or maybe building a project which take quite some time to complete. The command when executed takes a while to complete and thereby occupy the terminal preventing you from doing other stuff.

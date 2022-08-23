@@ -1,5 +1,6 @@
 ---
 title: Hugo Snippets
+draft: true
 ---
 
 

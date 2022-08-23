@@ -5,7 +5,7 @@ description: Learn how to split/explode a Pandas DataFrame with a column or cell
   multiple values separated by a deliminator into multiple rows
 share: true
 tags: 
-  - pandas
+  - data
   - python
 title: 'Pandas: Splitting (Exploding) a column into multiple rows'
 curated: true

@@ -3,9 +3,10 @@ category: how to
 date: "2017-08-03T00:00:00Z"
 excerpt: Basic configuration of logger in Python. 4 lines to get you started
 tags:
-- logging
+  - python
 title: Boilerplate - Logging in Python
 ---
+
 This is how all my Python scripts look like when they start:
 
 ```python

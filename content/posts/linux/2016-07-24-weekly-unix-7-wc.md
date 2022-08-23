@@ -2,7 +2,6 @@
 date: "2016-07-24T00:00:00Z"
 tags:
   - linux
-  - power-unix-tools
     
 title: 'Weekly Unix #7 - wc'
 type: post

@@ -6,10 +6,10 @@ excerpt:
   try something new, you can fire up a new machine and destroy once you are done.
   Clean slate for all your experiments.
 tags:
-  - devops
-  - Elasticsearch
-  - kafka
-  - storm
+  - programming
+  - elasticsearch
+  - apache kafka
+  - apache storm
 title: Vagrant - Setting up and tearing down development environments on the fly
 category: essay
 ---

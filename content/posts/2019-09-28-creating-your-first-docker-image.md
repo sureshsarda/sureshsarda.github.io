@@ -3,18 +3,17 @@ category: how to
 date: "2019-09-28T10:00:00Z"
 description: Learn to create a Docker container in less than 60 seconds.
 share: true
-tags: 
-    - docker
-    - python
-    - devops
-    - containers
+tags:
+  - docker
+  - python
 title: Create your first Docker container
-thumbnail: '/assets/images/overlay/rinson-chory-2vPGGOU-wLA-unsplash.jpg' 
+thumbnail: "/assets/images/overlay/rinson-chory-2vPGGOU-wLA-unsplash.jpg"
 ---
 
 > Part 1 of a multi-part essay on configuring Docker in production.
 
 ## Prerequisites
+
 1. You have Docker installed ([See instructions to install](https://docs.docker.com/install/linux/docker-ce/ubuntu/))
 2. (Optional) You know to to deploy a Flask application using command line
 
@@ -27,12 +26,12 @@ A typical workflow starts with a base image, works on top of it, saves it either
 ## Creating Your First Image
 
 ### Dockerfile
-This file list down steps/configuration to build an image. In this example, we are trying to run a Flask application. 
+
+This file list down steps/configuration to build an image. In this example, we are trying to run a Flask application.
 
 **A bit of backstory on Flask applications**
 
 Typically, Flask applications have an entry point, `server.py` in this case. We can start the server by simply executing: `python server.py`, assuming that the current Python environment has all the dependencies installed. If not, we can install the dependencies from a requirements file.
-
 
 ```docker
 # 1. Use this as the base image
@@ -57,21 +56,26 @@ CMD ["python", "server.py"]
 ### Running the container
 
 1. **To run the container, you first need to build it**
-THis can be achieved like this:
+   THis can be achieved like this:
+
 ```
 sudo docker build --tag=gettingstarted .
 ```
 
 2. **Once built, make sure it is present in your local registry**
+
 ```
 docker image ls
 ```
+
 (More on this listing later, but you should see the container `gettingstarted` with latest tag here)
 
 3. **Now is the time to run the container**
+
 ```
 docker run -p 5000:5000 gettingstarted
 ```
+
 This runs the Docker container by the given name. The `-p` parameter is the port mapping from the host OS to the container.
 
 That's it! You have created your first Docker container!

@@ -2,7 +2,8 @@
 category: how to
 date: "2019-11-23T00:00:00Z"
 tags:
-- Spring
+- spring
+- java
 title: Spring - Read Http Request headers
 url: /java/spring/request-headers-in-spring-rest
 ---

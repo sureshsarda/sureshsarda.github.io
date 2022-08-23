@@ -1,22 +1,23 @@
 ---
 category: how to
 tags:
-- Hadoop
-- Pig
-- Java
+  - apache hadoop
+  - big data
+  - java
 date: "2018-08-01T07:11:02Z"
 share: true
 title: Running in Pig in Local Mode in Java
 ---
 
 ## Overview of steps
+
 1. Create a new maven project
 2. Add Hadoop and Pig dependencies
 3. Write a small pig script to count words in a file
 4. Write a driver program that will run this pig script
 
-
 ## 1. Create a new maven project
+
 ```shell
 mvn archetype:generate -DgroupId=com.example -DartifactId=piglocal -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
 ```
@@ -24,7 +25,9 @@ mvn archetype:generate -DgroupId=com.example -DartifactId=piglocal -DarchetypeAr
 You can now import the project in your IDE.
 
 ### 2. Add Hadoop and Pig dependencies
+
 Pig needs the following dependencies:
+
 ```xml
 <dependency>
     <groupId>org.apache.pig</groupId>
@@ -57,6 +60,7 @@ Pig needs the following dependencies:
 ```
 
 ## 3. Write a small pig script to count words in a file
+
 ```shell
 inp = LOAD 'complete/path/to/file.txt' as (line:chararray);
 words = foreach inp generate FLATTEN(TOKENIZE(line)) as word;
@@ -69,9 +73,10 @@ store ordered_word_count into 'out';
 Don't forget to update the input file
 
 ### 4. Write a driver program
+
 ```java
 public static void main(String[] args) throws IOException {
     PigServer ps = new PigServer(ExecType.LOCAL);
     ps.registerScript("wordcount.pig");
-}   
+}
 ```

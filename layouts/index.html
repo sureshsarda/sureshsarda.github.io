@@ -8,40 +8,36 @@
 <!-- {{/* Create a variable with that section to use in multiple places. */}} -->
 {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
 <!-- {{/* Check to see if the section is defined for ranging through it */}} -->
-{{ $section_count := len $section }}
-{{ if ge $section_count 1 }}
+{{ $section_count := len $section }} {{ if ge $section_count 1 }}
 <!-- {{/* Derive the section name  */}} -->
 {{ $section_name := index (.Site.Params.mainSections) 0 }}
 
 <div class="pa3 pa4-ns w-100-s w-100-m w-70-l center bg-white">
   <!-- {{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}} -->
 
-  <h1 class="flex-none">
-    Pinned
-  </h1>
+  <h1 class="flex-none">All Posts</h1>
+  {{ range $section.GroupByDate "2006" }}
+  <h2 class="f3 blue">{{ .Key }}</h2>
+
+  {{ range .Pages }}
+  <div class="relative w-100">{{ partial "summary-single-line.html" . }}</div>
+  {{ end }} {{ end }}
+
+  <!-- <h1 class="flex-none">Pinned</h1>
   <section class="w-100 mw8">
     {{ range (where $section "Params.pinned" true) }}
-    <div class="relative w-100">
-      {{ partial "summary-single-line.html" . }}
-    </div>
+    <div class="relative w-100">{{ partial "summary-single-line.html" . }}</div>
     {{ end}}
   </section>
 
   {{ with .Site.GetPage "section" $section_name }}
-  <h1 class="flex-none">
-    Recent
-  </h1>
-  {{ end }}
-
-  {{ $n_posts := $.Param "recent_posts_number" | default 5 }}
+  <h1 class="flex-none">Recent</h1>
+  {{ end }} {{ $n_posts := $.Param "recent_posts_number" | default 5 }}
 
   <section class="w-100 mw8">
     {{ range $section }}
-    <div class="relative w-100">
-      {{ partial "summary-single-line.html" . }}
-    </div>
+    <div class="relative w-100">{{ partial "summary-single-line.html" . }}</div>
     {{ end }}
-  </section>
+  </section> -->
 </div>
-{{ end }}
-{{ end }}
+{{ end }} {{ end }}

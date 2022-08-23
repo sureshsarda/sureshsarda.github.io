@@ -3,7 +3,7 @@ category: how to
 date: "2016-06-08T00:00:00Z"
 tags:
     - linux
-title: Weekly Unix \#1 - tr
+title: Weekly Unix #1 - tr
 ---
 
 

@@ -1,9 +1,6 @@
 ---
 title: Hackerrank - find-point solution
 date: 2016-06-05T04:47:00Z
-tags:
-    - hackerrank
-    - geometry
 alias: 
   - /problem-solving/leetcode/solution-happy-number
 category: competitive-coding

@@ -2,9 +2,6 @@
 title: Hackerrank - maximum-draw solution
 date: 2016-06-10T00:00:00Z
 category: competitive-coding
-tags:
-    - hackerrank
-    - probability
 ---
 Solution to HackerRank question: [maximum draw](hackerrank)
 
