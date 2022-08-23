@@ -9,9 +9,9 @@
     <header class="w-100">
       <aside class="mt5 instapaper_ignoref b helvetica tracked">
         <a href="/" class="link no-underline black dim">HOME</a>
-        {{ range .Params.Categories }}
-        <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="link no-underline black dim">&bull; {{ . | upper }}</a>
-        {{end}}
+        {{ if .Params.Category }}
+        <a href="{{ "/category/" | relLangURL }}{{ .Params.Category | urlize }}" class="link no-underline black dim">&bull; {{ .Params.Category | upper }}</a>
+        {{ end }}
       </aside>
 
       <h1 class="f1 mv3 mb1">

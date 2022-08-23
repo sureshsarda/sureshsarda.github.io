@@ -1,6 +1,6 @@
 baseURL: '/'
 languageCode: 'en-us'
-title: 'sardas'
+title: 's9a.me'
 theme: 'ananke'
 
 menus:
@@ -13,7 +13,10 @@ menus:
       url: '/about'
     # - name: reading
     #   url: '/reading' 
-    
+taxonomies:
+  category: category
+  tags: tags
+
 params:
   # featured_image: /images/white-texture.jpg
   background_color_class: bg-black

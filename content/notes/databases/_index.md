@@ -1,4 +1,0 @@
----
-title: DB
-layout: subdir
----
