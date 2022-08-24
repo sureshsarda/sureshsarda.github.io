@@ -1,6 +1,6 @@
-baseURL: 's9a.me'
+baseURL: 'https://www.s9a.me/'
 languageCode: 'en-us'
-title: 's9a.me'
+title: ''
 theme: 'ananke'
 
 menus:
