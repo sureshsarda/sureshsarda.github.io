@@ -1,6 +1,6 @@
-baseURL: 'https://www.s9a.me/'
+baseURL: '/'
 languageCode: 'en-us'
-title: ''
+title: 's9a.me'
 theme: 'ananke'
 
 menus:
@@ -34,6 +34,8 @@ params:
     - name: medium
       url: https://sureshssarda.medium.com/
 
+permalinks:
+  posts: /:06/:1/:2/:filename/
 
 markup:
   highlight:
