@@ -22,7 +22,7 @@ params:
   production: true
   description: sureshsarda.me - my thoughts and ideas on programming
   images:
-    - slipbox.jpg
+    - images/slipbox.jpg
   title: s9a.me
 
   # mainSections:
