@@ -1,29 +1,34 @@
-baseURL: '/'
-languageCode: 'en-us'
-title: 's9a.me'
-theme: 'ananke'
+baseURL: "/"
+languageCode: "en-us"
+title: "s9a.me"
+theme: "ananke"
 
 menus:
   main:
     - name: posts
-      url: '/'
+      url: "/"
     # - name: notes
     #   url: '/notes'
     - name: about
-      url: '/about'
+      url: "/about"
     # - name: reading
-    #   url: '/reading' 
+    #   url: '/reading'
 taxonomies:
   category: category
   tags: tags
 
 params:
-  # featured_image: /images/white-texture.jpg
   background_color_class: bg-black
   production: true
+  description: sureshsarda.me - my thoughts and ideas on programming
+  images:
+    - slipbox.jpg
+  title: s9a.me
+
   # mainSections:
   # - posts
   # - reading
+
   ananke_socials:
     - name: twitter
       url: https://twitter.com/sureshssarda
@@ -33,9 +38,6 @@ params:
       url: https://www.linkedin.com/in/sureshsarda/
     - name: medium
       url: https://sureshssarda.medium.com/
-
-permalinks:
-  posts: /:06/:1/:2/:filename/
 
 markup:
   highlight:
@@ -50,6 +52,5 @@ markup:
     noClasses: true
     style: monokai
     tabWidth: 4
-
 
 disqusShortname: sardas
