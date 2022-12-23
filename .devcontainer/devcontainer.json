@@ -1,0 +1,22 @@
+{
+	"name": "Hugo",
+	"build": {
+        "dockerfile": "Dockerfile"
+    },
+	"workspaceMount": "source=${localWorkspaceFolder},target=/src,type=bind",
+    "workspaceFolder": "/src",
+    "forwardPorts": [
+        1313
+    ],
+    "extensions": [
+        "bierner.markdown-mermaid",
+        "takumii.markdowntable",
+        "davidanson.vscode-markdownlint",
+        "esbenp.prettier-vscode"
+    ],
+    "settings": {
+        "markdown.styles": [
+            ".vscode/preview.css"
+        ]
+    }
+}

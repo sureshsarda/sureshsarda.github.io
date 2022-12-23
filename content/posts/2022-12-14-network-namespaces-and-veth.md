@@ -1,12 +1,13 @@
 ---
 date: "2022-12-14"
 tags:
-    - containers
-    - linux kernel
+  - containers
+  - linux kernel
 title: Network Namespaces and Veth pairs
 type: Essay
 pinned: true
 ---
+
 Containers are a thing now and microservices the new buzz word. But how do containers work? How are containers magically
 separated from each other?
 
@@ -25,7 +26,6 @@ Let us begin by creating a new namepsace:
 After this, we need to connect this namespace to the host machine. For that we
 will use a veth pair. A veth pair is like an ethernet cable with two ends. Whatever
 you send from the one end comes out from the other end.
-
 
 ```bash
 # create a link calld veth0 of type veth and name the peer (or other end) as veth1
@@ -78,6 +78,7 @@ Let's assign IP addresses and start the devices so that we can send data
 (Note, if we want to execute a command inside a name space we use `ip netns exec <namespace> <command>`)
 
 Let's see if these devices are connected:
+
 ```bash
 > ping -c1 10.0.0.1
 PING 10.0.0.1 (10.0.0.1) 56(84) bytes of data.
@@ -91,6 +92,7 @@ PING 10.0.0.10 (10.0.0.10) 56(84) bytes of data.
 --- 10.0.0.10 ping statistics ---
 1 packets transmitted, 0 received, 100% packet loss, time 0ms
 ```
+
 Looks like No. Because although one end is connected to our host VM, it still
 doesn't know which traffic should be routed or which network exists on the other
 end of the veth. So the host does't send any traffic. The network is unavailable
