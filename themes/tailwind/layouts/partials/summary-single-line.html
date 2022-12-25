@@ -1,0 +1,8 @@
+<article class="text-base text-gray-800  inline-block mb-2">
+    <div class="w-36 text-gray-500"></div>
+    <div class="hover:text-gray-500 hover:underline">
+        <a href="{{.RelPermalink}}" class="color-inherit dim link">
+          {{ .Date.Format (default "Jan 02" .Site.Params.date_format) }} -- {{ .Title }}
+        </a>
+    </div>
+</article>

@@ -1,0 +1,5 @@
+{{ range .Params.tags }}
+  <a class="text-sky-600 mr-2" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="">
+    #{{. | lower}}
+  </a>
+{{ end }}

@@ -8,6 +8,7 @@ tags:
 title: A brief summary of Google's Monorepo
 type: Essay
 pinned: true
+toc: true
 ---
 
 I'll first talk about the code repo and how Goole makes it work, followed by the pros and cons and in the end whether it's needed today.
@@ -30,11 +31,11 @@ Let's start with a few stats about this repo:
 
 These stats are insane! A repository of size 86TB!!
 
-## Piper
+### Piper
 
 The paper goes into the background. There are two primary systems - Piper and CitC. Piper is implemented on top of Spanner and stores the entire code base. The file level access control is maintained through ACLs to guard business critical algorithms and few configuration files. There is also a system that tracks read and writes to files to maintain audit trail.
 
-## CitC
+### CitC
 
 Now obviously you can’t ‘clone’ and repository to your local. Therefore, they have created a new tool called 'CitC' or 'Clients in Cloud' which is basically a Linux FUSE file system that copies a part of the repository for you to work on. This is architected to save space. Only space required is the local copy of modified files. Some variant of overlay file system it seems. This gives a seamless view of the entire Piper repository and your changes overlaid on the top of that. Snapshots are stores in CitC - can be tagged, previous snapshots can be recovered, can be named and sent for review. I see a strong resemblance to commits here.
 

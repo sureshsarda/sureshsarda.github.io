@@ -1,11 +1,12 @@
 ---
-date: "2022-12-13"
+date: "2023-12-13"
 tags:
   - java
   - programming languages
 title: Proxy Interfaces In Java
 type: Essay
 pinned: true
+toc: true
 ---
 
 Java provides a static method `Proxy.newProxyInstance` as part of it's Reflection API. This static method returns a proxy class for a given set of interfaces.

@@ -1,11 +1,11 @@
 baseURL: "/"
 languageCode: "en-us"
 title: "s9a.me"
-theme: "ananke"
+theme: tailwind
 
 menus:
   main:
-    - name: posts
+    - name: home
       url: "/"
     # - name: notes
     #   url: '/notes'
@@ -13,8 +13,10 @@ menus:
       url: "/about"
     # - name: reading
     #   url: '/reading'
+    - name: rss
+      url: "/index.xml"
 taxonomies:
-  category: category
+  category: categories
   tags: tags
 
 params:
@@ -52,5 +54,17 @@ markup:
     noClasses: true
     style: monokai
     tabWidth: 4
+
+related:
+  includeNewer: true
+  indices:
+  - name: tags
+    weight: 100
+  - name: categories
+    weight: 50
+  - name: date
+    weight: 10
+  threshold: 80
+  toLower: false
 
 # disqusShortname: sardas

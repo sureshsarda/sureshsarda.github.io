@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+
+{{ $data := .Data }}
+<div class="center bg-white relative max-w-4xl mx-auto px-12 py-16">
+
+  <header class="border-b-2 mb-4">
+    <aside class="">
+      <a href="/" class="font-semibold text-base uppercase text-sky-700">go back to Home</a>
+    </aside>
+
+    <h1 class="text-5xl my-4">
+      {{- .Title -}}
+    </h1>
+
+
+    <p class="text-base text-gray-700 mb-12" {{ printf `datetime="%s" ` (.Date.Format "2006-01-02T15:04:05Z07:00" ) |
+      safeHTMLAttr }}>
+      All {{ .Type | pluralize }} and articles under them
+    </p>
+  </header>
+
+
+  <section class="">
+    {{ range .Pages }}
+    <div class="mt-8">
+      <a href="{{ "/" | relLangURL }}{{ .Type | pluralize | urlize }}/{{ .Title | urlize }}"
+        class="link blue hover-black lowercase text-sky-600 text-lg">
+        {{ .Title }}
+      </a>
+
+      ({{ len .Pages}} in total)
+
+      {{ range .Pages }}
+      <div class="text-base w-100">{{ partial "summary-single-line.html" . }}</div>
+      {{ end }}
+    </div>
+    {{ end}}
+  </section>
+
+
+
+
+</div>
+{{ end }}

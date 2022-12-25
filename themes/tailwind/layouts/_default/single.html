@@ -1,0 +1,63 @@
+{{ define "main" }}
+    {{ $section := .Site.GetPage "section" .Section }}
+  
+        <article class="center bg-white relative max-w-4xl mx-auto px-12 py-16">
+            <header class="border-b-2 mb-8">      
+                <aside class="">
+                    <a href="/" class="font-semibold text-base uppercase text-sky-700">HOME</a>
+                    {{ if .Params.Category }}
+                        <a href="{{ "/category/" | relLangURL }}{{ .Params.Category | urlize }}" class="font-semibold text-base uppercase text-sky-700">&bull; {{ .Params.Category | upper }}</a>
+                    {{ end }}
+                </aside>
+
+                <h1 class="text-5xl my-4">
+                    {{- .Title -}}
+                </h1>
+      
+                {{ if not .Date.IsZero }}
+                <div class="mb-12">
+                    <time class="text-base text-gray-700 " {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+                        {{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+                    </time>
+                </div>
+                {{end}}
+
+                {{/*
+                    Show "reading time" and "word count" but only if one of the following are true:
+                    1) A global config `params` value is set `show_reading_time = true`
+                    2) A section front matter value is set `show_reading_time = true`
+                    3) A page front matter value is set `show_reading_time = true`
+                */}}
+                {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
+                    <span class="f6 mv4 dib tracked"> - {{ i18n "readingTime" .ReadingTime }} </span>
+                    <span class="f6 mv4 dib tracked"> - {{ i18n "wordCount" .WordCount }} </span>
+                {{ end }}
+            </header>
+
+            <div class="prose">
+                {{- .Content -}}
+            </div>
+
+            {{- partial "tags.html" . -}}
+            {{ partial "social-share.html" . }}
+      
+            <!-- <div class="mt6 instapaper_ignoref">
+            {{ if .Site.DisqusShortname }}
+                {{ template "_internal/disqus.html" . }}
+            {{ end }}
+            {{ if .Site.Params.commentoEnable }}
+                {{- partial "commento.html" . -}}
+            {{ end }}
+            </div> -->
+
+
+            <!-- <aside class="">
+                {{- partial "toc.html" . -}}
+            </aside> -->
+
+            <aside>
+                {{- partial "related.html" . -}}
+            </aside>
+
+        </article>
+{{ end }}

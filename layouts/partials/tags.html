@@ -1,6 +1,0 @@
-{{ range .Params.tags }}
-<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"
-  class="link f5 no-underline pv2 mb2 dib black sans-serif">
-  #{{. | lower}}
-</a>
-{{ end }}
