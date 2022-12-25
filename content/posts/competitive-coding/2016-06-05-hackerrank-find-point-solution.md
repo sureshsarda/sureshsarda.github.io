@@ -1,20 +1,26 @@
 ---
 title: Hackerrank - find-point solution
 date: 2016-06-05T04:47:00Z
-alias: 
+alias:
   - /problem-solving/leetcode/solution-happy-number
 category: competitive-coding
 ---
+
 Solution to HackerRank [FindPoint][question]
 
 ## Domain Knowledge Required
+
 ### What is a symmetric point?
-Given 2 points P and Q, a symmetric point of P against Q is such that Q is the midpoint of the line joining P and the symmetric point P’.
+
+Given 2 points P and Q, a symmetric point of P against Q is such that Q is the
+midpoint of the line joining P and the symmetric point P’.
 In other words, let’s say a point P’ is the symmetric point. Then,
- - P-Q-P’are on one line
- - Dist(PQ) = Dist(QP’)
+
+- P-Q-P’are on one line
+- Dist(PQ) = Dist(QP’)
 
 ## Code
+
  ```java
 import java.io.*;
 import java.util.*;

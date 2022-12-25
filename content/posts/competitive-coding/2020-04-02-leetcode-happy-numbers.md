@@ -1,16 +1,9 @@
 ---
 category: competitive-coding
-date: "2020-04-02T00:00:00Z"
+date: 2020-04-02
 description:
   Solution to Leetcode's Happy Number problem. Write an algorithm to determine
   if a number is "happy".
-header:
-  caption: Hackerrank - find-point solution
-  cta_label: Read
-  cta_url: "#"
-  overlay_image: /assets/images//overlay/marcel-strauss-unsplash.jpg
-  show_overlay_excerpt: false
-  teaser: /assets/images/overlay/caleb-jones-unsplash.jpg
 publish: true
 share: true
 title: Solution to Leetcode - Happy Number
@@ -32,7 +25,7 @@ The main task is to figure out when to stop out of the infinite loop and conclud
 
 Let's look at a sequence of a unhappy number, 42:
 
-```
+```text
     input   = 42
 => 16 + 4   = 20
 => 4 + 0    = 4
@@ -43,13 +36,19 @@ Let's look at a sequence of a unhappy number, 42:
 => 36 + 1   = 37
 ```
 
-It's evident from 37 that it will start to loop again from the 37 we have already seen. This is important. We can now stop iterating because any number of time we try 37, it's going to give same sequence `37 -> 56 -> 61 -> 37 -> 56 -> ...`.
+It's evident from 37 that it will start to loop again from the 37 we have
+already seen. This is important. We can now stop iterating because any number
+of time we try 37, it's going to give same sequence
+`37 -> 56 -> 61 -> 37 -> 56 -> ...`.
 
-From here, the solution is simple, keep a track of already seen numbers and when ever a new number is found, add it to this set. We are good till the numbers are unique, but if we find a number we have already seen, that means we have detected a loop.
+From here, the solution is simple, keep a track of already seen numbers and
+when ever a new number is found, add it to this set. We are good till the
+numbers are unique, but if we find a number we have already seen, that means we
+have detected a loop.
 
 ### Pseudo Code
 
-```
+```pseudo
 seen = {}
 while number not in already seen and number is not 1:
     find square of digits of number
@@ -144,4 +143,5 @@ public class HappyNumberTest extends TestCase {
 
 ## Conclusion
 
-It's an interesting problem with a very simple solution. Once you get the bright idea behind how to stop the loop, the solution becomes evident.
+It's an interesting problem with a very simple solution. Once you get the
+bright idea behind how to stop the loop, the solution becomes evident.

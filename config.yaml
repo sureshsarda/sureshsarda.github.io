@@ -20,10 +20,10 @@ taxonomies:
 params:
   background_color_class: bg-black
   production: true
-  description: sureshsarda.me - my thoughts and ideas on programming
+  description: s9a.me - my thoughts and ideas on programming
   images:
     - images/slipbox.jpg
-  title: s9a.me
+  title: sureshsarda.me
 
   # mainSections:
   # - posts

@@ -13,10 +13,12 @@ This one is really simple. The question is:
 
 So Jim keeps removing socks from drawer, and the moment he finds a pair(repeat color) he stops. To find the solution, let's start with an example and dig our way further.
 Let's say he has 4 pairs:
-```
+
+```text
 Paris: a, b, c, d
 Socks: al, ar, bl, br, cl, cr and so on.. (l = left and r = right)
 ```
+
 That means, he has 8 socks.
 In the worst case, on a really bad day, he will take out socks of all different colors. Untill at last there is no unique color left! So total **unique colors = number of pair**. So the next sock after taking out single sock from all the pair is going to be repeated.
 
@@ -26,6 +28,7 @@ It doesn't matter which pair complets. The only condition is pair MUST complete.
 I'll leave it to you how many he will need to withdraw in the best case ;)
 
 ### Code
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -45,7 +48,7 @@ public class Solution {
     }
 }
 ```
-The answer to the best case question is 2. On his lucky day.. :)
 
+The answer to the best case question is 2. On his lucky day.. :)
 
 [hackerrank]: https://www.hackerrank.com/challenges/maximum-draws
