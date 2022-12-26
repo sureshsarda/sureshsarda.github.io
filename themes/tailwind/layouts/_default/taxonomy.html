@@ -9,6 +9,9 @@
     </aside>
 
     <h1 class="text-5xl my-4">
+      {{ if eq .Type "tags" }}
+        #
+      {{ end }}
       {{- .Title -}}
     </h1>
 

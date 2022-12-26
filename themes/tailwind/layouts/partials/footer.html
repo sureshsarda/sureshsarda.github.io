@@ -1,7 +1,10 @@
 <footer class="bg-black dark:bg-slate-900 text-white bottom-0 w-100 pa3" role="contentinfo">
   <div class="center relative max-w-4xl mx-auto px-12 py-16">
     <section class="mb-4">
-        <h1 class="text-2xl uppercase">ABOUT</h1>
+      
+        <h1 class="text-2xl uppercase hover:text-gray-500">
+          <a href="/about">About</a>
+        </h1>
         <p>
           Hi! I'm Suresh. Your host. You can get to know me better in the
           <a class="link white dim" href="/about">about</a> section or follow me
@@ -13,7 +16,9 @@
 
     {{ range $key, $value := .Site.Taxonomies }}
     <section class="mb-4">
-        <h1 class="text-2xl uppercase">{{ $key }} </h1>
+        <h1 class="text-2xl uppercase hover:text-gray-500">
+          <a href="{{ "/" | relLangURL }}{{ $key | pluralize | urlize }}">{{ $key }}</a>
+        </h1>
         {{ range $title, $pages := $value }}
             <a class="hover:text-gray-400" href="{{ "/" }}{{ $key | pluralize | urlize }}/{{ $title | urlize }}">{{ $title }} ({{ len $pages}})</a>
         {{ end }}

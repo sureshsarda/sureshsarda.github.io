@@ -23,10 +23,12 @@
             All Posts
           </h1>
         {{ range $section.GroupByDate "2006" }}
-            <h2 class="mt-4">
+            <h2 class="mt-4 mb-2 border-b-2 ">
                 <a href="/" class="lowercase text-sky-600 text-lg">{{ .Key }}</a>
+                <span class="text-sm text-gray-600">({{ len .Pages}} in total)</span>
             </h2>
-            ({{ len .Pages}} in total)
+            
+            
             
             {{ range .Pages }}
                 <div class="text-base w-100">{{ partial "summary-single-line.html" . }}</div>

@@ -5,8 +5,8 @@
             <header class="border-b-2 mb-8">      
                 <aside class="">
                     <a href="/" class="font-semibold text-base uppercase text-sky-700">HOME</a>
-                    {{ if .Params.Category }}
-                        <a href="{{ "/category/" | relLangURL }}{{ .Params.Category | urlize }}" class="font-semibold text-base uppercase text-sky-700">&bull; {{ .Params.Category | upper }}</a>
+                    {{ range .Params.Categories }}
+                        <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="font-semibold text-base uppercase text-sky-700">&bull; {{ . | upper }}</a>
                     {{ end }}
                 </aside>
 
