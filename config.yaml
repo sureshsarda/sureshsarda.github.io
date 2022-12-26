@@ -41,6 +41,7 @@ params:
     - name: medium
       url: https://sureshssarda.medium.com/
 
+enableGitInfo: true
 markup:
   highlight:
     anchorLineNos: false
