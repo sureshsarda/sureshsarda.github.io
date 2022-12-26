@@ -1059,6 +1059,10 @@ video {
   display: inline-block;
 }
 
+.flex {
+  display: flex;
+}
+
 .w-36 {
   width: 9rem;
 }
@@ -1069,10 +1073,6 @@ video {
 
 .flex-none {
   flex: none;
-}
-
-.items-center {
-  align-items: center;
 }
 
 .justify-between {
@@ -1119,6 +1119,21 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .text-2xl {
@@ -1197,14 +1212,22 @@ video {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+.first\:pl-0:first-child {
+  padding-left: 0px;
+}
+
+.last\:pr-0:last-child {
+  padding-right: 0px;
 }
 
 .hover\:text-gray-500:hover {
