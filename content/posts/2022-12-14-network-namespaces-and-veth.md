@@ -1,8 +1,10 @@
 ---
-date: "2022-12-14"
+date: 2022-12-14
 tags:
   - containers
-  - linux kernel
+  - linux
+  - docker
+  - networking
 title: Network Namespaces and Veth pairs
 type: Essay
 pinned: true

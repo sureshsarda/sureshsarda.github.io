@@ -1,8 +1,8 @@
 ---
-date: "2023-12-13"
+date: 2023-12-13
 tags:
   - java
-  - programming languages
+  - programming
 title: Proxy Interfaces In Java
 type: Essay
 pinned: true

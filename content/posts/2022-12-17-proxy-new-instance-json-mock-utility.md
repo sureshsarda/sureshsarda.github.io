@@ -1,9 +1,9 @@
 ---
-date: "2022-12-17"
+date: 2022-12-17
 tags:
   - java
   - reflection
-  - unit-testing
+  - testing
 title: Create a service mocking framework around Proxy.newProxyInstance
 type: Essay
 pinned: true
