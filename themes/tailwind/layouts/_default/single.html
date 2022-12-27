@@ -67,4 +67,5 @@
             </aside>
 
         </article>
+        {{ if .Params.math }}{{ partial "latex.html" . }}{{ end }}
 {{ end }}
