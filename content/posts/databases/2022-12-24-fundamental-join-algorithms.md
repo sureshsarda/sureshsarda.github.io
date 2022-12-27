@@ -95,10 +95,14 @@ records that match the condition.
 
 The cost is to first sort both the tables and then merge them.
 
-$$ SortCost R = 2M \cdot (1+\lceil log_{B-1} \lceil \frac{M}{B} \rceil \rceil)$$
-$$ SortCost S = 2N \cdot (1+\lceil log_{B-1} \lceil \frac{N}{B} \rceil \rceil)$$
-$$ MergeCost = (M + N) $$
-$$ Total Cost =  SortCost R + SortCost S + MergeCost $$
+$$
+\begin{align*}
+SortCost R &= 2M \cdot (1+\lceil log_{B-1} \lceil \frac{M}{B} \rceil \rceil) \\\\
+SortCost S &= 2N \cdot (1+\lceil log_{B-1} \lceil \frac{N}{B} \rceil \rceil) \\\\
+MergeCost &= (M + N) \\\\
+Total Cost &=  SortCost R + SortCost S + MergeCost
+\end{align*}
+$$
 
 Assume $B$ is the number of buffer pools available to keep those pages in memory.
 
@@ -131,8 +135,8 @@ There are 2 passes to create the hash table - one to read and one to write, one
 pass for each to probe. Therefore, the cost comes out to be:
 $$
 \begin{align*}
-cost &= partition + probe \\
-     &= 2(M + N) + (M + N) \\
+cost &= partition + probe \\\\
+     &= 2(M + N) + (M + N) \\\\
      &= 3(M + N)
 \end{align*}
 $$
@@ -163,17 +167,12 @@ Using these values, we can find the cost of each algorithm:
 
 Calculating sort cost for Sort Merge Join:
 $$
-
 \begin{align*}
-SortCost R + SortCost S
-&= 2M \cdot (1+\lceil log_{B-1} \lceil \frac{M}{B} \rceil \rceil)
-* 2N \cdot (1+\lceil log_{B-1} \lceil \frac{N}{B} \rceil \rceil) \\
-&= 2000 \cdot (1+\lceil log_{99} \lceil \frac{1000}{100} \rceil \rceil)
-* 1000 \cdot (1+\lceil log_{99} \lceil \frac{500}{100} \rceil \rceil) \\
-&= 4000 + 2000 \\
+SortCost R + SortCost S &= 2M \cdot (1+\lceil log_{B-1} \lceil \frac{M}{B} \rceil \rceil) + 2N \cdot (1+\lceil log_{B-1} \lceil \frac{N}{B} \rceil \rceil) \\\\
+&= 2000 \cdot (1+\lceil log_{99} \lceil \frac{1000}{100} \rceil \rceil) + 1000 \cdot (1+\lceil log_{99} \lceil \frac{500}{100} \rceil \rceil) \\\\
+&= 4000 + 2000 \\\\
 &= 6000
 \end{align*}
-
 $$
 
 ## References
