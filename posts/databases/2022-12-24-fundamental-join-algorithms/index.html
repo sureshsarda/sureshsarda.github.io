@@ -1,0 +1,106 @@
+<!doctype html><html lang=en-us class=dark><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>Fundamental Join Algorithms and IO Cost | s9a.me</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="Joins are integral part of relational databases and they are designed to do them well.
+There are few considerations before we join two table which can make a lot of difference on the performance of the query - whether there is an index present, what are the sizes of table? Can one table be fit in memory or whether an external disk sort could be required to perform the join efficiently."><meta name=generator content="Hugo 0.109.0"><meta name=ROBOTS content="INDEX, FOLLOW"><link rel=stylesheet href=/css/syntax.css><link rel=stylesheet href=/css/style.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@200;300;400;700;900&display=swap"><meta property="og:title" content="Fundamental Join Algorithms and IO Cost"><meta property="og:description" content="Joins are integral part of relational databases and they are designed to do them well.
+There are few considerations before we join two table which can make a lot of difference on the performance of the query - whether there is an index present, what are the sizes of table? Can one table be fit in memory or whether an external disk sort could be required to perform the join efficiently."><meta property="og:type" content="article"><meta property="og:url" content="/posts/databases/2022-12-24-fundamental-join-algorithms/"><meta property="og:image" content="/images/slipbox.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-12-24T00:00:00+00:00"><meta property="article:modified_time" content="2022-12-27T11:45:25+05:30"><meta property="og:site_name" content="sureshsarda.me"><meta itemprop=name content="Fundamental Join Algorithms and IO Cost"><meta itemprop=description content="Joins are integral part of relational databases and they are designed to do them well.
+There are few considerations before we join two table which can make a lot of difference on the performance of the query - whether there is an index present, what are the sizes of table? Can one table be fit in memory or whether an external disk sort could be required to perform the join efficiently."><meta itemprop=datePublished content="2022-12-24T00:00:00+00:00"><meta itemprop=dateModified content="2022-12-27T11:45:25+05:30"><meta itemprop=wordCount content="1088"><meta itemprop=image content="/images/slipbox.jpg"><meta itemprop=keywords content="databases,programming,"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="/images/slipbox.jpg"><meta name=twitter:title content="Fundamental Join Algorithms and IO Cost"><meta name=twitter:description content="Joins are integral part of relational databases and they are designed to do them well.
+There are few considerations before we join two table which can make a lot of difference on the performance of the query - whether there is an index present, what are the sizes of table? Can one table be fit in memory or whether an external disk sort could be required to perform the join efficiently."></head><body class="bg-slate-100 dark:bg-slate-900"><main><article class="center bg-white relative max-w-4xl mx-auto px-12 py-16"><header class="border-b-2 mb-8"><aside><a href=/ class="font-semibold text-base uppercase text-sky-700">HOME</a></aside><h1 class="text-5xl my-4">Fundamental Join Algorithms and IO Cost</h1><div class=mb-12><time class="text-base text-gray-700" datetime=2022-12-24T00:00:00Z>December 24, 2022</time></div></header><div class=prose><p>Joins are integral part of relational databases and they are designed to do
+them well.</p><p>There are few considerations before we join two table which can make a lot of
+difference on the performance of the query - whether there is an index present,
+what are the sizes of table? Can one table be fit in memory or whether an
+external disk sort could be required to perform the join efficiently. But
+in this article we will only see what are the most common join techniques.
+We will not worry about optimization and cost analysis of the query; just the
+join algorithms.</p><h2 id=comparing-costs>Comparing Costs</h2><p>Just to understand how these algorithms perform against each other, we will do
+some back of the envelope calculations. We will try to find the cost of IO (and
+not compute).
+For that, lets assume two tables -</p><ul><li>Table $R$: $M$ pages, and $m$ tuples</li><li>Table $S$: $N$ pages, and $n$ tuples</li></ul><h2 id=nested-loop-join>Nested Loop Join</h2><p>This is the most basic, least optimized join technique. It&rsquo;s simple as joining
+two lists where you don&rsquo;t have any indexes present. We basically have to
+iterate over each tuple in first table and for that, we have to search the if
+a matching tuple is found in second table. Therefore, as the name suggests -
+these are two nested &lsquo;for&rsquo; loops (or perhaps more if there are more tables
+in the query). Something like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-plain data-lang=plain><span style=display:flex><span>foreach tuple r in R:
+</span></span><span style=display:flex><span>    foreach tuple s in S:
+</span></span><span style=display:flex><span>        emit r and s if they match
+</span></span></code></pre></div><h3 id=cost-calculation-for-nested-loop-join>Cost Calculation for Nested Loop Join</h3><p>Generally the expensive operations in the databses are to fetch something from
+the secondary memory. In this case, we have to fetch all the pages from the
+outer table, then for each record in the outer table, we have to fetch all the
+pages from the inner table. Hence,</p><p>$$ M + (m \times N) $$</p><h3 id=block-nested-loop-join>Block Nested Loop Join</h3><p>In Nested Loop Join, for every page in outer table, we were fetching all the
+pages in inner table because we were joining directly on the tuples.
+A quick optimization to reduce IO is to join the two
+pages first before moving on. That is for each block in outer table fetch each
+block in inner table.</p><p>This is faster because it reduces IO. Tuples can be spread across but with this
+we make sure to first finish the given block before moving on to the next block.</p><p>The cost therefore becomes:
+$$ M + (M \times N) $$</p><h3 id=single-loop-join-or-index-nested-loop-join>Single Loop Join or Index Nested Loop Join</h3><p>In both the above variants we assumed that the database did not have an index
+on the table. But in presence of an index the joins would be much faster.
+It can even create a temporary index if it&rsquo;s worth the effort (more on that in
+later posts). This improves our cost further to:</p><p>$$ M + (m \times C) $$
+where $C$ is the cost of index search. Because not we just have to iterate over
+all the pages and all the tuples in outer table and for that perform an index
+lookup. In only makes sense to have the index on the inner table because that&rsquo;s
+where the lookups are happening. Having it on the outer table would be useless
+since we are just iterating over all the tuples.</p><h2 id=sort-merge-join>Sort Merge Join</h2><p>In sort merge join, the databse first sorts the keys for both the tables
+(individually) on which we have to perform the join. Then it&rsquo;s like a two
+pointer algorithm where it iterates through both the sorted keys to emit
+records that match the condition.</p><p>The cost is to first sort both the tables and then merge them.</p><p>$$ SortCost R = 2M \cdot (1+\lceil log_{B-1} \lceil \frac{M}{B} \rceil \rceil)$$
+$$ SortCost S = 2N \cdot (1+\lceil log_{B-1} \lceil \frac{N}{B} \rceil \rceil)$$
+$$ MergeCost = (M + N) $$
+$$ Total Cost = SortCost R + SortCost S + MergeCost $$</p><p>Assume $B$ is the number of buffer pools available to keep those pages in memory.</p><h2 id=hash-join>Hash Join</h2><p>There are two phases - build and probe. We first build a hash table from the
+outer relation or table and then for each tuple in the inner table, we use the
+same hashing function to check whether the tuple exists in the outer table.</p><p>We do want to have the entire hash table to be in memory otherwise there will
+be random IOs. But in case, the table doesn&rsquo;t fit in memory, we can use a
+variant of this algorithm called Grace Hash Join or Partition Hash Join.</p><h3 id=grace-hash-join-or-partition-hash-join>Grace Hash Join or Partition Hash Join</h3><p>Again there are two phases here:</p><ol><li>Build Phase: Hash both the tables on the join attributes into partitions</li><li>Probe Phase: Compare tuples in corresponding partitions</li></ol><p>The number of buckets for both the tables are kept constant. Therefore, in the
+probe phase, if the value is not present in the same bucket then it&rsquo;s not
+present at all.</p><ul><li><input disabled type=checkbox> Recursive Partition</li></ul><h3 id=cost-calculation-for-hash-join>Cost Calculation for Hash Join</h3><p>There are 2 passes to create the hash table - one to read and one to write, one
+pass for each to probe. Therefore, the cost comes out to be:
+$$
+\begin{align*}
+cost &= partition + probe \
+&= 2(M + N) + (M + N) \
+&= 3(M + N)
+\end{align*}
+$$</p><h2 id=cost-comparision>Cost Comparision</h2><p>Let&rsquo;s try to put some numbers in these variables to get a picture about how
+fast or slow they are.</p><p>Assuming these stats:</p><table><thead><tr><th>Table</th><th>Pages</th><th>Assumed Pages</th><th>Tuples</th><th>Assumed Tuples</th></tr></thead><tbody><tr><td>$R$</td><td>$M$</td><td>1000</td><td>$m$</td><td>100,000</td></tr><tr><td>$S$</td><td>$N$</td><td>500</td><td>$n$</td><td>40,000</td></tr></tbody></table><ul><li>Number of buffer pools ($B$) to be 100</li><li>IO cost to be 0.1ms</li></ul><p>Using these values, we can find the cost of each algorithm:</p><table><thead><tr><th>Algorithm</th><th>IO Cost</th><th>Example</th></tr></thead><tbody><tr><td>Simple Nested Loop Join</td><td>$M + (m \times N)$</td><td>1.4 hours</td></tr><tr><td>Block Nested Loop Join</td><td>$M + (M \times N)$</td><td>50 seconds</td></tr><tr><td>Single Loop Join</td><td>$M + (m \times C)$</td><td>varies</td></tr><tr><td>Sort Merge Join</td><td>$M + N + (sort cost)$</td><td>0.75 seconds (see calculation below)</td></tr><tr><td>Hash Join</td><td>$3 \cdot (M + N)$</td><td>0.45 seconds</td></tr></tbody></table><p>Calculating sort cost for Sort Merge Join:
+$$</p><p>\begin{align*}
+SortCost R + SortCost S
+&= 2M \cdot (1+\lceil log_{B-1} \lceil \frac{M}{B} \rceil \rceil)</p><ul><li>2N \cdot (1+\lceil log_{B-1} \lceil \frac{N}{B} \rceil \rceil) \
+&= 2000 \cdot (1+\lceil log_{99} \lceil \frac{1000}{100} \rceil \rceil)</li><li>1000 \cdot (1+\lceil log_{99} \lceil \frac{500}{100} \rceil \rceil) \
+&= 4000 + 2000 \
+&= 6000
+\end{align*}</li></ul><p>$$</p><h2 id=references>References</h2><ul><li>This article is largely based on the <a href=https://15445.courses.cs.cmu.edu/fall2022/schedule.html>course from CMU by Andy Pavlo</a></li></ul><ul><li><a href=http://cs.boisestate.edu/~jhyeh/cs410/cs410_notes_ch15.pdf>http://cs.boisestate.edu/~jhyeh/cs410/cs410_notes_ch15.pdf</a></li></ul></div><a class="text-sky-600 mr-2" href=/tags/databases>#databases</a>
+<a class="text-sky-600 mr-2" href=/tags/programming>#programming</a><div id=sharing class="mt3 ananke-socials"><a href="https://twitter.com/share?url=/posts/databases/2022-12-24-fundamental-join-algorithms/&text=Fundamental%20Join%20Algorithms%20and%20IO%20Cost" class="ananke-social-link twitter no-underline" aria-label="share on Twitter"></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=/posts/databases/2022-12-24-fundamental-join-algorithms/&title=Fundamental%20Join%20Algorithms%20and%20IO%20Cost" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn"></a></div><aside><div class="border-t-2 py-4"><p class="text-2xl font-bold">See Also</p><ul><li><a class="hover:underline hover:text-gray-500" href=/posts/2022-12-21-about-googles-mono-repo/>A brief summary of Google's Monorepo</a></li><li><a class="hover:underline hover:text-gray-500" href=/posts/2017-07-02-vagrant-setting-up-and-tearing-down-development-environments-on-the-fly/>Vagrant - Setting up and tearing down development environments on the fly</a></li></ul></div></aside><aside>Want to discuss this further? You can reach out to via
+<a class=text-sky-500 href=https://twitter.com/sureshssarda>Twitter</a>,
+<a class=text-sky-500 href=https://www.linkedin.com/in/sureshsarda/>LinkedIn</a> or directly via
+<a class=text-sky-500 href="mailto:sureshssarda@gmail.com?subject=Fundamental%20Join%20Algorithms%20and%20IO%20Cost">Email.</a></aside></article><script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},svg:{fontCache:"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script></main><footer class="bg-black dark:bg-slate-900 text-white bottom-0 w-100 pa3" role=contentinfo><div class="center relative max-w-4xl mx-auto px-12 py-16"><section class=mb-4><h1 class="text-2xl uppercase hover:text-gray-300 hover:underline"><a href=/about>About</a></h1><p>Hi! I'm Suresh. Your host. You can get to know me better in the
+<a class="hover:text-gray-500 hover:underline" href=/about>about</a> section or follow me
+using the social media icons on the right</p><div><div class=ananke-socials><a href=https://twitter.com/sureshssarda target=_blank class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel=noopener aria-label="follow on Twitter——Opens in a new window">Twitter</a>
+<a href=https://github.com/sureshsarda target=_blank class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel=noopener aria-label="follow on GitHub——Opens in a new window">GitHub</a>
+<a href=https://www.linkedin.com/in/sureshsarda/ target=_blank class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel=noopener aria-label="follow on LinkedIn——Opens in a new window">LinkedIn</a>
+<a href=https://sureshssarda.medium.com/ target=_blank class="medium ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Medium link" rel=noopener aria-label="follow on Medium——Opens in a new window">Medium</a></div></div></section><section class=mb-4><h1 class="text-2xl uppercase hover:text-gray-300 hover:underline"><a href=/categories>categories</a></h1><a class="hover:text-gray-400 hover:underline" href=/categories/linux>linux (6)</a></section><section class=mb-4><h1 class="text-2xl uppercase hover:text-gray-300 hover:underline"><a href=/tags>tags</a></h1><a class="hover:text-gray-400 hover:underline" href=/tags/ai>ai (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/apache-hadoop>apache-hadoop (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/apache-kafka>apache-kafka (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/apache-spark>apache-spark (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/apache-storm>apache-storm (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/big-data>big-data (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/clean-code>clean-code (3)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/containers>containers (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/data>data (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/databases>databases (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/design-patterns>design-patterns (2)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/docker>docker (3)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/elasticsearch>elasticsearch (5)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/java>java (11)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/linux>linux (12)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/networking>networking (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/notes>notes (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/performance>performance (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/power-unix-tools>power-unix-tools (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/programming>programming (3)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/python>python (3)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/reflection>reflection (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/research-paper>research-paper (2)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/sdlc>sdlc (1)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/spring>spring (2)</a>
+<a class="hover:text-gray-400 hover:underline" href=/tags/testing>testing (1)</a></section><section class="mb-4 text-gray-400"><a href=/>&copy; Suresh Sarda 2022</a><p class="text-sm text-gray-500">Hosted on
+<a class="hover:text-gray-300 hover:underline" href=https://github.com/sureshsarda/sureshsarda.github.io>Github</a>. Handcrafted using
+<a class="hover:text-gray-300 hover:underline" href=https://gohugo.io/>Hugo</a> and
+<a class="hover:text-gray-300 hover:underline" href=https://tailwindcss.com/>Tailwind</a>. (Version 17790dc)</p></section></div></div></footer></body></html>
