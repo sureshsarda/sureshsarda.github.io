@@ -2,9 +2,9 @@
     {{ $section := .Site.GetPage "section" .Section }}
   
         <article class="center bg-white relative max-w-4xl mx-auto px-12 py-16">
-            <header class="border-b-2 mb-8">      
+            <header class="border-b-2 mb-8 pb-8">      
                 <aside class="">
-                    <a href="/" class="font-semibold text-base uppercase text-sky-700">HOME</a>
+                    <a href="/" class="font-semibold text-base uppercase text-sky-600 hover:text-sky-900">HOME</a>
                     {{ range .Params.Categories }}
                         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="font-semibold text-base uppercase text-sky-700">&bull; {{ . | upper }}</a>
                     {{ end }}
@@ -15,12 +15,14 @@
                 </h1>
       
                 {{ if not .Date.IsZero }}
-                <div class="mb-12">
+                <div class="mb-4">
                     <time class="text-base text-gray-700 " {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
                         {{- .Date.Format (default "January 2, 2006" .Site.Params.date_format) -}}
                     </time>
                 </div>
                 {{end}}
+
+                {{- partial "tags.html" . -}}
 
                 {{/*
                     Show "reading time" and "word count" but only if one of the following are true:
@@ -32,13 +34,14 @@
                     <span class="f6 mv4 dib tracked"> - {{ i18n "readingTime" .ReadingTime }} </span>
                     <span class="f6 mv4 dib tracked"> - {{ i18n "wordCount" .WordCount }} </span>
                 {{ end }}
+
+
             </header>
 
             <div class="prose">
                 {{- .Content -}}
             </div>
 
-            {{- partial "tags.html" . -}}
             {{ partial "social-share.html" . }}
       
             <!-- <div class="mt6 instapaper_ignoref">
@@ -55,15 +58,17 @@
                 {{- partial "toc.html" . -}}
             </aside> -->
 
-            <aside>
-                {{- partial "related.html" . -}}
+
+
+            <aside class="border-t-2 ">
+                <p class="pt-4">Want to discuss this further? You can DM me via
+                <a class="text-sky-500" href="https://twitter.com/sureshssarda">Twitter</a>, 
+                <a class="text-sky-500" href="https://www.linkedin.com/in/sureshsarda/">LinkedIn</a> or directly drop an
+                <a class="text-sky-500" href="mailto:sureshssarda@gmail.com?subject={{ .Title }}">Email.</a></p>
             </aside>
 
             <aside>
-                Want to discuss this further? You can reach out to via 
-                <a class="text-sky-500" href="https://twitter.com/sureshssarda">Twitter</a>, 
-                <a class="text-sky-500" href="https://www.linkedin.com/in/sureshsarda/">LinkedIn</a> or directly via 
-                <a class="text-sky-500" href="mailto:sureshssarda@gmail.com?subject={{ .Title }}">Email.</a>
+                {{- partial "related.html" . -}}
             </aside>
 
         </article>

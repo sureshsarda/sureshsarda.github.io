@@ -6,7 +6,7 @@
 
   <header class="border-b-2 mb-4">
     <aside class="">
-      <a href="/" class="font-semibold text-base uppercase text-sky-700">go back to Home</a>
+      <a href="/" class="font-semibold text-base uppercase  text-sky-600 hover:text-sky-900">go back to Home</a>
     </aside>
 
     <h1 class="text-5xl my-4">
@@ -25,7 +25,7 @@
     {{ range .Pages }}
     <div class="mt-8">
       <a href="{{ "/" | relLangURL }}{{ .Type | pluralize | urlize }}/{{ .Title | urlize }}"
-        class="link blue hover-black lowercase text-sky-600 text-lg">
+        class="link blue hover-black lowercase text-sky-600 hover:text-sky-900 text-lg">
         {{ .Title }}
       </a>
 
