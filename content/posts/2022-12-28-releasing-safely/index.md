@@ -10,7 +10,7 @@ toc: true
 ---
 
 In this article we will walk through steps to rollout an upgrade as safely as
-possoble.
+possible.
 
 ## What you will need
 
@@ -21,13 +21,14 @@ possoble.
 
 ## Safely Rolling Out Change
 
-1. Create a configuration for the new feature with default value set to disabled.
-   Write code for the new feature but behind this new configuration condition
-   using the feature controller.
-   The code is now present, but disabled.
+![alt An overview of safely rolling out change](9steps.jpg "An overview of safely rolling out change")
+
+1. Create a feature in feature controller for the new feature with default value
+   set to disabled. Write code for the new feature but behind this new condition
+   using the feature controller. The code is now present, but disabled.
 2. Release the new binary with the new code. At this stage, the code is present
    but behind a flag and currently disabled. A failure at this stage would
-   require you to revert to the older binaries
+   require you to revert to the older binaries.
 3. Now update the configuration files, add the configuration for the feature
    but still keep it disabled. The feature should still be inactive and any
    failure at this stage would require you to revert to older configuration
@@ -44,11 +45,11 @@ possoble.
 7. Update the configuration files and remove references of the feature. The code
    is anyway not using this configuration as per step 6.
 8. Update all code and remove the conditional behaviour around this feature. A
-   failed rolloout would require you to revert to previous version of the binary.
-9. Remove the feature flag from the code.
+   failed rollout would require you to revert to previous version of the binary.
+9. Remove the code from feature controller.
 
 These nine steps might be an overkill for they ensure that code is released
-smoothly. These steps may span across weeks or months and parallely for many
+smoothly. These steps may span across weeks or months and parallelly for many
 features as well.
 
 ---
