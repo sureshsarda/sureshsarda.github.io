@@ -52,6 +52,10 @@ These nine steps might be an overkill for they ensure that code is released
 smoothly. These steps may span across weeks or months and parallelly for many
 features as well.
 
+## Read More
+
+[Making “Push On Green” a Reality: Issues & Actions Involved in Maintaining a Production Service](https://research.google/pubs/pub42576/)
+
 ---
 
 This is my 5th of 100 post in [#100daysToOffload](https://100daystooffload.com/).
