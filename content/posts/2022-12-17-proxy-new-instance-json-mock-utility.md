@@ -154,3 +154,6 @@ A proxy pattern is quite powerful when we want to swap implementations. Creating
 
 1. [https://refactoring.guru/design-patterns/proxy](https://refactoring.guru/design-patterns/proxy)
 2. [https://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Proxy.html](https://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Proxy.html)
+
+---
+This is my 2nd of 100 post in [#100daysToOffload](https://100daystooffload.com/).
