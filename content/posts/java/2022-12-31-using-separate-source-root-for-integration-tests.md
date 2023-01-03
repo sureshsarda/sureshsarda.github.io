@@ -109,10 +109,11 @@ That's all is required to create a new test source using Gradle. We can even
 create new type of test roots using the same method perhaps something for e2e
 tests? Or we can create new source roots as well!
 
-## Read More
+## Last, but not least
+
+Credit where it's due:
 
 * [Testing in Java & JVM projects on Gradle.org](https://docs.gradle.org/current/userguide/java_testing.html)
 
----
 
 This is my 6th of 100 post in [#100daysToOffload](https://100daystooffload.com/).
