@@ -18,7 +18,7 @@ There is another neat trick in TestContainers that let’s us create the
 containers on the fly. From Dockerfile or directly by declaring the container
 spec with Java using a DSL. Let’s see how to do this.
 
-## `Dockerfile` to create containers for `TestContainers`
+## Dockerfile to create containers for TestContainers
 
 The below code snippet create a container from the Dockerfile present in the
 classpath. The advantages are quite obvious where we don’t need the tool out of
