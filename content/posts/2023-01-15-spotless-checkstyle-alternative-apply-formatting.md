@@ -32,12 +32,12 @@ While Checkstyle only supports finding out the problems, Spotless can even fix
 them for you. With Gradle you would end up running
 
 ```bash
-./gradlew spotless apply
+./gradlew spotlessApply
 ```
 
 and ta-da!
 
-The regular `./gradlew spotless check` will just generate a report for you like
+The regular `./gradlew spotlessCheck` will just generate a report for you like
 Checkstyle does.
 
 ### Working with only the diff
