@@ -9,7 +9,7 @@ type: Essay
 pinned: true
 ---
 
-Checkstyle is a wonderful tool when we want to enforce the style guidelines in
+[Checkstyle][4] is a wonderful tool when we want to enforce the style guidelines in
 the project. But it has 2 major problems:
 
 1. It can't apply the formatting, it can only check whether the code is
@@ -21,7 +21,7 @@ the project. But it has 2 major problems:
    [this article][2]. (I don't speak the language but the code snippet is quite
    evident)
 
-## Enter Spotless
+## Enter [Spotless][3]
 
 Spotless is more or less similar to Checkstyle but with few more features that
 we need. We will only discuss the differences. The rest is same.
@@ -80,5 +80,7 @@ integrate with my existing projects.
 ---
 [1]: https://stackoverflow.com/questions/8409074
 [2]: https://ealebed.github.io/posts/2020/gradle-checkstyle-on-changed-files-only/
+[3]: https://github.com/diffplug/spotless
+[4]: https://checkstyle.org/
 
 This is my 10th of 100 post in [#100daysToOffload](https://100daystooffload.com/).
