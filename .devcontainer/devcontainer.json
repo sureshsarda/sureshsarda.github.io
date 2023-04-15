@@ -8,16 +8,20 @@
     "forwardPorts": [
         1313
     ],
-    "extensions": [
-        "bierner.markdown-mermaid",
-        "takumii.markdowntable",
-        "davidanson.vscode-markdownlint",
-        "esbenp.prettier-vscode",
-        "bradlc.vscode-tailwindcss"
-    ],
-    "settings": {
-        "markdown.styles": [
-            ".vscode/preview.css"
-        ]
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bierner.markdown-mermaid",
+                "takumii.markdowntable",
+                "davidanson.vscode-markdownlint",
+                "esbenp.prettier-vscode",
+                "bradlc.vscode-tailwindcss"
+            ],
+            "settings": {
+                "markdown.styles": [
+                    ".vscode/preview.css"
+                ]
+            }
+        }
     }
 }
