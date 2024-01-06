@@ -30,7 +30,3 @@ Typically, when we are not juggling too many items at once, we tend to do a bett
 ## Conclusion
 
 Stick to a single idea when writing. Start with a heading, and if the heading is too generic, narrow it down. Narrow it to so that it is a single point. A single argument, topic or idea.
-
-## Read More
-* [HBR article on One Idea Rule While Writing](2024-01-06-one-idea-rule-while-writing.md)
-* [3 Rules To Improve Your Writing](2024-01-01-3-rules-to-improve-your-writing.md)

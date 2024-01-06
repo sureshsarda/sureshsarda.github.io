@@ -16,7 +16,7 @@ Sentences of similar length are boring. Vary your sentence lengths. Some small. 
 
 ## Convey clearly with One Idea Rule
 
-Focus only one a [single idea](./2024-01-06-one-idea-rule-while-writing), belief or topic while writing. If the topic you selected is broad, then narrow it down to the point that it's very clear to visualize. Writing is not about content length. It's about conveying the message. Clearly.
+Focus only one a single idea, belief or topic while writing. If the topic you selected is broad, then narrow it down to the point that it's very clear to visualize. Writing is not about content length. It's about conveying the message. Clearly.
 
 ## Help readers with a introduction and conclusion
 
