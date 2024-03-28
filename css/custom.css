@@ -1,10 +1,20 @@
+@import url("/fonts/Serif/cmun-serif.css") print;
+
 @media print {
 
-    .noprint, .print\:hidden {
+    .prose {
+        max-width: none !important;
+        width: 100%;
+        line-height: unset !important;
+        text-align: justify;
+    }
+
+    .noprint,
+    .print\:hidden {
         display: none;
     }
 
-    * :not(code *){
-        font-family: "Inria Serif", serif;
+    * :not(code *) {
+        font-family: "Computer Modern Serif", sans-serif;
     }
 }
