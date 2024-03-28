@@ -12,10 +12,11 @@ tags:
   - paxos
   - two-phase-commit
 title: >
-    'Spanner: Google's Globally Distributed Database'
+    Spanner: Google's Globally Distributed Database
 type: Essay
 pinned: true
 toc: false
+math: true
 ---
 
 > Corbett, James C., et al. "Spanner: Google’s globally distributed database." ACM Transactions on Computer Systems (TOCS) 31.3 (2013): 1-22.
